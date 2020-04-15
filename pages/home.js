@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper"
 import Layout from '../components/Layout'
 import RadarChart from '../components/RadarChart'
 
+
 const useStyles = makeStyles((theme) => ({
   title: {
     marginTop: theme.spacing(5),
