@@ -53,19 +53,19 @@ body {
   bottom: 0px;
 }
 
-.footer-int p {
-  margin: 10px 20px;
-  font-size: 14px;
-  color: #F5F1ED;
-}
-
-.footer-int p a {
+.footer-int a {
   text-decoration: none;
   color: #F5F1ED;
 }
 
-.footer-int p a:hover {
+.footer-int a:hover {
   text-decoration: underline;
+}
+
+.footer-int p {
+  margin: 10px 20px;
+  font-size: 14px;
+  color: #F5F1ED;
 }
 
 .footer-int .git-btn {
