@@ -5,7 +5,6 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
 import '../src/styles/styles.css'
-import '@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props

@@ -88,10 +88,321 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/CvChat.js":
+/*!******************************!*\
+  !*** ./components/CvChat.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_simple_chatbot__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-simple-chatbot */ "react-simple-chatbot");
+/* harmony import */ var react_simple_chatbot__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_simple_chatbot__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/maiconesteves/Projects/portfolio/components/CvChat.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const theme = {
+  background: '#f5f8fb',
+  fontFamily: 'Roboto',
+  headerBgColor: '#000000',
+  headerFontColor: '#fff',
+  headerFontSize: '18px',
+  botBubbleColor: '#000000',
+  botFontColor: '#fff',
+  userBubbleColor: '#fff',
+  userFontColor: '#4a4a4a'
+};
+
+class Review extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      gender: '',
+      age: ''
+    };
+  }
+
+  componentWillMount() {
+    const {
+      steps
+    } = this.props;
+    const {
+      name,
+      gender,
+      age
+    } = steps;
+    this.setState({
+      name,
+      gender,
+      age
+    });
+  }
+
+  render() {
+    const {
+      name,
+      gender,
+      age
+    } = this.state;
+    return __jsx("div", {
+      style: {
+        width: '100%'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40,
+        columnNumber: 7
+      }
+    }, __jsx("h3", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41,
+        columnNumber: 9
+      }
+    }, "Summary"), __jsx("table", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42,
+        columnNumber: 9
+      }
+    }, __jsx("tbody", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 11
+      }
+    }, __jsx("tr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 13
+      }
+    }, __jsx("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 15
+      }
+    }, "Name"), __jsx("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 15
+      }
+    }, name.value)), __jsx("tr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48,
+        columnNumber: 13
+      }
+    }, __jsx("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49,
+        columnNumber: 15
+      }
+    }, "Gender"), __jsx("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50,
+        columnNumber: 15
+      }
+    }, gender.value)), __jsx("tr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52,
+        columnNumber: 13
+      }
+    }, __jsx("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53,
+        columnNumber: 15
+      }
+    }, "Age"), __jsx("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54,
+        columnNumber: 15
+      }
+    }, age.value)))));
+  }
+
+}
+
+Review.propTypes = {
+  steps: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+Review.defaultProps = {
+  steps: undefined
+};
+const steps = [{
+  id: '1',
+  message: 'What is your name?',
+  trigger: 'name'
+}, {
+  id: 'name',
+  user: true,
+  trigger: '3'
+}, {
+  id: '3',
+  message: 'Hi {previousValue}! What is your gender?',
+  trigger: 'gender'
+}, {
+  id: 'gender',
+  options: [{
+    value: 'male',
+    label: 'Male',
+    trigger: '5'
+  }, {
+    value: 'female',
+    label: 'Female',
+    trigger: '5'
+  }]
+}, {
+  id: '5',
+  message: 'How old are you?',
+  trigger: 'age'
+}, {
+  id: 'age',
+  user: true,
+  trigger: '7',
+  validator: value => {
+    if (isNaN(value)) {
+      return 'value must be a number';
+    } else if (value < 0) {
+      return 'value must be positive';
+    } else if (value > 120) {
+      return `${value}? Come on!`;
+    }
+
+    return true;
+  }
+}, {
+  id: '7',
+  message: 'Great! Check out your summary',
+  trigger: 'review'
+}, {
+  id: 'review',
+  component: __jsx(Review, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122,
+      columnNumber: 18
+    }
+  }),
+  asMessage: true,
+  trigger: 'update'
+}, {
+  id: 'update',
+  message: 'Would you like to update some field?',
+  trigger: 'update-question'
+}, {
+  id: 'update-question',
+  options: [{
+    value: 'yes',
+    label: 'Yes',
+    trigger: 'update-yes'
+  }, {
+    value: 'no',
+    label: 'No',
+    trigger: 'end-message'
+  }]
+}, {
+  id: 'update-yes',
+  message: 'What field would you like to update?',
+  trigger: 'update-fields'
+}, {
+  id: 'update-fields',
+  options: [{
+    value: 'name',
+    label: 'Name',
+    trigger: 'update-name'
+  }, {
+    value: 'gender',
+    label: 'Gender',
+    trigger: 'update-gender'
+  }, {
+    value: 'age',
+    label: 'Age',
+    trigger: 'update-age'
+  }]
+}, {
+  id: 'update-name',
+  update: 'name',
+  trigger: '7'
+}, {
+  id: 'update-gender',
+  update: 'gender',
+  trigger: '7'
+}, {
+  id: 'update-age',
+  update: 'age',
+  trigger: '7'
+}, {
+  id: 'end-message',
+  message: 'Thanks! Your data was submitted successfully!',
+  end: true
+}];
+
+class CvChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx(styled_components__WEBPACK_IMPORTED_MODULE_3__["ThemeProvider"], {
+      theme: theme,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 176,
+        columnNumber: 9
+      }
+    }, __jsx(react_simple_chatbot__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      steps: steps,
+      className: "chatBot",
+      botAvatar: "/img/maicon.png",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 177,
+        columnNumber: 13
+      }
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (CvChat);
+
+/***/ }),
 
 /***/ "./components/Layout.js":
 /*!******************************!*\
@@ -678,8 +989,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Grid */ "@material-ui/core/Grid");
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _phuocng_react_pdf_viewer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @phuocng/react-pdf-viewer */ "@phuocng/react-pdf-viewer");
-/* harmony import */ var _phuocng_react_pdf_viewer__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_phuocng_react_pdf_viewer__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_CvChat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/CvChat */ "./components/CvChat.js");
 var _jsxFileName = "/Users/maiconesteves/Projects/portfolio/pages/resume.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -701,107 +1011,39 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
   }
 }));
 
-function Resume(PDF) {
+function Resume() {
   const classes = useStyles();
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 9
-    }
-  }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    elevation: 5,
-    className: "content-paper",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
     }
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
     container: true,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 17
-    }
-  }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    item: true,
     lg: 12,
-    sm: 12,
-    xs: 12,
-    className: classes.title,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27,
-      columnNumber: 21
+      columnNumber: 13
     }
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    align: "center",
-    variant: "h3",
-    component: "h1",
+  }, __jsx(_components_CvChat__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28,
-      columnNumber: 25
+      columnNumber: 17
     }
-  }, "About Me"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    align: "center",
-    variant: "subtitle1",
-    component: "h2",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 25
-    }
-  }, "subtitle")), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    container: true,
-    lg: 12,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 21
-    }
-  }, __jsx(_phuocng_react_pdf_viewer__WEBPACK_IMPORTED_MODULE_6__["Worker"], {
-    workerUrl: "https://unpkg.com/pdfjs-dist@2.2.228/build/pdf.worker.min.js",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 25
-    }
-  }, __jsx("div", {
-    style: {
-      height: '750px'
-    },
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 29
-    }
-  }, __jsx(_phuocng_react_pdf_viewer__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    fileUrl: "/pdf/developer.pdf",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 33
-    }
-  })))))));
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Resume);
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*******************************!*\
   !*** multi ./pages/resume.js ***!
   \*******************************/
@@ -1022,17 +1264,6 @@ module.exports = require("@material-ui/icons/Notifications");
 
 /***/ }),
 
-/***/ "@phuocng/react-pdf-viewer":
-/*!********************************************!*\
-  !*** external "@phuocng/react-pdf-viewer" ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@phuocng/react-pdf-viewer");
-
-/***/ }),
-
 /***/ "framer-motion":
 /*!********************************!*\
   !*** external "framer-motion" ***!
@@ -1041,6 +1272,17 @@ module.exports = require("@phuocng/react-pdf-viewer");
 /***/ (function(module, exports) {
 
 module.exports = require("framer-motion");
+
+/***/ }),
+
+/***/ "prop-types":
+/*!*****************************!*\
+  !*** external "prop-types" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
 
 /***/ }),
 
@@ -1063,6 +1305,28 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-particles-js");
+
+/***/ }),
+
+/***/ "react-simple-chatbot":
+/*!***************************************!*\
+  !*** external "react-simple-chatbot" ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-simple-chatbot");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

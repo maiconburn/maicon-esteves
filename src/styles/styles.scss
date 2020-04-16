@@ -11,6 +11,7 @@ body{
     color: $text-color !important;
 }
 
+//Particle style
 .particle-canvas {
     background: $primary-color;
     position:fixed !important;
@@ -18,6 +19,14 @@ body{
     top:0;
     width:100%;
     height:100%;
+}
+
+.chatBot{
+    width: 100%;
+    margin-top: -150px;
+    .rsc-container{
+        width: auto;
+    }
 }
 
 .edge-header{
@@ -40,6 +49,7 @@ body{
     }
 }
 
+//Index style
 .wrapper{
     position: fixed;
     top:0px;

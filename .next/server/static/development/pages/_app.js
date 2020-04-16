@@ -93,17 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./pages/_app.js":
 /*!***********************!*\
   !*** ./pages/_app.js ***!
@@ -127,13 +116,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/theme */ "./src/theme.js");
 /* harmony import */ var _src_styles_styles_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/styles/styles.css */ "./src/styles/styles.css");
 /* harmony import */ var _src_styles_styles_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_src_styles_styles_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _phuocng_react_pdf_viewer_cjs_react_pdf_viewer_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css */ "./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css");
-/* harmony import */ var _phuocng_react_pdf_viewer_cjs_react_pdf_viewer_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_phuocng_react_pdf_viewer_cjs_react_pdf_viewer_css__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/maiconesteves/Projects/portfolio/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 
 
 
@@ -159,21 +145,21 @@ function MyApp(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 21,
       columnNumber: 5
     }
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 22,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 23,
       columnNumber: 9
     }
   }, "Maicon Esteves - Portfolio"), __jsx("meta", {
@@ -182,7 +168,7 @@ function MyApp(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 24,
       columnNumber: 9
     }
   })), __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["ThemeProvider"], {
@@ -190,21 +176,21 @@ function MyApp(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 26,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 28,
       columnNumber: 9
     }
   }), __jsx(Component, _extends({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 29,
       columnNumber: 9
     }
   }))));
