@@ -997,6 +997,11 @@ function CssBaseline(props) {
 }
 
  true ? CssBaseline.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
   /**
    * You can wrap a node.
    */
@@ -2109,8 +2114,12 @@ function createSpacing() {
       return transform(args[0]);
     }
 
-    return args.map(function (factor) {
-      var output = transform(factor);
+    return args.map(function (argument) {
+      if (typeof argument === 'string') {
+        return argument;
+      }
+
+      var output = transform(argument);
       return typeof output === 'number' ? "".concat(output, "px") : output;
     }).join(' ');
   }; // Backward compatibility, to remove in v5.
@@ -2966,7 +2975,7 @@ var ServerStyleSheets = /*#__PURE__*/function () {
       this.sheetsRegistry = new jss__WEBPACK_IMPORTED_MODULE_4__["SheetsRegistry"](); // A new class name generator
 
       var generateClassName = Object(_createGenerateClassName__WEBPACK_IMPORTED_MODULE_6__["default"])();
-      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_StylesProvider__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_StylesProvider__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         sheetsManager: sheetsManager,
         serverGenerateClassName: generateClassName,
         sheetsRegistry: this.sheetsRegistry
@@ -3112,7 +3121,7 @@ function StylesProvider(props) {
     });
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StylesContext.Provider, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StylesContext.Provider, {
     value: context
   }, children);
 }
@@ -3274,7 +3283,7 @@ function ThemeProvider(props) {
 
     return output;
   }, [localTheme, outerTheme]);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_useTheme_ThemeContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_useTheme_ThemeContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
     value: theme
   }, children);
 }
@@ -3663,7 +3672,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withThemeCreator", function() { return _withTheme__WEBPACK_IMPORTED_MODULE_13__["withThemeCreator"]; });
 
-/** @license Material-UI v4.9.6
+/** @license Material-UI v4.9.10
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -4053,7 +4062,8 @@ function makeStyles(stylesOrCreator) {
     meta: classNamePrefix,
     classNamePrefix: classNamePrefix
   };
-  return function () {
+
+  var useStyles = function useStyles() {
     var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var theme = Object(_useTheme__WEBPACK_IMPORTED_MODULE_6__["default"])() || defaultTheme;
 
@@ -4083,8 +4093,17 @@ function makeStyles(stylesOrCreator) {
 
       shouldUpdate.current = true;
     });
-    return getClasses(instance.current, props.classes, Component);
+    var classes = getClasses(instance.current, props.classes, Component);
+
+    if (true) {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      react__WEBPACK_IMPORTED_MODULE_2___default.a.useDebugValue(classes);
+    }
+
+    return classes;
   };
+
+  return useStyles;
 }
 
 /***/ }),
@@ -4335,7 +4354,7 @@ function styled(Component) {
       }
 
       var FinalComponent = ComponentProp || Component;
-      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(FinalComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(FinalComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         ref: ref,
         className: className
       }, spread), children);
@@ -4439,7 +4458,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function useTheme() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_ThemeContext__WEBPACK_IMPORTED_MODULE_1__["default"]);
+  var theme = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(_ThemeContext__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+  if (true) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.useDebugValue(theme);
+  }
+
+  return theme;
 }
 
 /***/ }),
@@ -4559,7 +4585,7 @@ var withStyles = function withStyles(stylesOrCreator) {
         }
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         ref: innerRef || ref,
         classes: classes
       }, more));
@@ -4669,7 +4695,7 @@ function withThemeCreator() {
           other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["innerRef"]);
 
       var theme = Object(_useTheme__WEBPACK_IMPORTED_MODULE_6__["default"])() || defaultTheme;
-      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         theme: theme,
         ref: innerRef || ref
       }, other));
@@ -5339,7 +5365,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "textAlign", function() { return _typography__WEBPACK_IMPORTED_MODULE_13__["textAlign"]; });
 
-/** @license Material-UI v4.9.6
+/** @license Material-UI v4.9.10
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -6258,6 +6284,67 @@ var refType = prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_
 
 /***/ }),
 
+/***/ "./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../css-loader/dist/cjs.js??ref--5-oneOf-5-1!../../../next/dist/compiled/postcss-loader??__nextjs_postcss!./react-pdf-viewer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../../css-loader/dist/cjs.js??ref--5-oneOf-5-1!../../../next/dist/compiled/postcss-loader??__nextjs_postcss!./react-pdf-viewer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../../css-loader/dist/cjs.js??ref--5-oneOf-5-1!../../../next/dist/compiled/postcss-loader??__nextjs_postcss!./react-pdf-viewer.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/clsx/dist/clsx.m.js":
 /*!******************************************!*\
   !*** ./node_modules/clsx/dist/clsx.m.js ***!
@@ -6308,6 +6395,20 @@ function toVal(mix) {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, "/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-icon {\n  fill: none;\n  stroke: #000000;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-width: 1;\n  text-align: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-primary-button {\n  background-color: #357edd;\n  border: none;\n  border-radius: 4px;\n  color: #ffffff;\n  cursor: pointer;\n  padding: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-menu-item {\n  align-items: center;\n  display: flex;\n  padding: 4px 0px;\n}\n.viewer-menu-item:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-menu-item-icon {\n  padding-left: 16px;\n  padding-right: 8px;\n}\n.viewer-menu-item-label {\n  flex-grow: 1;\n  flex-shrink: 1;\n  padding-right: 32px;\n}\n.viewer-menu-item-check {\n  padding-right: 16px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-button {\n  background-color: transparent;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  padding: 8px;\n}\n.viewer-button:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-button-selected {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-toolbar {\n  align-items: center;\n  display: flex;\n  width: 100%;\n}\n.viewer-toolbar-left {\n  align-items: center;\n  display: flex;\n}\n.viewer-toolbar-center {\n  align-items: center;\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 1;\n  justify-content: center;\n}\n.viewer-toolbar-right {\n  align-items: center;\n  display: flex;\n  margin-left: auto;\n}\n.viewer-toolbar-item {\n  padding: 0px 2px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-separator {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-progress-bar {\n  background-color: rgba(0, 0, 0, 0.1);\n  border-radius: 9999px;\n}\n.viewer-progress-bar-inner {\n  align-items: center;\n  background-color: #357edd;\n  border-radius: 9999px;\n  color: #ffffff;\n  display: flex;\n  font-size: 10px;\n  justify-content: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-spinner {\n  -webkit-animation-duration: 750ms;\n          animation-duration: 750ms;\n  -webkit-animation-name: viewer-spinner-transform;\n          animation-name: viewer-spinner-transform;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n  -webkit-animation-timing-function: linear;\n          animation-timing-function: linear;\n  transition-property: transform;\n}\n.viewer-spinner-circle {\n  fill: none;\n  stroke: rgba(0, 0, 0, 0.4);\n  stroke-linecap: round;\n  stroke-width: 2;\n}\n@-webkit-keyframes viewer-spinner-transform {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n@keyframes viewer-spinner-transform {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-menu-divider {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n  margin: 4px 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-layout-container {\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr;\n  grid-template-columns: 1fr;\n  -ms-grid-rows: 44px calc(100% - 44px);\n  grid-template-rows: 44px calc(100% - 44px);\n  height: 100%;\n  overflow: hidden;\n  position: relative;\n  width: 100%;\n}\n.viewer-layout-toolbar {\n  align-items: center;\n  background-color: #eeeeee;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  -ms-grid-column: 1;\n  grid-column-start: 1;\n  -ms-grid-column-span: 2;\n  grid-column-end: 3;\n  -ms-grid-row: 1;\n  grid-row: 1;\n  justify-content: center;\n  padding: 4px;\n}\n.viewer-layout-sidebar {\n  border-right: 1px solid rgba(0, 0, 0, 0.2);\n  display: none;\n  -ms-grid-column: 1;\n  grid-column: 1;\n  -ms-grid-row: 2;\n  grid-row: 2;\n  justify-content: center;\n}\n.viewer-layout-main {\n  -ms-grid-column: 1;\n  grid-column: 1;\n  -ms-grid-row: 2;\n  grid-row: 2;\n  overflow: scroll;\n}\n/* With sidebar opened */\n.viewer-layout-with-sidebar.viewer-layout-container {\n  -ms-grid-columns: 30% 1fr;\n  grid-template-columns: 30% 1fr;\n}\n.viewer-layout-with-sidebar .viewer-layout-sidebar {\n  display: flex;\n}\n.viewer-layout-with-sidebar .viewer-layout-main {\n  -ms-grid-column: 2;\n  grid-column: 2;\n  -ms-grid-row: 2;\n  grid-row: 2;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-modal-body {\n  background: #ffffff;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  border-radius: 4px;\n  margin: 160px auto 0px;\n  max-width: 480px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-popover-body {\n  background: #FFF;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  border-radius: 4px;\n  left: 0;\n  padding: 8px 0;\n  position: absolute;\n  top: -9999px;\n  z-index: 9999;\n}\n.viewer-popover-body-arrow {\n  background: #ffffff;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-popover-overlay {\n  bottom: 0px;\n  left: 0px;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-modal-overlay {\n  background-color: rgba(0, 0, 0, 0.5);\n  bottom: 0px;\n  left: 0px;\n  position: fixed;\n  right: 0px;\n  top: 0px;\n  z-index: 9999;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-tooltip-body {\n  background: #000;\n  border-radius: 4px;\n  color: #FFF;\n  left: 0;\n  max-width: 300px;\n  position: absolute;\n  text-align: center;\n  top: -9999px;\n  z-index: 9999;\n}\n.viewer-tooltip-body-arrow {\n  background-color: #000;\n}\n.viewer-tooltip-body-content {\n  padding: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-doc-error {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n.viewer-doc-error-text {\n  background-color: #e53e3e;\n  border-radius: 0.25rem;\n  color: #fff;\n  line-height: 1.5;\n  max-width: 50%;\n  padding: 0.5rem;\n}\n.viewer-doc-loading {\n  align-items: center;\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  width: 100%;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-page-size-calculator {\n  align-items: center;\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  width: 100%;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-inner-pages-vertical {\n  display: flex;\n  flex-direction: column;\n}\n.viewer-inner-pages-horizontal {\n  display: flex;\n  flex-direction: row;\n}\n.viewer-inner-pages-wrapped {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.viewer-inner-page {\n  padding: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-arrow {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n  border-left-color: rgba(0, 0, 0, 0.3);\n  border-right: 1px solid rgba(0, 0, 0, 0.3);\n  border-top-color: rgba(0, 0, 0, 0.3);\n  height: 10px;\n  position: absolute;\n  width: 10px;\n  z-index: 0;\n}\n.viewer-arrow-tl {\n  bottom: 0;\n  left: 0;\n  transform: translate(50%, 50%) rotate(45deg);\n}\n.viewer-arrow-tc {\n  bottom: 0;\n  left: 50%;\n  transform: translate(-50%, 50%) rotate(45deg);\n}\n.viewer-arrow-tr {\n  bottom: 0;\n  right: 0;\n  transform: translate(-50%, 50%) rotate(45deg);\n}\n.viewer-arrow-rt {\n  left: 0;\n  top: 0;\n  transform: translate(-50%, 50%) rotate(135deg);\n}\n.viewer-arrow-rc {\n  left: 0;\n  top: 50%;\n  transform: translate(-50%, -50%) rotate(135deg);\n}\n.viewer-arrow-rb {\n  bottom: 0;\n  left: 0;\n  transform: translate(-50%, -50%) rotate(135deg);\n}\n.viewer-arrow-bl {\n  left: 0;\n  top: 0;\n  transform: translate(50%, -50%) rotate(225deg);\n}\n.viewer-arrow-bc {\n  left: 50%;\n  top: 0;\n  transform: translate(-50%, -50%) rotate(225deg);\n}\n.viewer-arrow-br {\n  right: 0;\n  top: 0;\n  transform: translate(-50%, -50%) rotate(225deg);\n}\n.viewer-arrow-lt {\n  right: 0;\n  top: 0;\n  transform: translate(50%, 50%) rotate(315deg);\n}\n.viewer-arrow-lc {\n  right: 0;\n  top: 50%;\n  transform: translate(50%, -50%) rotate(315deg);\n}\n.viewer-arrow-lb {\n  bottom: 0;\n  right: 0;\n  transform: translate(50%, -50%) rotate(315deg);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-asking-password {\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  width: 100%;\n}\n.viewer-asking-password-message {\n  margin: 8px 0px;\n}\n.viewer-asking-password-input-container {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n}\n.viewer-asking-password-input {\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  padding: 8px;\n  width: 200px;\n}\n.viewer-asking-password-button {\n  background-color: #357edd;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-left-color: transparent;\n  color: #ffffff;\n  cursor: pointer;\n  padding: 8px 16px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-page-layer {\n  align-items: center;\n  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);\n  display: flex;\n  justify-content: center;\n  margin: 0px auto;\n  position: relative;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-grab {\n  cursor: -webkit-grab;\n  cursor: grab;\n}\n.viewer-grab :not(input),\n.viewer-grab :not(select),\n.viewer-grab :not(textarea) {\n  cursor: -webkit-grab !important;\n  cursor: grab !important;\n}\n.viewer-grabbing {\n  cursor: -webkit-grabbing;\n  cursor: grabbing;\n}\n.viewer-grabbing :not(input),\n.viewer-grabbing :not(select),\n.viewer-grabbing :not(textarea) {\n  cursor: -webkit-grabbing !important;\n  cursor: grabbing !important;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-drop-area {\n  align-items: center;\n  background-color: #ffffff;\n  border: 2px dashed rgba(0, 0, 0, 0.3);\n  bottom: 0px;\n  display: flex;\n  font-size: 24px;\n  justify-content: center;\n  left: 0px;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 9999;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-print-zone {\n  display: none;\n}\n@media print {\n  .viewer-body-printing #root {\n    display: none;\n  }\n  .viewer-print-zone {\n    display: block;\n  }\n  .viewer-print-zone-page-thumbnail {\n    overflow: hidden;\n    page-break-after: auto;\n    page-break-inside: avoid;\n  }\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-exit-fullscreen {\n  bottom: 0;\n  padding: 8px;\n  position: fixed;\n  right: 0;\n}\n.viewer-exit-fullscreen-inner {\n  background-color: #FFF;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-sidebar {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n.viewer-sidebar-tabs {\n  align-items: center;\n  background-color: #eeeeee;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  display: flex;\n  justify-content: center;\n  padding: 4px;\n}\n.viewer-sidebar-tab {\n  padding: 0px 2px;\n}\n.viewer-sidebar-content {\n  flex-grow: 1;\n  flex-shrink: 1;\n  overflow: auto;\n  padding: 8px 0px;\n}\n.viewer-sidebar-thumbnails {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-toolbar-current-page-input {\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  padding: 4px;\n  width: 50px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-annotation-layer section {\n  position: absolute;\n}\n.viewer-annotation-layer .linkAnnotation > a {\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.viewer-annotation-layer .linkAnnotation > a:hover {\n  background: rgba(255, 255, 0, 0.2);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-print-progress {\n  align-items: center;\n  background-color: rgba(0, 0, 0, 0.2);\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  left: 0px;\n  position: absolute;\n  top: 0px;\n  width: 100%;\n  z-index: 9999;\n}\n.viewer-print-progress-inner {\n  background-color: #ffffff;\n  border-radius: 4px;\n  padding: 24px;\n  text-align: center;\n  width: 240px;\n}\n.viewer-print-progress-bar {\n  margin-bottom: 16px;\n}\n.viewer-print-progress-message {\n  margin-bottom: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-canvas-layer {\n  left: 0px;\n  position: absolute;\n  top: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-text-layer {\n  height: 100%;\n  left: 0px;\n  line-height: 1;\n  position: absolute;\n  top: 0px;\n  width: 100%;\n}\n.viewer-text {\n  color: transparent;\n  cursor: text;\n  opacity: 0.2;\n  position: absolute;\n  transform-origin: 0% 0%;\n  white-space: pre;\n}\n.viewer-text::-moz-selection {\n  background: #0000ff;\n  color: transparent;\n}\n.viewer-text::selection {\n  background: #0000ff;\n  color: transparent;\n}\n.viewer-text-highlight {\n  background-color: #b400aa;\n  border-radius: 4px;\n  margin: -1px;\n  padding: 1px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-bookmark-empty {\n  text-align: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-thumbnail {\n  padding: 8px;\n}\n.viewer-thumbnail:hover {\n  background-color: rgba(0, 0, 0, 0.3);\n}\n.viewer-thumbnail-selected {\n  background-color: rgba(0, 0, 0, 0.3);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-zoom-popover-target {\n  align-items: center;\n  display: flex;\n}\n.viewer-zoom-popover-target-scale {\n  margin-right: 4px;\n}\n.viewer-zoom-popover-target-arrow {\n  border-color: rgba(0, 0, 0, 0.6) transparent transparent;\n  border-style: solid;\n  border-width: 8px 4px 0px;\n  height: 0px;\n  width: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-open-file {\n  background-color: transparent;\n  border: none;\n  border-radius: 4px;\n  padding: 8px;\n  position: relative;\n}\n.viewer-open-file:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-open-file-input {\n  bottom: 0px;\n  cursor: pointer;\n  height: 100%;\n  left: 0px;\n  opacity: 0;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  width: 100%;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-properties-modal {\n  padding: 8px 0px;\n}\n.viewer-properties-modal-group {\n  padding: 0px 8px;\n}\n.viewer-properties-modal-footer {\n  display: flex;\n  justify-content: center;\n  margin-top: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-search-popover {\n  padding: 0 8px;\n}\n.viewer-search-popover-input-counter {\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  display: flex;\n  margin-bottom: 8px;\n  position: relative;\n  width: 180px;\n}\n.viewer-search-popover-input {\n  border: none;\n  padding: 4px;\n  width: 100%;\n}\n.viewer-search-popover-counter {\n  align-items: center;\n  bottom: 0px;\n  display: flex;\n  padding-right: 4px;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n}\n.viewer-search-popover-label {\n  align-items: center;\n  display: flex;\n  margin-bottom: 8px;\n}\n.viewer-search-popover-label-checkbox {\n  margin-right: 4px;\n}\n.viewer-search-popover-footer {\n  align-items: center;\n  display: flex;\n}\n.viewer-search-popover-footer-item {\n  padding: 0px 4px;\n}\n.viewer-search-popover-footer-button {\n  margin-left: auto;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-bookmark-list {\n  list-style-type: none;\n  margin: 0px;\n  padding: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-thumbnail-container {\n  align-items: center;\n  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 8px 0px;\n  display: flex;\n  justify-content: center;\n  margin: 0px auto;\n  position: relative;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-attachment-list {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n}\n.viewer-attachment-list-empty {\n  text-align: center;\n}\n.viewer-attachment-item {\n  padding: 8px;\n}\n.viewer-attachment-item:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-menu {\n  list-style-type: none;\n  margin: 0px;\n  padding: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-properties-loader {\n  text-align: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-property-item {\n  margin: 8px 0px;\n}\n.viewer-property-item-label {\n  display: inline-block;\n  padding-right: 8px;\n  width: 30%;\n}\n.viewer-property-item-value {\n  display: inline-block;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-bookmark-item {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  padding-bottom: 6px;\n  padding-right: 4px;\n  padding-top: 6px;\n}\n.viewer-bookmark-item:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-bookmark-toggle {\n  margin-right: 4px;\n  transform: rotate(90deg);\n}\n.viewer-bookmark-toggle-expanded {\n  transform: rotate(0deg);\n}\n.viewer-bookmark-title {\n  flex-grow: 1;\n  flex-shrink: 1;\n}\n", "",{"version":3,"sources":["/Users/maiconesteves/Projects/portfolio/node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css"],"names":[],"mappings":"AAAA;;;;;;EAME;AACF;EACE,UAAU;EACV,eAAe;EACf,qBAAqB;EACrB,sBAAsB;EACtB,eAAe;EACf,kBAAkB;AACpB;AACA;;;;;;EAME;AACF;EACE,yBAAyB;EACzB,YAAY;EACZ,kBAAkB;EAClB,cAAc;EACd,eAAe;EACf,YAAY;AACd;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,aAAa;EACb,gBAAgB;AAClB;AACA;EACE,oCAAoC;AACtC;AACA;EACE,kBAAkB;EAClB,kBAAkB;AACpB;AACA;EACE,YAAY;EACZ,cAAc;EACd,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;;;;;;EAME;AACF;EACE,6BAA6B;EAC7B,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,YAAY;AACd;AACA;EACE,oCAAoC;AACtC;AACA;EACE,oCAAoC;AACtC;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,aAAa;EACb,WAAW;AACb;AACA;EACE,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,YAAY;EACZ,cAAc;EACd,uBAAuB;AACzB;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,iBAAiB;AACnB;AACA;EACE,gBAAgB;AAClB;AACA;;;;;;EAME;AACF;EACE,2CAA2C;AAC7C;AACA;;;;;;EAME;AACF;EACE,oCAAoC;EACpC,qBAAqB;AACvB;AACA;EACE,mBAAmB;EACnB,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,aAAa;EACb,eAAe;EACf,uBAAuB;AACzB;AACA;;;;;;EAME;AACF;EACE,iCAAyB;UAAzB,yBAAyB;EACzB,gDAAwC;UAAxC,wCAAwC;EACxC,2CAAmC;UAAnC,mCAAmC;EACnC,yCAAiC;UAAjC,iCAAiC;EACjC,8BAA8B;AAChC;AACA;EACE,UAAU;EACV,0BAA0B;EAC1B,qBAAqB;EACrB,eAAe;AACjB;AACA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF;AAPA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF;AACA;;;;;;EAME;AACF;EACE,2CAA2C;EAC3C,eAAe;AACjB;AACA;;;;;;EAME;AACF;EACE,oCAAoC;EACpC,iBAAiB;EACjB,aAAa;EACb,qBAAqB;EACrB,0BAA0B;EAC1B,qCAAqC;EACrC,0CAA0C;EAC1C,YAAY;EACZ,gBAAgB;EAChB,kBAAkB;EAClB,WAAW;AACb;AACA;EACE,mBAAmB;EACnB,yBAAyB;EACzB,2CAA2C;EAC3C,kBAAkB;EAClB,oBAAoB;EACpB,uBAAuB;EACvB,kBAAkB;EAClB,eAAe;EACf,WAAW;EACX,uBAAuB;EACvB,YAAY;AACd;AACA;EACE,0CAA0C;EAC1C,aAAa;EACb,kBAAkB;EAClB,cAAc;EACd,eAAe;EACf,WAAW;EACX,uBAAuB;AACzB;AACA;EACE,kBAAkB;EAClB,cAAc;EACd,eAAe;EACf,WAAW;EACX,gBAAgB;AAClB;AACA,wBAAwB;AACxB;EACE,yBAAyB;EACzB,8BAA8B;AAChC;AACA;EACE,aAAa;AACf;AACA;EACE,kBAAkB;EAClB,cAAc;EACd,eAAe;EACf,WAAW;AACb;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,oCAAoC;EACpC,kBAAkB;EAClB,sBAAsB;EACtB,gBAAgB;AAClB;AACA;;;;;;EAME;AACF;EACE,gBAAgB;EAChB,oCAAoC;EACpC,kBAAkB;EAClB,OAAO;EACP,cAAc;EACd,kBAAkB;EAClB,YAAY;EACZ,aAAa;AACf;AACA;EACE,mBAAmB;AACrB;AACA;;;;;;EAME;AACF;EACE,WAAW;EACX,SAAS;EACT,kBAAkB;EAClB,UAAU;EACV,QAAQ;AACV;AACA;;;;;;EAME;AACF;EACE,oCAAoC;EACpC,WAAW;EACX,SAAS;EACT,eAAe;EACf,UAAU;EACV,QAAQ;EACR,aAAa;AACf;AACA;;;;;;EAME;AACF;EACE,gBAAgB;EAChB,kBAAkB;EAClB,WAAW;EACX,OAAO;EACP,gBAAgB;EAChB,kBAAkB;EAClB,kBAAkB;EAClB,YAAY;EACZ,aAAa;AACf;AACA;EACE,sBAAsB;AACxB;AACA;EACE,YAAY;AACd;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,aAAa;EACb,uBAAuB;EACvB,YAAY;AACd;AACA;EACE,yBAAyB;EACzB,sBAAsB;EACtB,WAAW;EACX,gBAAgB;EAChB,cAAc;EACd,eAAe;AACjB;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,YAAY;EACZ,uBAAuB;EACvB,WAAW;AACb;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,aAAa;EACb,YAAY;EACZ,uBAAuB;EACvB,WAAW;AACb;AACA;;;;;;EAME;AACF;EACE,aAAa;EACb,sBAAsB;AACxB;AACA;EACE,aAAa;EACb,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,eAAe;EACf,uBAAuB;AACzB;AACA;EACE,YAAY;AACd;AACA;;;;;;EAME;AACF;EACE,2CAA2C;EAC3C,qCAAqC;EACrC,0CAA0C;EAC1C,oCAAoC;EACpC,YAAY;EACZ,kBAAkB;EAClB,WAAW;EACX,UAAU;AACZ;AACA;EACE,SAAS;EACT,OAAO;EACP,4CAA4C;AAC9C;AACA;EACE,SAAS;EACT,SAAS;EACT,6CAA6C;AAC/C;AACA;EACE,SAAS;EACT,QAAQ;EACR,6CAA6C;AAC/C;AACA;EACE,OAAO;EACP,MAAM;EACN,8CAA8C;AAChD;AACA;EACE,OAAO;EACP,QAAQ;EACR,+CAA+C;AACjD;AACA;EACE,SAAS;EACT,OAAO;EACP,+CAA+C;AACjD;AACA;EACE,OAAO;EACP,MAAM;EACN,8CAA8C;AAChD;AACA;EACE,SAAS;EACT,MAAM;EACN,+CAA+C;AACjD;AACA;EACE,QAAQ;EACR,MAAM;EACN,+CAA+C;AACjD;AACA;EACE,QAAQ;EACR,MAAM;EACN,6CAA6C;AAC/C;AACA;EACE,QAAQ;EACR,QAAQ;EACR,8CAA8C;AAChD;AACA;EACE,SAAS;EACT,QAAQ;EACR,8CAA8C;AAChD;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,oCAAoC;EACpC,aAAa;EACb,YAAY;EACZ,uBAAuB;EACvB,WAAW;AACb;AACA;EACE,eAAe;AACjB;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,uBAAuB;AACzB;AACA;EACE,oCAAoC;EACpC,YAAY;EACZ,YAAY;AACd;AACA;EACE,yBAAyB;EACzB,oCAAoC;EACpC,8BAA8B;EAC9B,cAAc;EACd,eAAe;EACf,iBAAiB;AACnB;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,4CAA4C;EAC5C,aAAa;EACb,uBAAuB;EACvB,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;;;;;EAME;AACF;EACE,oBAAY;EAAZ,YAAY;AACd;AACA;;;EAGE,+BAAuB;EAAvB,uBAAuB;AACzB;AACA;EACE,wBAAgB;EAAhB,gBAAgB;AAClB;AACA;;;EAGE,mCAA2B;EAA3B,2BAA2B;AAC7B;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,yBAAyB;EACzB,qCAAqC;EACrC,WAAW;EACX,aAAa;EACb,eAAe;EACf,uBAAuB;EACvB,SAAS;EACT,kBAAkB;EAClB,UAAU;EACV,QAAQ;EACR,aAAa;AACf;AACA;;;;;;EAME;AACF;EACE,aAAa;AACf;AACA;EACE;IACE,aAAa;EACf;EACA;IACE,cAAc;EAChB;EACA;IACE,gBAAgB;IAChB,sBAAsB;IACtB,wBAAwB;EAC1B;AACF;AACA;;;;;;EAME;AACF;EACE,SAAS;EACT,YAAY;EACZ,eAAe;EACf,QAAQ;AACV;AACA;EACE,sBAAsB;AACxB;AACA;;;;;;EAME;AACF;EACE,aAAa;EACb,sBAAsB;EACtB,YAAY;EACZ,WAAW;AACb;AACA;EACE,mBAAmB;EACnB,yBAAyB;EACzB,2CAA2C;EAC3C,aAAa;EACb,uBAAuB;EACvB,YAAY;AACd;AACA;EACE,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,cAAc;EACd,cAAc;EACd,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;AACA;;;;;;EAME;AACF;EACE,oCAAoC;EACpC,YAAY;EACZ,WAAW;AACb;AACA;;;;;;EAME;AACF;EACE,kBAAkB;AACpB;AACA;EACE,YAAY;EACZ,OAAO;EACP,kBAAkB;EAClB,MAAM;EACN,WAAW;AACb;AACA;EACE,kCAAkC;AACpC;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,oCAAoC;EACpC,aAAa;EACb,YAAY;EACZ,uBAAuB;EACvB,SAAS;EACT,kBAAkB;EAClB,QAAQ;EACR,WAAW;EACX,aAAa;AACf;AACA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,aAAa;EACb,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,mBAAmB;AACrB;AACA;EACE,kBAAkB;AACpB;AACA;;;;;;EAME;AACF;EACE,SAAS;EACT,kBAAkB;EAClB,QAAQ;AACV;AACA;;;;;;EAME;AACF;EACE,YAAY;EACZ,SAAS;EACT,cAAc;EACd,kBAAkB;EAClB,QAAQ;EACR,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,YAAY;EACZ,YAAY;EACZ,kBAAkB;EAClB,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;AAHA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;AACA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,YAAY;EACZ,YAAY;AACd;AACA;;;;;;EAME;AACF;EACE,kBAAkB;AACpB;AACA;;;;;;EAME;AACF;EACE,YAAY;AACd;AACA;EACE,oCAAoC;AACtC;AACA;EACE,oCAAoC;AACtC;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,iBAAiB;AACnB;AACA;EACE,wDAAwD;EACxD,mBAAmB;EACnB,yBAAyB;EACzB,WAAW;EACX,UAAU;AACZ;AACA;;;;;;EAME;AACF;EACE,6BAA6B;EAC7B,YAAY;EACZ,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;AACpB;AACA;EACE,oCAAoC;AACtC;AACA;EACE,WAAW;EACX,eAAe;EACf,YAAY;EACZ,SAAS;EACT,UAAU;EACV,kBAAkB;EAClB,UAAU;EACV,QAAQ;EACR,WAAW;AACb;AACA;;;;;;EAME;AACF;EACE,gBAAgB;AAClB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,aAAa;EACb,uBAAuB;EACvB,eAAe;AACjB;AACA;;;;;;EAME;AACF;EACE,cAAc;AAChB;AACA;EACE,mBAAmB;EACnB,oCAAoC;EACpC,aAAa;EACb,kBAAkB;EAClB,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,YAAY;EACZ,YAAY;EACZ,WAAW;AACb;AACA;EACE,mBAAmB;EACnB,WAAW;EACX,aAAa;EACb,kBAAkB;EAClB,kBAAkB;EAClB,UAAU;EACV,QAAQ;AACV;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,kBAAkB;AACpB;AACA;EACE,iBAAiB;AACnB;AACA;EACE,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,gBAAgB;AAClB;AACA;EACE,iBAAiB;AACnB;AACA;;;;;;EAME;AACF;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;AACd;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,8CAA8C;EAC9C,aAAa;EACb,uBAAuB;EACvB,gBAAgB;EAChB,kBAAkB;AACpB;AACA;;;;;;EAME;AACF;EACE,qBAAqB;EACrB,SAAS;EACT,UAAU;EACV,WAAW;AACb;AACA;EACE,kBAAkB;AACpB;AACA;EACE,YAAY;AACd;AACA;EACE,oCAAoC;AACtC;AACA;;;;;;EAME;AACF;EACE,qBAAqB;EACrB,WAAW;EACX,YAAY;AACd;AACA;;;;;;EAME;AACF;EACE,kBAAkB;AACpB;AACA;;;;;;EAME;AACF;EACE,eAAe;AACjB;AACA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,UAAU;AACZ;AACA;EACE,qBAAqB;AACvB;AACA;;;;;;EAME;AACF;EACE,mBAAmB;EACnB,eAAe;EACf,aAAa;EACb,mBAAmB;EACnB,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,oCAAoC;AACtC;AACA;EACE,iBAAiB;EACjB,wBAAwB;AAC1B;AACA;EACE,uBAAuB;AACzB;AACA;EACE,YAAY;EACZ,cAAc;AAChB","file":"react-pdf-viewer.css","sourcesContent":["/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-icon {\n  fill: none;\n  stroke: #000000;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-width: 1;\n  text-align: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-primary-button {\n  background-color: #357edd;\n  border: none;\n  border-radius: 4px;\n  color: #ffffff;\n  cursor: pointer;\n  padding: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-menu-item {\n  align-items: center;\n  display: flex;\n  padding: 4px 0px;\n}\n.viewer-menu-item:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-menu-item-icon {\n  padding-left: 16px;\n  padding-right: 8px;\n}\n.viewer-menu-item-label {\n  flex-grow: 1;\n  flex-shrink: 1;\n  padding-right: 32px;\n}\n.viewer-menu-item-check {\n  padding-right: 16px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-button {\n  background-color: transparent;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  padding: 8px;\n}\n.viewer-button:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-button-selected {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-toolbar {\n  align-items: center;\n  display: flex;\n  width: 100%;\n}\n.viewer-toolbar-left {\n  align-items: center;\n  display: flex;\n}\n.viewer-toolbar-center {\n  align-items: center;\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 1;\n  justify-content: center;\n}\n.viewer-toolbar-right {\n  align-items: center;\n  display: flex;\n  margin-left: auto;\n}\n.viewer-toolbar-item {\n  padding: 0px 2px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-separator {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-progress-bar {\n  background-color: rgba(0, 0, 0, 0.1);\n  border-radius: 9999px;\n}\n.viewer-progress-bar-inner {\n  align-items: center;\n  background-color: #357edd;\n  border-radius: 9999px;\n  color: #ffffff;\n  display: flex;\n  font-size: 10px;\n  justify-content: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-spinner {\n  animation-duration: 750ms;\n  animation-name: viewer-spinner-transform;\n  animation-iteration-count: infinite;\n  animation-timing-function: linear;\n  transition-property: transform;\n}\n.viewer-spinner-circle {\n  fill: none;\n  stroke: rgba(0, 0, 0, 0.4);\n  stroke-linecap: round;\n  stroke-width: 2;\n}\n@keyframes viewer-spinner-transform {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-menu-divider {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n  margin: 4px 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-layout-container {\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr;\n  grid-template-columns: 1fr;\n  -ms-grid-rows: 44px calc(100% - 44px);\n  grid-template-rows: 44px calc(100% - 44px);\n  height: 100%;\n  overflow: hidden;\n  position: relative;\n  width: 100%;\n}\n.viewer-layout-toolbar {\n  align-items: center;\n  background-color: #eeeeee;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  -ms-grid-column: 1;\n  grid-column-start: 1;\n  -ms-grid-column-span: 2;\n  grid-column-end: 3;\n  -ms-grid-row: 1;\n  grid-row: 1;\n  justify-content: center;\n  padding: 4px;\n}\n.viewer-layout-sidebar {\n  border-right: 1px solid rgba(0, 0, 0, 0.2);\n  display: none;\n  -ms-grid-column: 1;\n  grid-column: 1;\n  -ms-grid-row: 2;\n  grid-row: 2;\n  justify-content: center;\n}\n.viewer-layout-main {\n  -ms-grid-column: 1;\n  grid-column: 1;\n  -ms-grid-row: 2;\n  grid-row: 2;\n  overflow: scroll;\n}\n/* With sidebar opened */\n.viewer-layout-with-sidebar.viewer-layout-container {\n  -ms-grid-columns: 30% 1fr;\n  grid-template-columns: 30% 1fr;\n}\n.viewer-layout-with-sidebar .viewer-layout-sidebar {\n  display: flex;\n}\n.viewer-layout-with-sidebar .viewer-layout-main {\n  -ms-grid-column: 2;\n  grid-column: 2;\n  -ms-grid-row: 2;\n  grid-row: 2;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-modal-body {\n  background: #ffffff;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  border-radius: 4px;\n  margin: 160px auto 0px;\n  max-width: 480px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-popover-body {\n  background: #FFF;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  border-radius: 4px;\n  left: 0;\n  padding: 8px 0;\n  position: absolute;\n  top: -9999px;\n  z-index: 9999;\n}\n.viewer-popover-body-arrow {\n  background: #ffffff;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-popover-overlay {\n  bottom: 0px;\n  left: 0px;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-modal-overlay {\n  background-color: rgba(0, 0, 0, 0.5);\n  bottom: 0px;\n  left: 0px;\n  position: fixed;\n  right: 0px;\n  top: 0px;\n  z-index: 9999;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-tooltip-body {\n  background: #000;\n  border-radius: 4px;\n  color: #FFF;\n  left: 0;\n  max-width: 300px;\n  position: absolute;\n  text-align: center;\n  top: -9999px;\n  z-index: 9999;\n}\n.viewer-tooltip-body-arrow {\n  background-color: #000;\n}\n.viewer-tooltip-body-content {\n  padding: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-doc-error {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n.viewer-doc-error-text {\n  background-color: #e53e3e;\n  border-radius: 0.25rem;\n  color: #fff;\n  line-height: 1.5;\n  max-width: 50%;\n  padding: 0.5rem;\n}\n.viewer-doc-loading {\n  align-items: center;\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  width: 100%;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-page-size-calculator {\n  align-items: center;\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  width: 100%;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-inner-pages-vertical {\n  display: flex;\n  flex-direction: column;\n}\n.viewer-inner-pages-horizontal {\n  display: flex;\n  flex-direction: row;\n}\n.viewer-inner-pages-wrapped {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.viewer-inner-page {\n  padding: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-arrow {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.3);\n  border-left-color: rgba(0, 0, 0, 0.3);\n  border-right: 1px solid rgba(0, 0, 0, 0.3);\n  border-top-color: rgba(0, 0, 0, 0.3);\n  height: 10px;\n  position: absolute;\n  width: 10px;\n  z-index: 0;\n}\n.viewer-arrow-tl {\n  bottom: 0;\n  left: 0;\n  transform: translate(50%, 50%) rotate(45deg);\n}\n.viewer-arrow-tc {\n  bottom: 0;\n  left: 50%;\n  transform: translate(-50%, 50%) rotate(45deg);\n}\n.viewer-arrow-tr {\n  bottom: 0;\n  right: 0;\n  transform: translate(-50%, 50%) rotate(45deg);\n}\n.viewer-arrow-rt {\n  left: 0;\n  top: 0;\n  transform: translate(-50%, 50%) rotate(135deg);\n}\n.viewer-arrow-rc {\n  left: 0;\n  top: 50%;\n  transform: translate(-50%, -50%) rotate(135deg);\n}\n.viewer-arrow-rb {\n  bottom: 0;\n  left: 0;\n  transform: translate(-50%, -50%) rotate(135deg);\n}\n.viewer-arrow-bl {\n  left: 0;\n  top: 0;\n  transform: translate(50%, -50%) rotate(225deg);\n}\n.viewer-arrow-bc {\n  left: 50%;\n  top: 0;\n  transform: translate(-50%, -50%) rotate(225deg);\n}\n.viewer-arrow-br {\n  right: 0;\n  top: 0;\n  transform: translate(-50%, -50%) rotate(225deg);\n}\n.viewer-arrow-lt {\n  right: 0;\n  top: 0;\n  transform: translate(50%, 50%) rotate(315deg);\n}\n.viewer-arrow-lc {\n  right: 0;\n  top: 50%;\n  transform: translate(50%, -50%) rotate(315deg);\n}\n.viewer-arrow-lb {\n  bottom: 0;\n  right: 0;\n  transform: translate(50%, -50%) rotate(315deg);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-asking-password {\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  width: 100%;\n}\n.viewer-asking-password-message {\n  margin: 8px 0px;\n}\n.viewer-asking-password-input-container {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n}\n.viewer-asking-password-input {\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  padding: 8px;\n  width: 200px;\n}\n.viewer-asking-password-button {\n  background-color: #357edd;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-left-color: transparent;\n  color: #ffffff;\n  cursor: pointer;\n  padding: 8px 16px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-page-layer {\n  align-items: center;\n  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);\n  display: flex;\n  justify-content: center;\n  margin: 0px auto;\n  position: relative;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-grab {\n  cursor: grab;\n}\n.viewer-grab :not(input),\n.viewer-grab :not(select),\n.viewer-grab :not(textarea) {\n  cursor: grab !important;\n}\n.viewer-grabbing {\n  cursor: grabbing;\n}\n.viewer-grabbing :not(input),\n.viewer-grabbing :not(select),\n.viewer-grabbing :not(textarea) {\n  cursor: grabbing !important;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-drop-area {\n  align-items: center;\n  background-color: #ffffff;\n  border: 2px dashed rgba(0, 0, 0, 0.3);\n  bottom: 0px;\n  display: flex;\n  font-size: 24px;\n  justify-content: center;\n  left: 0px;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 9999;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-print-zone {\n  display: none;\n}\n@media print {\n  .viewer-body-printing #root {\n    display: none;\n  }\n  .viewer-print-zone {\n    display: block;\n  }\n  .viewer-print-zone-page-thumbnail {\n    overflow: hidden;\n    page-break-after: auto;\n    page-break-inside: avoid;\n  }\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-exit-fullscreen {\n  bottom: 0;\n  padding: 8px;\n  position: fixed;\n  right: 0;\n}\n.viewer-exit-fullscreen-inner {\n  background-color: #FFF;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-sidebar {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  width: 100%;\n}\n.viewer-sidebar-tabs {\n  align-items: center;\n  background-color: #eeeeee;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  display: flex;\n  justify-content: center;\n  padding: 4px;\n}\n.viewer-sidebar-tab {\n  padding: 0px 2px;\n}\n.viewer-sidebar-content {\n  flex-grow: 1;\n  flex-shrink: 1;\n  overflow: auto;\n  padding: 8px 0px;\n}\n.viewer-sidebar-thumbnails {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-toolbar-current-page-input {\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  padding: 4px;\n  width: 50px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-annotation-layer section {\n  position: absolute;\n}\n.viewer-annotation-layer .linkAnnotation > a {\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.viewer-annotation-layer .linkAnnotation > a:hover {\n  background: rgba(255, 255, 0, 0.2);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-print-progress {\n  align-items: center;\n  background-color: rgba(0, 0, 0, 0.2);\n  display: flex;\n  height: 100%;\n  justify-content: center;\n  left: 0px;\n  position: absolute;\n  top: 0px;\n  width: 100%;\n  z-index: 9999;\n}\n.viewer-print-progress-inner {\n  background-color: #ffffff;\n  border-radius: 4px;\n  padding: 24px;\n  text-align: center;\n  width: 240px;\n}\n.viewer-print-progress-bar {\n  margin-bottom: 16px;\n}\n.viewer-print-progress-message {\n  margin-bottom: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-canvas-layer {\n  left: 0px;\n  position: absolute;\n  top: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-text-layer {\n  height: 100%;\n  left: 0px;\n  line-height: 1;\n  position: absolute;\n  top: 0px;\n  width: 100%;\n}\n.viewer-text {\n  color: transparent;\n  cursor: text;\n  opacity: 0.2;\n  position: absolute;\n  transform-origin: 0% 0%;\n  white-space: pre;\n}\n.viewer-text::selection {\n  background: #0000ff;\n  color: transparent;\n}\n.viewer-text-highlight {\n  background-color: #b400aa;\n  border-radius: 4px;\n  margin: -1px;\n  padding: 1px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-bookmark-empty {\n  text-align: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-thumbnail {\n  padding: 8px;\n}\n.viewer-thumbnail:hover {\n  background-color: rgba(0, 0, 0, 0.3);\n}\n.viewer-thumbnail-selected {\n  background-color: rgba(0, 0, 0, 0.3);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-zoom-popover-target {\n  align-items: center;\n  display: flex;\n}\n.viewer-zoom-popover-target-scale {\n  margin-right: 4px;\n}\n.viewer-zoom-popover-target-arrow {\n  border-color: rgba(0, 0, 0, 0.6) transparent transparent;\n  border-style: solid;\n  border-width: 8px 4px 0px;\n  height: 0px;\n  width: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-open-file {\n  background-color: transparent;\n  border: none;\n  border-radius: 4px;\n  padding: 8px;\n  position: relative;\n}\n.viewer-open-file:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-open-file-input {\n  bottom: 0px;\n  cursor: pointer;\n  height: 100%;\n  left: 0px;\n  opacity: 0;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  width: 100%;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-properties-modal {\n  padding: 8px 0px;\n}\n.viewer-properties-modal-group {\n  padding: 0px 8px;\n}\n.viewer-properties-modal-footer {\n  display: flex;\n  justify-content: center;\n  margin-top: 8px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-search-popover {\n  padding: 0 8px;\n}\n.viewer-search-popover-input-counter {\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  display: flex;\n  margin-bottom: 8px;\n  position: relative;\n  width: 180px;\n}\n.viewer-search-popover-input {\n  border: none;\n  padding: 4px;\n  width: 100%;\n}\n.viewer-search-popover-counter {\n  align-items: center;\n  bottom: 0px;\n  display: flex;\n  padding-right: 4px;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n}\n.viewer-search-popover-label {\n  align-items: center;\n  display: flex;\n  margin-bottom: 8px;\n}\n.viewer-search-popover-label-checkbox {\n  margin-right: 4px;\n}\n.viewer-search-popover-footer {\n  align-items: center;\n  display: flex;\n}\n.viewer-search-popover-footer-item {\n  padding: 0px 4px;\n}\n.viewer-search-popover-footer-button {\n  margin-left: auto;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-bookmark-list {\n  list-style-type: none;\n  margin: 0px;\n  padding: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-thumbnail-container {\n  align-items: center;\n  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 8px 0px;\n  display: flex;\n  justify-content: center;\n  margin: 0px auto;\n  position: relative;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-attachment-list {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  width: 100%;\n}\n.viewer-attachment-list-empty {\n  text-align: center;\n}\n.viewer-attachment-item {\n  padding: 8px;\n}\n.viewer-attachment-item:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-menu {\n  list-style-type: none;\n  margin: 0px;\n  padding: 0px;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-properties-loader {\n  text-align: center;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-property-item {\n  margin: 8px 0px;\n}\n.viewer-property-item-label {\n  display: inline-block;\n  padding-right: 8px;\n  width: 30%;\n}\n.viewer-property-item-value {\n  display: inline-block;\n}\n/**\n * A React component to view a PDF document\n *\n * @see https://react-pdf-viewer.dev\n * @license https://react-pdf-viewer.dev/license\n * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>\n */\n.viewer-bookmark-item {\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  padding-bottom: 6px;\n  padding-right: 4px;\n  padding-top: 6px;\n}\n.viewer-bookmark-item:hover {\n  background-color: rgba(0, 0, 0, 0.1);\n}\n.viewer-bookmark-toggle {\n  margin-right: 4px;\n  transform: rotate(90deg);\n}\n.viewer-bookmark-toggle-expanded {\n  transform: rotate(0deg);\n}\n.viewer-bookmark-title {\n  flex-grow: 1;\n  flex-shrink: 1;\n}\n"]}]);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./src/styles/styles.css":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./src/styles/styles.css ***!
@@ -6317,7 +6418,7 @@ function toVal(mix) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  font-size: 16px !important;\n  line-height: 28px !important;\n  color: #464646 !important;\n}\n\n.particle-canvas {\n  background: #000000;\n  position: fixed !important;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n\n.edge-header {\n  position: relative;\n  background-color: #2274A5;\n  display: block;\n  width: 100%;\n  height: 278px;\n}\n\n.edge-header .particle-header {\n  position: absolute;\n}\n\n.content-paper {\n  position: relative;\n  margin-top: -150px;\n  padding: 0px 50px 50px 50px;\n}\n\n.content-paper a {\n  color: #2274A5 !important;\n}\n\n.wrapper {\n  position: fixed;\n  height: 100%;\n  min-height: 100%;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  display: flex;\n  flex-direction: column;\n}\n\n.wrapper header {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n}\n\n.wrapper .introduction {\n  display: flex;\n  margin-top: 15%;\n  flex-direction: column;\n  align-items: center;\n}\n\n@media screen and (max-width: 601px) {\n  .wrapper .introduction {\n    margin-top: 45%;\n  }\n}\n\n.wrapper .introduction .hello {\n  font-family: \"Raleway\";\n  font-size: 32pt;\n  line-height: 36pt;\n  color: #F5F1ED;\n  padding: 0px;\n  margin: 0px;\n}\n\n@media screen and (max-width: 601px) {\n  .wrapper .introduction .hello {\n    font-size: 21pt;\n    line-height: 22pt;\n  }\n}\n\n.wrapper .introduction .hello span {\n  color: #2274A5;\n}\n\n.wrapper .introduction .bt-index {\n  margin-top: 10px;\n  width: 150px;\n}\n\n@media screen and (max-width: 601px) {\n  .wrapper .introduction .bt-index {\n    width: 120px;\n  }\n}\n/*# sourceMappingURL=styles.css.map */", "",{"version":3,"sources":["/Users/maiconesteves/Projects/portfolio/src/styles/styles.scss","/Users/maiconesteves/Projects/portfolio/src/styles/styles.css"],"names":[],"mappings":"AAMA;EACI,iCAAiC;EACjC,0BAA0B;EAC1B,4BAA4B;EAC5B,yBAA6B;ACLjC;;ADQA;EACI,mBAZmB;EAanB,0BAAyB;EACzB,OAAM;EACN,MAAK;EACL,WAAU;EACV,YAAW;ACLf;;ADQA;EACI,kBAAkB;EAClB,yBArBqB;EAsBrB,cAAc;EACd,WAAW;EACX,aAAa;ACLjB;;ADAA;EAOQ,kBAAkB;ACH1B;;ADOA;EACI,kBAAkB;EAClB,kBAAkB;EAClB,2BAA2B;ACJ/B;;ADCA;EAKQ,yBAAkC;ACF1C;;ADMA;EACI,eAAe;EACf,YAAY;EACZ,gBAAgB;EAChB,QAAQ;EACR,SAAS;EACT,UAAU;EAuCb,aAAA;EAlCO,sBAAmB;ACD3B;;AAEA;EDOQ,aAAY;ECAV,mBAAmB;EDFjB,yBAAe;ACM3B;;AAEA;EDGY,aAAW;EACX,eAAa;EAOhB,sBAAA;EApCD,mBAsBA;ACeR;;AAEA;EACE;IACE,eAAe;EDzCnB;AC2CA;;AAEA;ED7CA,sBAqCQ;EACI,eAAW;EAIX,iBAAY;EACf,cAAA;ECOP,YAAY;EDXF,WAAa;ACazB;;AAEA;EACE;IACE,eAAe;IACf,iBAAiB;EACnB;AACF;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,YAAY;AACd;;AAEA;EACE;IACE,YAAY;EACd;AACF;AACA,qCAAqC","file":"styles.css"}]);
+exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  font-size: 16px !important;\n  line-height: 28px !important;\n  color: #464646 !important;\n}\n\n.particle-canvas {\n  background: #000000;\n  position: fixed !important;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n\n.edge-header {\n  position: relative;\n  background-color: #2274A5;\n  display: block;\n  width: 100%;\n  height: 278px;\n}\n\n.edge-header .particle-header {\n  position: absolute;\n}\n\n.content-paper {\n  position: relative;\n  margin-top: -150px;\n  padding: 0px 50px 50px 50px;\n}\n\n.content-paper a {\n  color: #2274A5 !important;\n}\n\n.wrapper {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n}\n\n.wrapper .introduction {\n  display: block;\n  margin: 0px auto;\n  width: 710px;\n  height: 200px;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction {\n    width: 400px;\n    height: 400px;\n  }\n}\n\n.wrapper .introduction .content-introduction {\n  display: block;\n  margin: 37.03704% auto;\n  width: 710px;\n  height: 200px;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction .content-introduction {\n    width: 400px;\n    height: 400px;\n  }\n}\n\n.wrapper .introduction .content-introduction .avatar {\n  display: block;\n  width: 180px;\n  height: 180px;\n  margin: 0px 10px 0px 0px;\n  float: left;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction .content-introduction .avatar {\n    margin: 10px auto;\n    float: none;\n    width: 150px;\n    height: 150px;\n  }\n}\n\n.wrapper .introduction .content-introduction hgroup {\n  display: block;\n  margin: 20px 0px 0px 10px;\n  padding: 0px;\n  float: left;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction .content-introduction hgroup {\n    width: 400px;\n    margin: 10px auto;\n  }\n}\n\n.wrapper .introduction .content-introduction hgroup h1, .wrapper .introduction .content-introduction hgroup h2 {\n  text-align: center;\n  font-family: \"Raleway\";\n  font-size: 32pt;\n  line-height: 38pt;\n  color: #F5F1ED;\n  margin: 0px;\n  padding: 0px;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction .content-introduction hgroup h1, .wrapper .introduction .content-introduction hgroup h2 {\n    margin: 0px auto;\n    font-size: 21pt;\n    line-height: 24pt;\n  }\n}\n\n.wrapper .introduction .content-introduction hgroup h1 span, .wrapper .introduction .content-introduction hgroup h2 span {\n  color: #2274A5;\n}\n\n.wrapper .introduction .content-introduction .bt-index {\n  float: left;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction .content-introduction .bt-index {\n    display: block;\n    width: 400px;\n  }\n}\n\n.wrapper .introduction .content-introduction .bt-index a {\n  margin: 10px 0px 0px 10px;\n}\n\n@media screen and (max-width: 801px) {\n  .wrapper .introduction .content-introduction .bt-index a {\n    display: flex;\n    margin: 10px auto;\n    width: 200px;\n  }\n}\n/*# sourceMappingURL=styles.css.map */", "",{"version":3,"sources":["/Users/maiconesteves/Projects/portfolio/src/styles/styles.scss","/Users/maiconesteves/Projects/portfolio/src/styles/styles.css"],"names":[],"mappings":"AAMA;EACI,iCAAiC;EACjC,0BAA0B;EAC1B,4BAA4B;EAC5B,yBAA6B;ACLjC;;ADQA;EACI,mBAZmB;EAanB,0BAAyB;EACzB,OAAM;EACN,MAAK;EACL,WAAU;EACV,YAAW;ACLf;;ADQA;EACI,kBAAkB;EAClB,yBArBqB;EAsBrB,cAAc;EACd,WAAW;EACX,aAAa;ACLjB;;ADAA;EAOQ,kBAAkB;ACH1B;;ADOA;EACI,kBAAkB;EAClB,kBAAkB;EAClB,2BAA2B;ACJ/B;;ADCA;EAKQ,yBAAkC;ACF1C;;ADMA;EACI,eAAe;EACf,QAAO;EACP,SAAQ;EACR,WAAW;EACX,YAAY;ACHhB;;ADFA;EAOQ,cAAc;EACd,gBAAgB;EAChB,YAAY;EACZ,aAAa;ACDrB;;ADEQ;EAXR;IAYY,YAAY;IACZ,aAAa;ECEvB;AACF;;ADhBA;EAgBY,cAAa;EACb,sBAAyB;EACzB,YAAY;EACZ,aAAa;ACIzB;;ADHY;EApBZ;IAqBgB,YAAY;IACZ,aAAa;ECO3B;AACF;;AD9BA;EAyBgB,cAAc;EACd,YAAY;EACZ,aAAa;EACb,wBAAwB;EACxB,WAAW;ACS3B;;ADRgB;EA9BhB;IA+BoB,iBAAiB;IACjB,WAAW;IACX,YAAY;IACZ,aAAa;ECY/B;AACF;;AD/CA;EAsCgB,cAAc;EACd,yBAAyB;EACzB,YAAY;EACZ,WAAW;ACa3B;;ADZgB;EA1ChB;IA2CoB,YAAY;IACZ,iBAAiB;ECgBnC;AACF;;AD7DA;EA+CoB,kBAAkB;EAClB,sBAAsB;EACtB,eAAe;EACf,iBAAiB;EACjB,cA7FM;EA8FN,WAAW;EACX,YAAY;ACkBhC;;ADjBoB;EAtDpB;IAuDwB,gBAAgB;IAChB,eAAe;IACf,iBAAiB;ECqBvC;AACF;;AD/EA;EA4DwB,cAnGC;AC0HzB;;ADnFA;EAiEgB,WAAW;ACsB3B;;ADrBgB;EAlEhB;IAmEoB,cAAc;IACd,YAAY;ECyB9B;AACF;;AD9FA;EAuEoB,yBAAyB;AC2B7C;;AD1BoB;EAxEpB;IA2EwB,aAAY;IAEnB,iBAAA;IC6Bb,YAAY;EACd;AACF;AACA,qCAAqC","file":"styles.css"}]);
 
 
 /***/ }),
@@ -10384,7 +10485,7 @@ var index = create();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js"))&&"object"==typeof e&&"default"in e?e.default:e,r=/https?|ftp|gopher|file/;function o(e){"string"==typeof e&&(e=f(e));var o=function(e,t,r){var o=e.auth,a=e.hostname,s=e.protocol||"",h=e.pathname||"",c=e.hash||"",p=e.query||"",n=!1;o=o?encodeURIComponent(o).replace(/%3A/i,":")+"@":"",e.host?n=o+e.host:a&&(n=o+(~a.indexOf(":")?"["+a+"]":a),e.port&&(n+=":"+e.port)),p&&"object"==typeof p&&(p=t.encode(p));var l=e.search||p&&"?"+p||"";return s&&":"!==s.substr(-1)&&(s+=":"),e.slashes||(!s||r.test(s))&&!1!==n?(n="//"+(n||""),h&&"/"!==h[0]&&(h="/"+h)):n||(n=""),c&&"#"!==c[0]&&(c="#"+c),l&&"?"!==l[0]&&(l="?"+l),{protocol:s,host:n,pathname:h=h.replace(/[?#]/g,encodeURIComponent),search:l=l.replace("#","%23"),hash:c}}(e,t,r);return""+o.protocol+o.host+o.pathname+o.search+o.hash}var a="http://",s="w.w",h=a+s,c=/^https?|ftp|gopher|file/,p=/^(.*?)([#?].*)/,n=/^([a-z0-9.+-]*:)(\/{0,3})(.*)/i,l=/^([a-z0-9.+-]*:)?\/\/\/*/i,i=/^([a-z0-9.+-]*:)(\/{0,2})\[(.*)\]$/i;function u(e){try{return decodeURI(e)}catch(t){return e}}function f(e,r,a){void 0===r&&(r=!1),void 0===a&&(a=!1);var f=(e=e.trim()).match(p);e=f?u(f[1]).replace(/\\/g,"/")+f[2]:u(e).replace(/\\/g,"/"),i.test(e)&&"/"!==e.slice(-1)&&(e+="/");var m=!/(^javascript)/.test(e)&&e.match(n),v=l.test(e),d="";m&&(c.test(m[1])||(d=m[1].toLowerCase(),e=""+m[2]+m[3]),m[2]||(v=!1,c.test(m[1])?(d=m[1],e=""+m[3]):e="//"+m[3]),3!==m[2].length&&1!==m[2].length||(d=m[1],e="/"+m[3]));var g,b=e.match(/(:[0-9]+)/),y="";b&&b[1]&&3===b[1].length&&(e=e.replace(y=b[1],y+"00"));var w={},x="",R="";try{g=new URL(e)}catch(t){x=t,d||a||!/^\/\//.test(e)||/^\/\/.+[@.]/.test(e)||(R="/",e=e.substr(1));try{g=new URL(e,h)}catch(e){return w.protocol=d,w.href=d,w}}w.slashes=v&&!R,w.host=g.host===s?"":g.host,w.hostname=g.hostname===s?"":g.hostname.replace(/(\[|\])/g,""),w.protocol=x?d||null:g.protocol,w.search=g.search.replace(/\\/g,"%5C"),w.hash=g.hash.replace(/\\/g,"%5C");var U=e.split("#");!w.search&&~U[0].indexOf("?")&&(w.search="?"),w.hash||""!==U[1]||(w.hash="#"),w.query=r?t.decode(g.search.substr(1)):w.search.substr(1),w.pathname=R+u(g.pathname).replace(/"/g,"%22"),"about:"===w.protocol&&"blank"===w.pathname&&(w.protocol="",w.pathname=""),x&&"/"!==e[0]&&(w.pathname=w.pathname.substr(1)),d&&!c.test(d)&&"/"!==e.slice(-1)&&"/"===w.pathname&&(w.pathname=""),w.path=w.pathname+w.search,w.auth=[g.username,g.password].map(decodeURIComponent).filter(Boolean).join(":"),w.port=g.port,y&&(w.host=w.host.replace(y+"00",y),w.port=w.port.slice(0,-2)),w.href=R?""+w.pathname+w.search+w.hash:o(w);var j=/^(file)/.test(w.href)?["host","hostname"]:[];return Object.keys(w).forEach(function(e){~j.indexOf(e)||(w[e]=w[e]||null)}),w}var m=/^([a-z0-9.+-]*:\/\/\/)([a-z0-9.+-]:\/*)?/i,v=/https?|ftp|gopher|file/;function d(e,t){var r="string"==typeof e?f(e):e;e="object"==typeof e?o(e):e;var s=f(t),c="";r.protocol&&!r.slashes&&(c=r.protocol,e=e.replace(r.protocol,""),c+="/"===t[0]||"/"===e[0]?"/":""),c&&s.protocol&&(c="",s.slashes||(c=s.protocol,t=t.replace(s.protocol,"")));var p=e.match(m);p&&!s.protocol&&(e=e.substr((c=p[1]+(p[2]||"")).length),/^\/\/[^\/]/.test(t)&&(c=c.slice(0,-1)));var n=new URL(e,h+"/"),l=new URL(t,n).toString().replace(h,""),i=s.protocol||r.protocol;return i+=r.slashes||s.slashes?"//":"",!c&&i?l=l.replace(a,i):c&&(l=l.replace(a,"")),v.test(l)||~t.indexOf(".")||"/"===e.slice(-1)||"/"===t.slice(-1)||"/"!==l.slice(-1)||(l=l.slice(0,-1)),c&&(l=c+("/"===l[0]?l.substr(1):l)),l}exports.parse=f,exports.format=o,exports.resolve=d,exports.resolveObject=function(e,t){return f(d(e,t))};
+var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js"))&&"object"==typeof e&&"default"in e?e.default:e,r=/https?|ftp|gopher|file/;function o(e){"string"==typeof e&&(e=g(e));var o=function(e,t,r){var o=e.auth,a=e.hostname,s=e.protocol||"",c=e.pathname||"",h=e.hash||"",p=e.query||"",n=!1;o=o?encodeURIComponent(o).replace(/%3A/i,":")+"@":"",e.host?n=o+e.host:a&&(n=o+(~a.indexOf(":")?"["+a+"]":a),e.port&&(n+=":"+e.port)),p&&"object"==typeof p&&(p=t.encode(p));var l=e.search||p&&"?"+p||"";return s&&":"!==s.substr(-1)&&(s+=":"),e.slashes||(!s||r.test(s))&&!1!==n?(n="//"+(n||""),c&&"/"!==c[0]&&(c="/"+c)):n||(n=""),h&&"#"!==h[0]&&(h="#"+h),l&&"?"!==l[0]&&(l="?"+l),{protocol:s,host:n,pathname:c=c.replace(/[?#]/g,encodeURIComponent),search:l=l.replace("#","%23"),hash:h}}(e,t,r);return""+o.protocol+o.host+o.pathname+o.search+o.hash}var a="http://",s="w.w",c=a+s,h=/^([a-z0-9.+-]*:\/\/\/)([a-z0-9.+-]:\/*)?/i,p=/https?|ftp|gopher|file/;function n(e,t){var r="string"==typeof e?g(e):e;e="object"==typeof e?o(e):e;var s=g(t),n="";r.protocol&&!r.slashes&&(n=r.protocol,e=e.replace(r.protocol,""),n+="/"===t[0]||"/"===e[0]?"/":""),n&&s.protocol&&(n="",s.slashes||(n=s.protocol,t=t.replace(s.protocol,"")));var l=e.match(h);l&&!s.protocol&&(e=e.substr((n=l[1]+(l[2]||"")).length),/^\/\/[^/]/.test(t)&&(n=n.slice(0,-1)));var i=new URL(e,c+"/"),f=new URL(t,i).toString().replace(c,""),u=s.protocol||r.protocol;return u+=r.slashes||s.slashes?"//":"",!n&&u?f=f.replace(a,u):n&&(f=f.replace(a,"")),p.test(f)||~t.indexOf(".")||"/"===e.slice(-1)||"/"===t.slice(-1)||"/"!==f.slice(-1)||(f=f.slice(0,-1)),n&&(f=n+("/"===f[0]?f.substr(1):f)),f}function l(){}l.parse=g,l.format=o,l.resolve=n,l.resolveObject=n;var i=/^https?|ftp|gopher|file/,f=/^(.*?)([#?].*)/,u=/^([a-z0-9.+-]*:)(\/{0,3})(.*)/i,m=/^([a-z0-9.+-]*:)?\/\/\/*/i,v=/^([a-z0-9.+-]*:)(\/{0,2})\[(.*)\]$/i;function d(e){try{return decodeURI(e)}catch(t){return e}}function g(e,r,a){if(void 0===r&&(r=!1),void 0===a&&(a=!1),e&&"object"==typeof e&&e instanceof l)return e;var h=(e=e.trim()).match(f);e=h?d(h[1]).replace(/\\/g,"/")+h[2]:d(e).replace(/\\/g,"/"),v.test(e)&&"/"!==e.slice(-1)&&(e+="/");var p=!/(^javascript)/.test(e)&&e.match(u),n=m.test(e),g="";p&&(i.test(p[1])||(g=p[1].toLowerCase(),e=""+p[2]+p[3]),p[2]||(n=!1,i.test(p[1])?(g=p[1],e=""+p[3]):e="//"+p[3]),3!==p[2].length&&1!==p[2].length||(g=p[1],e="/"+p[3]));var b,y=(h?h[1]:e).match(/(:[0-9]+)/),j="";y&&y[1]&&3===y[1].length&&(e=e.replace(j=y[1],j+"00"));var w=new l,x="",U="";try{b=new URL(e)}catch(t){x=t,g||a||!/^\/\//.test(e)||/^\/\/.+[@.]/.test(e)||(U="/",e=e.substr(1));try{b=new URL(e,c)}catch(e){return w.protocol=g,w.href=g,w}}w.slashes=n&&!U,w.host=b.host===s?"":b.host,w.hostname=b.hostname===s?"":b.hostname.replace(/(\[|\])/g,""),w.protocol=x?g||null:b.protocol,w.search=b.search.replace(/\\/g,"%5C"),w.hash=b.hash.replace(/\\/g,"%5C");var R=e.split("#");!w.search&&~R[0].indexOf("?")&&(w.search="?"),w.hash||""!==R[1]||(w.hash="#"),w.query=r?t.decode(b.search.substr(1)):w.search.substr(1),w.pathname=U+d(b.pathname).replace(/"/g,"%22"),"about:"===w.protocol&&"blank"===w.pathname&&(w.protocol="",w.pathname=""),x&&"/"!==e[0]&&(w.pathname=w.pathname.substr(1)),g&&!i.test(g)&&"/"!==e.slice(-1)&&"/"===w.pathname&&(w.pathname=""),w.path=w.pathname+w.search,w.auth=[b.username,b.password].map(decodeURIComponent).filter(Boolean).join(":"),w.port=b.port,j&&(w.host=w.host.replace(j+"00",j),w.port=w.port.slice(0,-2)),w.href=U?""+w.pathname+w.search+w.hash:o(w);var O=/^(file)/.test(w.href)?["host","hostname"]:[];return Object.keys(w).forEach(function(e){~O.indexOf(e)||(w[e]=w[e]||null)}),w}exports.parse=g,exports.format=o,exports.resolve=n,exports.resolveObject=function(e,t){return g(n(e,t))},exports.Url=l;
 //# sourceMappingURL=index.js.map
 
 
@@ -10392,12 +10493,12 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_82519ec661270f7f484f ***!
+  !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_2adc2403d89adc16ead0 ***!
   \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/next/dist/build/polyfills/object-assign.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/next/dist/build/polyfills/object-assign.js");
 
 /***/ }),
 
@@ -10478,7 +10579,7 @@ var singletonRouter = {
   }
 }; // Create public properties and methods of the router in the singletonRouter
 
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback'];
+var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback', 'basePath'];
 var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
@@ -10673,6 +10774,10 @@ var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/
 
 exports.AmpStateContext = React.createContext({});
 
+if (true) {
+  exports.AmpStateContext.displayName = 'AmpStateContext';
+}
+
 /***/ }),
 
 /***/ "./node_modules/next/dist/next-server/lib/amp.js":
@@ -10749,6 +10854,10 @@ Object.defineProperty(exports, "__esModule", {
 var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 exports.HeadManagerContext = React.createContext(null);
+
+if (true) {
+  exports.HeadManagerContext.displayName = 'HeadManagerContext';
+}
 
 /***/ }),
 
@@ -11013,6 +11122,10 @@ var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/
 
 exports.RouterContext = React.createContext(null);
 
+if (true) {
+  exports.RouterContext.displayName = 'RouterContext';
+}
+
 /***/ }),
 
 /***/ "./node_modules/next/dist/next-server/lib/router/router.js":
@@ -11055,10 +11168,16 @@ var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_m
 
 var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
 
+var basePath =  false || '';
+
 function addBasePath(path) {
-  // variable is always a string
-  var p = "";
-  return path.indexOf(p) !== 0 ? p + path : path;
+  return path.indexOf(basePath) !== 0 ? basePath + path : path;
+}
+
+exports.addBasePath = addBasePath;
+
+function delBasePath(path) {
+  return path.indexOf(basePath) === 0 ? path.substr(basePath.length) || '/' : path;
 }
 
 function toRoute(path) {
@@ -11230,6 +11349,7 @@ var Router = /*#__PURE__*/function () {
 
     this.asPath = // @ts-ignore this is temporarily global (attached to window)
     is_dynamic_1.isDynamicRoute(pathname) && __NEXT_DATA__.autoExport ? pathname : as;
+    this.basePath = basePath;
     this.sub = subscription;
     this.clc = null;
     this._wrapApp = wrapApp; // make sure to ignore extra popState in safari on navigating
@@ -11336,7 +11456,9 @@ var Router = /*#__PURE__*/function () {
 
 
         var url = typeof _url === 'object' ? utils_1.formatWithValidation(_url) : _url;
-        var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
+        var as = typeof _as === 'object' ? utils_1.formatWithValidation(_as) : _as;
+        url = addBasePath(url);
+        as = addBasePath(as); // Add the ending slash to the paths. So, we can serve the
         // "<page>/index.html" directly for the SSR page.
 
         if (false) { var rewriteUrlForNextExport; }
@@ -11352,7 +11474,7 @@ var Router = /*#__PURE__*/function () {
           _this2.asPath = as;
           Router.events.emit('hashChangeStart', as);
 
-          _this2.changeState(method, url, addBasePath(as), options);
+          _this2.changeState(method, url, as, options);
 
           _this2.scrollToHash(as);
 
@@ -11422,7 +11544,7 @@ var Router = /*#__PURE__*/function () {
 
           Router.events.emit('beforeHistoryChange', as);
 
-          _this2.changeState(method, url, addBasePath(as), options);
+          _this2.changeState(method, url, as, options);
 
           if (true) {
             var appComp = _this2.components['/_app'].Component;
@@ -11553,7 +11675,7 @@ var Router = /*#__PURE__*/function () {
             __N_SSP = routeInfo.__N_SSP;
 
         if (true) {
-          var _require = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js"),
+          var _require = __webpack_require__(/*! react-is */ "./node_modules/next/node_modules/react-is/index.js"),
               isValidElementType = _require.isValidElementType;
 
           if (!isValidElementType(Component)) {
@@ -11692,7 +11814,8 @@ var Router = /*#__PURE__*/function () {
           return;
         }
 
-        Promise.all([_this4.pageLoader.prefetchData(url, asPath), _this4.pageLoader[options.priority ? 'loadPage' : 'prefetch'](toRoute(pathname))]).then(function () {
+        var route = delBasePath(toRoute(pathname));
+        Promise.all([_this4.pageLoader.prefetchData(url, delBasePath(asPath)), _this4.pageLoader[options.priority ? 'loadPage' : 'prefetch'](route)]).then(function () {
           return resolve();
         }, reject);
       });
@@ -11711,14 +11834,15 @@ var Router = /*#__PURE__*/function () {
                 cancelled = true;
               };
 
-              _context.next = 4;
+              route = delBasePath(route);
+              _context.next = 5;
               return _regeneratorRuntime.awrap(this.pageLoader.loadPage(route));
 
-            case 4:
+            case 5:
               componentResult = _context.sent;
 
               if (!cancelled) {
-                _context.next = 9;
+                _context.next = 10;
                 break;
               }
 
@@ -11726,14 +11850,14 @@ var Router = /*#__PURE__*/function () {
               error.cancelled = true;
               throw error;
 
-            case 9:
+            case 10:
               if (cancel === this.clc) {
                 this.clc = null;
               }
 
               return _context.abrupt("return", componentResult);
 
-            case 11:
+            case 12:
             case "end":
               return _context.stop();
           }
@@ -11862,7 +11986,16 @@ function getRouteMatcher(routeRegex) {
       return false;
     }
 
-    var decode = decodeURIComponent;
+    var decode = function decode(param) {
+      try {
+        return decodeURIComponent(param);
+      } catch (_) {
+        var err = new Error('failed to decode param');
+        err.code = 'DECODE_FAILED';
+        throw err;
+      }
+    };
+
     var params = {};
     Object.keys(groups).forEach(function (slugName) {
       var g = groups[slugName];
@@ -12053,19 +12186,12 @@ var url_1 = __webpack_require__(/*! url */ "./node_modules/native-url/dist/index
 
 
 function execOnce(fn) {
-  var _this = this;
-
   var used = false;
-  var result = null;
+  var result;
   return function () {
     if (!used) {
       used = true;
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      result = fn.apply(_this, args);
+      result = fn.apply(void 0, arguments);
     }
 
     return result;
@@ -12210,14 +12336,270 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 
 /***/ }),
 
+/***/ "./node_modules/next/node_modules/react-is/cjs/react-is.development.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/next/node_modules/react-is/cjs/react-is.development.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.6
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' ||
+  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+}
+
+/**
+ * Forked from fbjs/warning:
+ * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ *
+ * Only change is we use console.warn instead of console.error,
+ * and do nothing when 'console' is not supported.
+ * This really simplifies the code.
+ * ---
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var lowPriorityWarning = function () {};
+
+{
+  var printWarning = function (format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.warn(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  lowPriorityWarning = function (condition, format) {
+    if (format === undefined) {
+      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+var lowPriorityWarning$1 = lowPriorityWarning;
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+              default:
+                return $$typeof;
+            }
+        }
+      case REACT_LAZY_TYPE:
+      case REACT_MEMO_TYPE:
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+}
+
+// AsyncMode is deprecated along with isAsyncMode
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+
+// AsyncMode should be deprecated
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true;
+      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.typeOf = typeOf;
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isValidElementType = isValidElementType;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/react-is/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/next/node_modules/react-is/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/next/node_modules/react-is/cjs/react-is.development.js");
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_82519ec661270f7f484f ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_2adc2403d89adc16ead0 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -12852,12 +13234,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_82519ec661270f7f484f ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_2adc2403d89adc16ead0 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -13078,7 +13460,7 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.6
+/** @license React v16.13.1
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -13095,88 +13477,39 @@ if (true) {
   (function() {
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
 // nor polyfill, then a plain number is used for performance.
 var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-
 var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
 var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
 var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
 var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
 var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
 var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+// (unstable) APIs that have been removed. Can we remove the symbols?
+
 var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
 var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
 var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
 var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
 var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
 var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
 
 function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' ||
-  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
 }
-
-/**
- * Forked from fbjs/warning:
- * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
- *
- * Only change is we use console.warn instead of console.error,
- * and do nothing when 'console' is not supported.
- * This really simplifies the code.
- * ---
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var lowPriorityWarning = function () {};
-
-{
-  var printWarning = function (format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.warn(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  lowPriorityWarning = function (condition, format) {
-    if (format === undefined) {
-      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-var lowPriorityWarning$1 = lowPriorityWarning;
 
 function typeOf(object) {
   if (typeof object === 'object' && object !== null) {
     var $$typeof = object.$$typeof;
+
     switch ($$typeof) {
       case REACT_ELEMENT_TYPE:
         var type = object.type;
@@ -13189,29 +13522,32 @@ function typeOf(object) {
           case REACT_STRICT_MODE_TYPE:
           case REACT_SUSPENSE_TYPE:
             return type;
+
           default:
             var $$typeofType = type && type.$$typeof;
 
             switch ($$typeofType) {
               case REACT_CONTEXT_TYPE:
               case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
               case REACT_PROVIDER_TYPE:
                 return $$typeofType;
+
               default:
                 return $$typeof;
             }
+
         }
-      case REACT_LAZY_TYPE:
-      case REACT_MEMO_TYPE:
+
       case REACT_PORTAL_TYPE:
         return $$typeof;
     }
   }
 
   return undefined;
-}
+} // AsyncMode is deprecated along with isAsyncMode
 
-// AsyncMode is deprecated along with isAsyncMode
 var AsyncMode = REACT_ASYNC_MODE_TYPE;
 var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
 var ContextConsumer = REACT_CONTEXT_TYPE;
@@ -13225,17 +13561,17 @@ var Portal = REACT_PORTAL_TYPE;
 var Profiler = REACT_PROFILER_TYPE;
 var StrictMode = REACT_STRICT_MODE_TYPE;
 var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
 
-var hasWarnedAboutDeprecatedIsAsyncMode = false;
-
-// AsyncMode should be deprecated
 function isAsyncMode(object) {
   {
     if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-      hasWarnedAboutDeprecatedIsAsyncMode = true;
-      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
     }
   }
+
   return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
 }
 function isConcurrentMode(object) {
@@ -13275,7 +13611,6 @@ function isSuspense(object) {
   return typeOf(object) === REACT_SUSPENSE_TYPE;
 }
 
-exports.typeOf = typeOf;
 exports.AsyncMode = AsyncMode;
 exports.ConcurrentMode = ConcurrentMode;
 exports.ContextConsumer = ContextConsumer;
@@ -13289,7 +13624,6 @@ exports.Portal = Portal;
 exports.Profiler = Profiler;
 exports.StrictMode = StrictMode;
 exports.Suspense = Suspense;
-exports.isValidElementType = isValidElementType;
 exports.isAsyncMode = isAsyncMode;
 exports.isConcurrentMode = isConcurrentMode;
 exports.isContextConsumer = isContextConsumer;
@@ -13303,6 +13637,8 @@ exports.isPortal = isPortal;
 exports.isProfiler = isProfiler;
 exports.isStrictMode = isStrictMode;
 exports.isSuspense = isSuspense;
+exports.isValidElementType = isValidElementType;
+exports.typeOf = typeOf;
   })();
 }
 
@@ -13328,12 +13664,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_82519ec661270f7f484f ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -14422,9 +14758,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/theme */ "./src/theme.js");
 /* harmony import */ var _src_styles_styles_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/styles/styles.css */ "./src/styles/styles.css");
 /* harmony import */ var _src_styles_styles_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_src_styles_styles_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _phuocng_react_pdf_viewer_cjs_react_pdf_viewer_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css */ "./node_modules/@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css");
+/* harmony import */ var _phuocng_react_pdf_viewer_cjs_react_pdf_viewer_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_phuocng_react_pdf_viewer_cjs_react_pdf_viewer_css__WEBPACK_IMPORTED_MODULE_8__);
 
 var _jsxFileName = "/Users/maiconesteves/Projects/portfolio/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -14447,21 +14786,21 @@ function MyApp(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 5
     }
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, "Maicon Esteves - Portfolio"), __jsx("meta", {
@@ -14470,7 +14809,7 @@ function MyApp(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 25,
       columnNumber: 9
     }
   })), __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["ThemeProvider"], {
@@ -14478,21 +14817,21 @@ function MyApp(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 9
     }
   }), __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 9
     }
   }))));
@@ -14613,14 +14952,14 @@ module.exports = __webpack_require__(/*! /Users/maiconesteves/Projects/portfolio
 
 /***/ }),
 
-/***/ "dll-reference dll_82519ec661270f7f484f":
+/***/ "dll-reference dll_2adc2403d89adc16ead0":
 /*!*******************************************!*\
-  !*** external "dll_82519ec661270f7f484f" ***!
+  !*** external "dll_2adc2403d89adc16ead0" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_82519ec661270f7f484f;
+module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 

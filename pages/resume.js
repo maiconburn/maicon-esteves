@@ -1,10 +1,9 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles'
-import Container from "@material-ui/core/Container"
-import Navbar from '../components/NavBar'
+import Paper from "@material-ui/core/Paper"
+import Layout from '../components/Layout'
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
-import { PDFObject } from 'react-pdfobject'
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -18,27 +17,26 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-function Resume() {
+function Resume(PDF) {
     const classes = useStyles()
     return (
-        <React.Fragment>
-            <header>
-            <Navbar/>
-            </header>
-            <Container fixed>
-                <Grid item xs={12} spacing={5} className={classes.title}>
-                <Typography align="center" variant="h3" component="h1">
-                    About Me
-                </Typography>
-                <Typography align="center" variant="subtitle1" component="h2">
-                    subtitle
-                </Typography>
+        <Layout>
+            <Paper elevation={5} className="content-paper">
+                <Grid container>
+                    <Grid item lg={12} sm={12} xs={12} className={classes.title}>
+                        <Typography align="center" variant="h3" component="h1">
+                            About Me
+                        </Typography>
+                        <Typography align="center" variant="subtitle1" component="h2">
+                            subtitle
+                        </Typography>
+                    </Grid>
+                    <Grid container lg={12}>
+                        TESTE
+                    </Grid>
                 </Grid>
-                <Grid container xs={12}>
-                    <PDFObject className={classes.pdfobject} url="/pdf/developer.pdf" width="800px" height="1200px" />
-                </Grid>
-            </Container>
-        </React.Fragment>           
+            </Paper>
+        </Layout>           
     )
 }
  

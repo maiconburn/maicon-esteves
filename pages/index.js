@@ -1,49 +1,47 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import Particles from 'react-particles-js'
-import Grid from '@material-ui/core/Grid'
+import LayoutIndex from '../components/LayoutIndex'
 import Avatar from '@material-ui/core/Avatar'
-
-const particleOpt = {
-  particles: {
-    number: {
-      value: 100,
-      density: {
-        enable: false,
-        value_area: 800
-      },
-      move: {
-        enable: true,
-        speed: 1
-      }
-    }
-  },
-  interactivity: {
-    events: {
-        onhover: {
-            enable: true,
-            mode: ["push"]
-        }
-    }
-  }
-}
+import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined'
+import { motion, AnimatePresence } from "framer-motion"
 
 function Index(props) {
+    const spring = {
+      type: "spring",
+      damping: 20,
+      stiffness: 100,
+      when: "afterChildren"
+    }
     return (
-      <React.Fragment>
-        <Particles canvasClassName="particle-canvas" params={particleOpt} />
-        <Grid className="wrapper" item xs={6} sm container>
-          <div className="introduction">
-            <Avatar alt="Profile Picture" size="large" src="/img/maicon.png" />
-            <hgroup>
-              <h1 className="hello">Hello, I'm <span>Maicon Esteves</span></h1>
-              <h2 className="hello">I'm a full-stack developer</h2>
-            </hgroup>
-          <Button variant="outlined" size="large" color="secondary" href="home">Default</Button>
-          </div>
-        </Grid>
-      </React.Fragment>
-    );
+      <AnimatePresence>
+        <div className="page-transition-wrapper">
+          <motion.div
+            transition={spring}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            id="page-transition-container"
+          >
+            <LayoutIndex>
+              <div className="wrapper">
+                <div className="introduction">
+                  <div className="content-introduction">
+                    <Avatar className="avatar" alt="Profile Picture" size="large" src="/img/maicon.png" />
+                    <hgroup>
+                      <h1 align="center">Hello, I'm <span>Maicon Esteves</span></h1>
+                      <h2 align="center">I'm a full-stack developer</h2>
+                    </hgroup>
+                    <div className="bt-index">
+                      <Button variant="outlined" size="large" color="secondary" href="home" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </LayoutIndex>
+          </motion.div>
+        </div>
+      </AnimatePresence>
+    )
 }
 
 export default Index

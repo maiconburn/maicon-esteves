@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid"
 import Box from "@material-ui/core/Box"
 import NavBar from './NavBar'
 import Particles from 'react-particles-js'
+import { motion, AnimatePresence } from "framer-motion"
 
 const particleOpt = {
   particles: {
@@ -30,18 +31,36 @@ const particleOpt = {
 }
 
 function Layout(props) {
+
+    const spring = {
+      type: "spring",
+      damping: 20,
+      stiffness: 100,
+      when: "afterChildren"
+    }
+
     return (
-      <React.Fragment>
-        <Box component="header">
-          <NavBar/>
-          <Grid className="edge-header" container lg={12}>
-            <Particles canvasClassName="particle-header" width="100%" params={particleOpt} />
-          </Grid>
-        </Box>
-        <Container maxWidth="lg">
-            {props.children}
-        </Container> 
-      </React.Fragment>
+      <AnimatePresence>
+        <div className="page-transition-wrapper">
+          <motion.div
+            transition={spring}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, delay: 0.2 }}
+            exit={{ opacity: 0 }}
+            id="page-transition-container"
+          >
+            <Box component="header">
+              <NavBar/>
+              <Grid className="edge-header" container xs={12}>
+                <Particles canvasClassName="particle-header" width="100%" params={particleOpt} />
+              </Grid>
+            </Box>
+            <Container maxWidth="lg">
+                {props.children}
+            </Container>
+          </motion.div>
+        </div> 
+      </AnimatePresence>
     )
 }
 export default Layout

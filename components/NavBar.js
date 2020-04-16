@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography'
 import Badge from '@material-ui/core/Badge'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
-import CodeIcon from '@material-ui/icons/Code'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
@@ -135,10 +134,10 @@ function Navbar() {
           </Button>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Button color="inherit">
+            <Button color="inherit" href="resume">
               About Me
             </Button>
-            <Button color="inherit">
+            <Button color="inherit" href="home">
               Messages
             </Button>
             <IconButton
