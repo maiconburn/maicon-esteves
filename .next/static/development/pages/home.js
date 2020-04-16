@@ -31401,7 +31401,7 @@ function Home() {
 
 /***/ }),
 
-/***/ 8:
+/***/ 3:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhome&absolutePagePath=%2FUsers%2Fmaiconesteves%2FProjects%2Fportfolio%2Fpages%2Fhome.js ***!
   \**************************************************************************************************************************************/
@@ -31424,5 +31424,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[8,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=home.js.map

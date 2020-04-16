@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper"
 import Layout from '../components/Layout'
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
+import Viewer, { Worker } from '@phuocng/react-pdf-viewer'
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -32,7 +33,11 @@ function Resume(PDF) {
                         </Typography>
                     </Grid>
                     <Grid container lg={12}>
-                        TESTE
+                        <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.2.228/build/pdf.worker.min.js">
+                            <div style={{ height: '750px' }}>
+                                <Viewer fileUrl="/pdf/developer.pdf" />
+                            </div>
+                        </Worker>
                     </Grid>
                 </Grid>
             </Paper>
