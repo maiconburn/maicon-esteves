@@ -125,7 +125,7 @@ function Navbar() {
             color="inherit"
             href="index"
           >
-            <Avatar alt="Profile Picture" src="/img/maicon.png" />
+            <Avatar alt="Maicon Esteves" src="/img/maicon.png" />
           </IconButton>
           <Button edge="start" color="inherit" href="index" >
             <Typography variant="h6" noWrap>

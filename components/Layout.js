@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container'
 import Grid from "@material-ui/core/Grid"
 import Box from "@material-ui/core/Box"
 import NavBar from './NavBar'
+import Footer from './Footer'
 import Particles from 'react-particles-js'
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -58,6 +59,7 @@ function Layout(props) {
             <Container maxWidth="lg">
                 {props.children}
             </Container>
+            <Footer />
           </motion.div>
         </div> 
       </AnimatePresence>
