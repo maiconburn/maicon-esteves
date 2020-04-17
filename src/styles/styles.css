@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px !important;
-  line-height: 28px !important;
+  line-height: 24px !important;
   color: #464646 !important;
 }
 
@@ -17,6 +17,12 @@ body {
 .chatBot {
   width: 100%;
   margin-top: -150px;
+}
+
+@media screen and (max-width: 801px) {
+  .chatBot {
+    margin-top: -230px;
+  }
 }
 
 .chatBot .rsc-container {
@@ -41,8 +47,20 @@ body {
   padding: 0px 50px 50px 50px;
 }
 
+@media screen and (max-width: 801px) {
+  .content-paper {
+    margin-top: -230px;
+  }
+}
+
 .content-paper a {
   color: #2274A5 !important;
+}
+
+.icon-description {
+  padding-top: 5px;
+  font-size: 20.8px !important;
+  font-weight: bold !important;
 }
 
 .footer-int {
@@ -54,8 +72,16 @@ body {
 }
 
 .footer-int a {
+  font-size: 12.8px !important;
+  text-transform: none;
   text-decoration: none;
   color: #F5F1ED;
+}
+
+@media screen and (max-width: 801px) {
+  .footer-int a {
+    ffont-size: 8px !important;
+  }
 }
 
 .footer-int a:hover {
@@ -64,7 +90,6 @@ body {
 
 .footer-int p {
   margin: 10px 20px;
-  font-size: 14px;
   color: #F5F1ED;
 }
 
@@ -76,7 +101,6 @@ body {
 .footer-int .git-btn p {
   margin: 0px 0px 0px 7px;
   color: #F5F1ED;
-  font-size: 14px;
 }
 
 .wrapper {
@@ -191,5 +215,9 @@ body {
     margin: 10px auto;
     width: 200px;
   }
+}
+
+.indexFooter .footer-int {
+  background-color: transparent !important;
 }
 /*# sourceMappingURL=styles.css.map */

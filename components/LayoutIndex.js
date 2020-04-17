@@ -1,7 +1,8 @@
 import React from 'react'
 import Particles from 'react-particles-js'
+import Footer from './Footer'
 
-export default class Layout extends React.Component{
+class Layout extends React.Component{
   render(){
     const myProp = this.props
     const particleOpt = {
@@ -31,7 +32,12 @@ export default class Layout extends React.Component{
       <React.Fragment>
         <Particles canvasClassName="particle-canvas" params={particleOpt} />
         {myProp.children}
+        <div className="indexFooter">
+          <Footer />
+        </div>
       </React.Fragment>
     )
   }
 }
+
+export default Layout

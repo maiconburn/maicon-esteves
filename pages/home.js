@@ -37,25 +37,25 @@ function Home() {
             <Grid container lg={12}>
               <Grid item lg={3} sm={3} xs={6}>
                 <img src="/svg/programmer.svg" width="50%" className={classes.image} />
-                <Typography align="center" variant="h4" component="h4">
+                <Typography align="center" className="icon-description" variant="h4" component="h4">
                   Technical
                 </Typography>
               </Grid>
               <Grid item lg={3} sm={3} xs={6}>
                 <img src="/svg/creative.svg" width="50%" className={classes.image} />
-                <Typography align="center" variant="h4" component="h4">
+                <Typography align="center" className="icon-description" variant="h4" component="h4">
                   Creative
                 </Typography>
               </Grid>
               <Grid item lg={3} sm={3} xs={6}>
                 <img src="/svg/analytics.svg" width="50%" className={classes.image} />
-                <Typography align="center" variant="h4" component="h4">
+                <Typography align="center" className="icon-description" variant="h4" component="h4">
                   Analytical
                 </Typography>
               </Grid>
               <Grid item lg={3} sm={3} xs={6}>
                 <img src="/svg/entrepreneur.svg" width="50%" className={classes.image} />
-                <Typography align="center" variant="h4" component="h4">
+                <Typography align="center" className="icon-description" variant="h4" component="h4">
                   Entrepreneur
                 </Typography>
               </Grid>
