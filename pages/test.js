@@ -5,7 +5,11 @@ import Paper from "@material-ui/core/Paper"
 import Layout from '../components/Layout'
 import Grid from "@material-ui/core/Grid"
 import ProgressBar from '../components/ProgressBar'
+import Chip from '@material-ui/core/Chip'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHashtag } from '@fortawesome/free-solid-svg-icons'
 import BlogCard from '../components/BlogCard'
+
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -22,9 +26,21 @@ const useStyles = makeStyles((theme) => ({
     progressbar: {
         paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
+    },
+    chip:{
+        marginRight: '5px',
+        marginLeft: '5px',
+        marginBottom: '10px',
+        fontWeight: 'bold',
+        fontSize: '15px',
+        background: '#2274A5',
+        color: '#FFFFFF'
+    },
+    icon:{
+        marginLeft: '10px',
+        color: '#FFFFFF'
     }
 }))
-
 
 function Test() {
     const classes = useStyles()
@@ -104,16 +120,22 @@ function Test() {
                                 <ProgressBar progress={90} />
                             </Grid>
                         </Grid>
+                        <Grid item container xs={12}>
+                            <Chip label="Linux" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
+                            <Chip label="Google Analytcs" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
+                            <Chip label="SEO" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
+                            <Chip label="Docker" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
+                        </Grid>
                     </Grid>
                 </Paper>
-                <Grid xs container>
-                    <Grid xs={3} item>
+                <Grid xs container justify="space-between" alignItems="center" direction="row">
+                    <Grid xs item>
                         <BlogCard />
                     </Grid>
-                    <Grid xs={3} item>
+                    <Grid xs item>
                         <BlogCard />
                     </Grid>
-                    <Grid xs={3} item>
+                    <Grid xs item>
                         <BlogCard />
                     </Grid>
                 </Grid>

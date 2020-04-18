@@ -9,6 +9,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(2),
     },
   },
+  line: {
+    height: '8px',
+    marginBottom: '18px'
+  }
 }));
 
 export default function ProgressBar(props) {
@@ -35,8 +39,7 @@ export default function ProgressBar(props) {
 
   return (
     <div className={classes.root}>
-      <LinearProgress variant="determinate" value={completed} />
-      <LinearProgress variant="determinate" value={completed} color="secondary" />
+      <LinearProgress className={classes.line} variant="determinate" value={completed} />
     </div>
   );
 }

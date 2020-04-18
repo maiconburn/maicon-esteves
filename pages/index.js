@@ -32,7 +32,7 @@ function Index(props) {
                       <h2 align="center">I'm a full-stack developer</h2>
                     </hgroup>
                     <div className="bt-index">
-                      <Button variant="outlined" size="large" color="secondary" href="home" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
+                      <Button variant="outlined" size="large" color="secondary" href="about" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
                     </div>
                   </div>
                 </div>

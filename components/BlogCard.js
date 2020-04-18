@@ -1,79 +1,62 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
-import Link from "@material-ui/core/Link"
-import Typography from "@material-ui/core/Typography"
-import Box from "@material-ui/core/Box"
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import { motion } from "framer-motion"
 
 const useStyles = makeStyles((theme) => ({
-  img: {
-    width: "100%",
-    height: "auto",
-    marginBottom: 8
+  root: {
+    maxWidth: 345,
+    margin: '15px'
   },
-  card: {
-    boxShadow: theme.shadows[2]
-  },
-  noDecoration: {
-    textDecoration: "none !important"
-  },
-  title: {
-    transition: theme.transitions.create(["background-color"], {
-      duration: theme.transitions.duration.complex,
-      easing: theme.transitions.easing.easeInOut
-    }),
-    cursor: "pointer",
-    color: theme.palette.secondary.main,
-    "&:hover": {
-      color: theme.palette.secondary.dark
-    },
-    "&:active": {
-      color: theme.palette.primary.dark
-    }
-  },
-  link: {
-    transition: theme.transitions.create(["background-color"], {
-      duration: theme.transitions.duration.complex,
-      easing: theme.transitions.easing.easeInOut
-    }),
-    cursor: "pointer",
-    color: theme.palette.primary.main,
-    "&:hover": {
-      color: theme.palette.primary.dark
-    }
-  },
-  showFocus: {
-    "&:focus span": {
-      color: theme.palette.secondary.dark
-    }
+  media: {
+    backgroundSize: 'cover',
+    backgroundPosition: 'top left',
+    height: 250,
   }
 }))
 
-function BlogCard() {
+function BlogCard(props) {
     const classes = useStyles()
     return (
-      <Card className={classes.card}>
-        <Link href="" tabIndex={-1}>
-          <img src="/img/maicon.png" className={classes.img} alt="" />
-        </Link>
-        <Box>
-          <Typography variant="body2" color="textSecondary">
-            25/03/1984
-          </Typography>
-          <Link
-            className={classes.showFocus}
-          >
-            <Typography variant="h6">
-              <span className={classes.title}>Teste</span>
-            </Typography>
-          </Link>
-          <Typography variant="body1" color="textSecondary">
-            <Link className={classes.noDecoration} tabIndex={-1}>
-              <span className={classes.link}> read more...</span>
-            </Link>
-          </Typography>
-        </Box>
-      </Card>
+      <motion.div
+          animate={{ scale: [0.7, 1] }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.8 }}
+          transition={{ duration: 0.5 }}
+      >
+        <Card className={classes.root} elevation={5}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image={props.imageUrl}
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button size="small" color="primary">
+              Share
+            </Button>
+            <Button size="small" color="primary">
+              Learn More
+            </Button>
+          </CardActions>
+        </Card>
+      </motion.div>
     )
 }
 export default BlogCard

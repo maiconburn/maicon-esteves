@@ -56,7 +56,7 @@ function Layout(props) {
                 <Particles canvasClassName="particle-header" width="100%" params={particleOpt} />
               </Grid>
             </Box>
-            <Container maxWidth="lg">
+            <Container maxWidth="lg" className="siteContainer">
                 {props.children}
             </Container>
             <Footer />

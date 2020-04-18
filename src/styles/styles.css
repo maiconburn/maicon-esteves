@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px !important;
-  line-height: 24px !important;
+  line-height: 25.6px !important;
   color: #464646 !important;
 }
 
@@ -44,7 +44,7 @@ body {
 .content-paper {
   position: relative;
   margin-top: -150px;
-  padding: 0px 50px 50px 50px;
+  padding: 10px 60px 60px 60px;
 }
 
 @media screen and (max-width: 801px) {
@@ -58,7 +58,7 @@ body {
 }
 
 .icon-description {
-  padding-top: 5px;
+  padding: 5px 0 15px 0;
   font-size: 20.8px !important;
   font-weight: bold !important;
 }

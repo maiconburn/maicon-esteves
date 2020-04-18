@@ -134,11 +134,17 @@ function Navbar() {
           </Button>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Button color="inherit" href="resume">
+            <Button color="inherit" href="about">
               About Me
             </Button>
-            <Button color="inherit" href="home">
-              Messages
+            <Button color="inherit" href="resume">
+              Curriculum
+            </Button>
+            <Button color="inherit" href="portfolio">
+              Portfolio
+            </Button>
+            <Button color="inherit" href="contact">
+              Contact
             </Button>
             <IconButton
               color="inherit"
