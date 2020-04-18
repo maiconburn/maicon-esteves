@@ -183,8 +183,8 @@ body {
 @media screen and (max-width: 801px) {
   .wrapper .introduction .content-introduction hgroup h1, .wrapper .introduction .content-introduction hgroup h2 {
     margin: 0px auto;
-    font-size: 21pt;
-    line-height: 24pt;
+    font-size: 18pt;
+    line-height: 21pt;
   }
 }
 
