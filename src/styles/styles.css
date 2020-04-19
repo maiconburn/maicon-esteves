@@ -120,7 +120,7 @@ body {
 
 @media screen and (max-width: 801px) {
   .wrapper .introduction {
-    width: 400px;
+    width: 320px;
     height: 400px;
   }
 }
@@ -134,16 +134,6 @@ body {
 
 @media screen and (max-width: 801px) {
   .wrapper .introduction .content-introduction {
-    margin: 37.03704% auto;
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .wrapper .introduction .content-introduction {
-    margin: 40% 0px;
     width: 320px;
     height: 400px;
   }
@@ -175,14 +165,8 @@ body {
 
 @media screen and (max-width: 801px) {
   .wrapper .introduction .content-introduction hgroup {
-    width: 400px;
-    margin: 10px auto;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .wrapper .introduction .content-introduction hgroup {
     width: 320px;
+    margin: 10px auto;
   }
 }
 
@@ -197,17 +181,11 @@ body {
 
 @media screen and (max-width: 801px) {
   .wrapper .introduction .content-introduction hgroup h1, .wrapper .introduction .content-introduction hgroup h2 {
-    width: 400px;
+    width: 320px;
     text-align: center;
     margin: 0px auto;
     font-size: 18pt;
     line-height: 21pt;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .wrapper .introduction .content-introduction hgroup h1, .wrapper .introduction .content-introduction hgroup h2 {
-    width: 320px;
   }
 }
 
@@ -221,15 +199,8 @@ body {
 
 @media screen and (max-width: 801px) {
   .wrapper .introduction .content-introduction .bt-index {
-    display: block;
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .wrapper .introduction .content-introduction .bt-index {
-    width: 320px;
     text-align: center;
+    width: 320px;
   }
 }
 
@@ -239,17 +210,8 @@ body {
 
 @media screen and (max-width: 801px) {
   .wrapper .introduction .content-introduction .bt-index a {
-    margin: 10px auto;
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .wrapper .introduction .content-introduction .bt-index a {
     text-align: center;
-    width: 320px;
-    padding: 7px 0px;
-    margin: 0px auto;
+    margin: 10px auto;
     width: 200px;
   }
 }
