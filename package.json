@@ -27,9 +27,9 @@
     "react-dom": "^16.13.1",
     "react-particles-js": "^2.7.1",
     "react-simple-chatbot": "^0.6.1",
-    "styled-components": "^5.1.0"
+    "sass": "^1.26.3"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7"
+    "next-purgecss": "^4.0.0"
   }
 }

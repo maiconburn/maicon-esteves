@@ -2,13 +2,11 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Grid from "@material-ui/core/Grid"
 import Box from "@material-ui/core/Box"
-import Paper from "@material-ui/core/Paper"
-import Typography from "@material-ui/core/Typography"
 import NavBar from './NavBar'
 import Footer from './Footer'
 import Particles from 'react-particles-js'
 import { motion, AnimatePresence } from "framer-motion"
-import css from '../src/css/components/Layout.module.scss'
+import css from '../src/css/components/LayoutChat.module.scss'
 
 const particleOpt = {
   particles: {
@@ -34,7 +32,7 @@ const particleOpt = {
   }
 }
 
-function Layout(props) {
+function LayoutChat(props) {
 
     const spring = {
       type: "spring",
@@ -62,21 +60,7 @@ function Layout(props) {
               </Grid>
             </Box>
             <Container maxWidth="lg" className={styles.siteContainer}>
-              <Paper elevation={5} container className={styles.contentPaper}>
-                <Box p={'4vw'}>
-                  <Grid container item lg={12}>
-                    <Box item container mb={2} mx={2} width="100%" lg={12} xs={12} className={styles.pageTitle}>
-                      <Typography align="center" variant="h3" component="h1">
-                        {props.pageTitle}
-                      </Typography>
-                      <Typography align="center" variant="subtitle1" component="h2">
-                        {props.pageSubTitle}
-                      </Typography>
-                    </Box>
-                    {props.children}
-                  </Grid>
-                </Box>
-              </Paper>
+              {props.children}
             </Container>
             <Footer />
           </motion.div>
@@ -84,4 +68,4 @@ function Layout(props) {
       </AnimatePresence>
     )
 }
-export default Layout
+export default LayoutChat

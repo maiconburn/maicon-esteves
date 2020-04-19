@@ -24,34 +24,21 @@ const useStyles = makeStyles((theme) => ({
 function Test() {
     const classes = useStyles()
     return (
-        <Layout className={classes.root}>
-            <Paper elevation={5} className="content-paper">
-                <Grid container xs={12}>
-                    <Grid item xs={12} className={classes.title}>
-                        <Typography align="center" variant="h3" component="h1">
-                            Portfolio
-                        </Typography>
-                        <Typography align="center" variant="subtitle1" component="h2">
-                            subtitle
-                        </Typography>
-                    </Grid>
+        <Layout pageTitle="Portfolio" pageSubTitle="Learn more about my work" className={classes.root}>   
+            <Grid xs container justify="space-between" alignItems="center" direction="row">
+                <Grid xs={4} item>
+                    <BlogCard imageUrl="/img/hopihari.jpg" />
                 </Grid>
-                
-                <Grid xs container justify="space-between" alignItems="center" direction="row">
-                    <Grid xs={4} item>
-                        <BlogCard imageUrl="/img/hopihari.jpg" />
-                    </Grid>
-                    <Grid xs={4} item>
-                        <BlogCard imageUrl="/img/sosbikini.jpg" />
-                    </Grid>
-                    <Grid xs={4} item>
-                        <BlogCard imageUrl="/img/blend.jpg" />
-                    </Grid>
-                    <Grid xs={4} item>
-                        <BlogCard imageUrl="/img/quemdisseberenice.jpg" />
-                    </Grid>
+                <Grid xs={4} item>
+                    <BlogCard imageUrl="/img/sosbikini.jpg" />
                 </Grid>
-            </Paper>
+                <Grid xs={4} item>
+                    <BlogCard imageUrl="/img/blend.jpg" />
+                </Grid>
+                <Grid xs={4} item>
+                    <BlogCard imageUrl="/img/quemdisseberenice.jpg" />
+                </Grid>
+            </Grid>
         </Layout>           
     )
 }

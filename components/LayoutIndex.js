@@ -1,10 +1,12 @@
 import React from 'react'
 import Particles from 'react-particles-js'
 import Footer from './Footer'
+import css from '../src/css/components/LayoutIndex.module.scss'
 
 class Layout extends React.Component{
   render(){
     const myProp = this.props
+    const styles = css
     const particleOpt = {
       particles: {
         number: {
@@ -30,9 +32,9 @@ class Layout extends React.Component{
     }
     return(
       <React.Fragment>
-        <Particles canvasClassName="particle-canvas" params={particleOpt} />
+        <Particles canvasClassName={styles.particleCanvas} params={particleOpt} />
         {myProp.children}
-        <div className="indexFooter">
+        <div className={styles.indexFooter}>
           <Footer />
         </div>
       </React.Fragment>

@@ -1,8 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme } from '@material-ui/core/'
 import red from '@material-ui/core/colors/red'
 
-// Cria a instância do tema.
-const theme = createMuiTheme({
+const defaultTheme = createMuiTheme({
   palette: {
     primary: {
       main: '#000',
@@ -20,6 +19,22 @@ const theme = createMuiTheme({
       default: '#fff',
     },
   },
-});
+})
+
+const { breakpoints, typography: { pxToRem } } = defaultTheme
+
+const theme = {
+  ...defaultTheme,
+  overrides: {
+    MuiTypography: {
+      h1: {
+        fontSize: "5rem",
+        [breakpoints.down("xs")]: {
+          fontSize: "3rem"
+        }
+      }
+    }
+  }
+}
 
 export default theme

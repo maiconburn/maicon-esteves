@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ChatBot from 'react-simple-chatbot'
 import { ThemeProvider } from 'styled-components'
+import css from '../src/css/components/Chat.module.scss'
 
 const theme = {
   background: '#f5f8fb',
@@ -172,9 +173,10 @@ const steps = [
 
 class CvChat extends Component {
   render() {
+    const styles = css
     return (
         <ThemeProvider theme={theme}>
-            <ChatBot steps={steps} className="chatBot" botAvatar="/img/maicon.png" />
+            <ChatBot steps={steps} className={styles.chatBot} botAvatar="/img/maicon.png" />
         </ThemeProvider>
     )
   }

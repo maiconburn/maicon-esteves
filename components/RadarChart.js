@@ -9,7 +9,7 @@ class RadarChart extends Component {
     this.state = {
       series: [{
         name: 'Teste',
-        data: [4, 2, 3, 4, 5, 6],
+        data: [8, 7, 9, 8, 6, 6],
       }],
       options: {
         chart: {
@@ -19,7 +19,7 @@ class RadarChart extends Component {
           type: 'radar',
         },
         title: {
-          text: 'Radar with Polygon Fill'
+          text: props.chartTitle
         },
         dataLabels: {
           enabled: true
@@ -36,7 +36,7 @@ class RadarChart extends Component {
           }
         },
         xaxis: {
-          categories: ['Frontend', 'Backend', 'Server', 'Marketing', 'Business', 'Management']
+          categories: ['Frontend', 'Backend', 'Marketing', 'Project Manager', 'Database', 'DevOps']
         }
       }
     }
@@ -47,7 +47,7 @@ class RadarChart extends Component {
         options={this.state.options} 
         series={this.state.series} 
         type="radar" 
-        height={440}
+        height={this.props.chartHeight}
       />
     )
   }

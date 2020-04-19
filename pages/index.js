@@ -4,6 +4,7 @@ import LayoutIndex from '../components/LayoutIndex'
 import Avatar from '@material-ui/core/Avatar'
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined'
 import { motion, AnimatePresence } from "framer-motion"
+import css from '../src/css/pages/Index.module.scss'
 
 function Index(props) {
     const spring = {
@@ -12,6 +13,7 @@ function Index(props) {
       stiffness: 100,
       when: "afterChildren"
     }
+    const styles = css
     return (
       <AnimatePresence>
         <div className="page-transition-wrapper">
@@ -23,15 +25,15 @@ function Index(props) {
             id="page-transition-container"
           >
             <LayoutIndex>
-              <div className="wrapper">
-                <div className="introduction">
-                  <div className="content-introduction">
-                    <Avatar className="avatar" alt="Profile Picture" size="large" src="/img/maicon.png" />
+              <div className={styles.wrapper}>
+                <div className={styles.introduction}>
+                  <div className={styles.contentIntroduction}>
+                    <Avatar className={styles.avatar} alt="Maicon Esteves's Picture" size="large" src="/img/maicon.png" />
                     <hgroup>
                       <h1 align="center">Hello, I'm <span>Maicon Esteves</span></h1>
                       <h2 align="center">I'm a full-stack developer</h2>
                     </hgroup>
-                    <p className="bt-index">
+                    <p className={styles.btIndex}>
                       <Button variant="outlined" size="large" color="secondary" href="about" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
                     </p>
                   </div>
