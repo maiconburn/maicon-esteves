@@ -22,7 +22,6 @@ function Footer() {
                 <Grid item xs={6} justify="flex-end" container>
                     <IconButton
                     edge="end"
-                    target="_blank"
                     className={styles.gitBtn}
                     href="https://github.com/maiconburn"
                     color="inherit"

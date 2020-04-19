@@ -39,7 +39,7 @@ export default function ProgressBar(props) {
 
   return (
     <div className={classes.root}>
-      <LinearProgress className={classes.line} variant="determinate" value={completed} />
+      <LinearProgress className={classes.line} color="primary" variant="determinate" value={completed} />
     </div>
   );
 }
