@@ -7,7 +7,15 @@ import theme from '../src/theme'
 import css from '../src/css/global/Global.module.scss'
 
 export default function MyApp(props) {
-  const { Component, pageProps } = props  
+  const { Component, pageProps } = props
+
+  const teste = React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles)
+    }
+  }, [])
   const styles = css
   return (
     <React.Fragment>
@@ -17,10 +25,10 @@ export default function MyApp(props) {
       </Head>
       <body className={styles.bodyClass}>
         <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <Component {...pageProps} />
-      </ThemeProvider>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <Component {...pageProps} />
+        </ThemeProvider>
       </body>
     </React.Fragment>
   )
