@@ -1,0 +1,17 @@
+@import '../Variables.module.scss';
+
+a.buttonActive{
+    height: '35px';
+    margin: '7px 5px';
+    border-radius: '5px';
+    :hover{
+        opacity: 0.8;
+        span{
+            padding: 0px 5px;
+        }
+    }
+    span{
+        padding: 0px 5px;
+    }
+    
+}

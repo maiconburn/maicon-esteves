@@ -14,6 +14,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import MoreIcon from '@material-ui/icons/MoreVert'
 import Avatar from '@material-ui/core/Avatar'
+import ButtonActive from '../components/ButtonActive'
+import Link from 'next/link'
+import css from '../src/css/components/NavBar.module.scss'
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -37,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 function Navbar() {
+  const styles = css
   const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState(null)
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
@@ -75,7 +79,7 @@ function Navbar() {
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
-  );
+  )
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
@@ -89,9 +93,9 @@ function Navbar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <Button color="primary">
+        <Link href="about" color="primary">
           About Me
-        </Button>
+        </Link>
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -134,18 +138,18 @@ function Navbar() {
           </Button>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Button color="inherit" href="about">
+            <ButtonActive className={styles.buttonActive} color="inherit" href="/about">
               About Me
-            </Button>
-            <Button color="inherit" href="resume">
+            </ButtonActive>
+            <ButtonActive className={styles.buttonActive} color="inherit" href="/resume">
               Curriculum
-            </Button>
-            <Button color="inherit" href="portfolio">
+            </ButtonActive>
+            <ButtonActive className={styles.buttonActive} color="inherit" href="/portfolio">
               Portfolio
-            </Button>
-            <Button color="inherit" href="contact">
+            </ButtonActive>
+            <ButtonActive className={styles.buttonActive} color="inherit" href="/contact">
               Contact
-            </Button>
+            </ButtonActive>
             <IconButton
               color="inherit"
               target="_blank"
