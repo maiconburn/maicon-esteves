@@ -31,9 +31,9 @@ function Index(props) {
                       <h1 align="center">Hello, I'm <span>Maicon Esteves</span></h1>
                       <h2 align="center">I'm a full-stack developer</h2>
                     </hgroup>
-                    <div className="bt-index">
+                    <p className="bt-index">
                       <Button variant="outlined" size="large" color="secondary" href="about" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
