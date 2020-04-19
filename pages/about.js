@@ -7,7 +7,7 @@ import Box from "@material-ui/core/Box"
 import Layout from '../components/Layout'
 import Skills from '../components/Skills'
 import RadarChart from '../components/RadarChart'
-import css from '../src/css/pages/About.module.scss'
+import css from '../src/css/pages/about.module.scss'
 
 function Home() {
     const styles = css
