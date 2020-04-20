@@ -1,23 +1,25 @@
-const sgMail = require('@sendgrid/mail')
+import sgMail from '@sendgrid/mail'
 
-export default async function(req, res) {
+export default async function Mail(req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
   const { email, message } = req.body
 
   const content = {
-    to: 'maicon.burn@gmail.com',
-    from: email,
-    subject: `New Message From - ${email}`,
+    to: 'test@example.com',
+    from: 'test@example.com',
+    subject: `New Portfolio Message From - ${email}`,
     text: message,
-    html: `<p>${message}</p>`
+    html: `<strong>${message}</strong>`,
   }
-
-  try {
-    await sgMail.send(content)
-    res.status(200).send('Message sent successfully.')
-  } catch (error) {
-    console.log('ERROR', error)
-    res.status(400).send('Message not sent.')
-  }
+  sgMail
+    .send(content)
+    .then(() => {}, error => {
+        console.error(error);
+        res.status(200).send('Message sent successfully.')
+        if (error.response) {
+        console.error(error.response.body)
+        res.status(400).send('Message not sent.')
+        }
+    })
 }
