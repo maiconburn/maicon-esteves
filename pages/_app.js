@@ -4,19 +4,17 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
-import css from '../src/css/global/Global.module.scss'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props
 
-  const teste = React.useEffect(() => {
+  React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
   }, [])
-  const styles = css
   return (
     <React.Fragment>
       <Head>
