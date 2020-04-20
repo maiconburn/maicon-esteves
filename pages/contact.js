@@ -4,10 +4,8 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Layout from '../components/Layout'
 import Form from '../components/Form'
-import css from '../src/css/pages/contact.module.scss'
 
 function Contact() {
-    const styles = css
     return (
         <Layout pageTitle="Contact" pageSubTitle="Learn more about my work">   
             <Grid item xs={12}>
