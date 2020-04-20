@@ -94,7 +94,7 @@ function Navbar() {
     >
       <MenuItem>
         <Link href="about" color="primary">
-          About Me
+          <a>About Me</a>
         </Link>
       </MenuItem>
       <MenuItem>
@@ -132,7 +132,7 @@ function Navbar() {
             <Avatar alt="Maicon Esteves" src="/img/maicon.png" />
           </IconButton>
           <Button edge="start" color="inherit" href="index" >
-            <Typography variant="h6" noWrap>
+            <Typography variant="h6" className="MuiTypography-noWrap">
                 Portfolio - Maicon Esteves
             </Typography>
           </Button>

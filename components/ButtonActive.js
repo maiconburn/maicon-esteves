@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 function ButtonActive(props) {
   const router = useRouter()
   const style = {
-    backgroundColor: router.pathname === props.href ? '#464646' : 'none',
+    backgroundColor: router.pathname === props.href ? '#55025a' : 'none',
     height: '35px',
     margin: '7px 5px',
     borderRadius: '5px',

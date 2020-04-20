@@ -51,7 +51,7 @@ function Layout(props) {
           <motion.div
             transition={spring}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, delay: 0.2 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             id="page-transition-container"
           >
@@ -64,8 +64,8 @@ function Layout(props) {
             <Container maxWidth="lg" className={styles.siteContainer}>
               <Paper elevation={5} container className={styles.contentPaper}>
                 <Box p={'4vw'}>
-                  <Grid container item lg={12}>
-                    <Box item container mb={2} mx={2} width="100%" lg={12} xs={12} className={styles.pageTitle}>
+                  <Grid container item xs={12}>
+                    <Box item container mb={2} mx={2} width="100%" xs={12} className={styles.pageTitle}>
                       <Typography align="center" variant="h3" component="h1">
                         {props.pageTitle}
                       </Typography>
@@ -73,7 +73,9 @@ function Layout(props) {
                         {props.pageSubTitle}
                       </Typography>
                     </Box>
-                    {props.children}
+                    <Box item xs={12} width="100%">
+                      {props.children}
+                    </Box>
                   </Grid>
                 </Box>
               </Paper>

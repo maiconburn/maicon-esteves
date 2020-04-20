@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import css from '../src/css/components/ProgressBar.module.scss'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ProgressBar(props) {
+  const styles = css
   const classes = useStyles();
   const [completed, setCompleted] = React.useState(0);
 
@@ -39,7 +41,7 @@ export default function ProgressBar(props) {
 
   return (
     <div className={classes.root}>
-      <LinearProgress className={classes.line} color="primary" variant="determinate" value={completed} />
+      <LinearProgress className={`${styles.line} ${classes.line}`} color="primary" variant="determinate" value={completed} />
     </div>
   );
 }

@@ -49,7 +49,7 @@ function LayoutChat(props) {
           <motion.div
             transition={spring}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, delay: 0.2 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             id="page-transition-container"
           >

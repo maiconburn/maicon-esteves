@@ -1,46 +1,24 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from "@material-ui/core/Typography"
-import Paper from "@material-ui/core/Paper"
+import Box from '@material-ui/core/Box'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
 import Layout from '../components/Layout'
-import Grid from "@material-ui/core/Grid"
-import BlogCard from '../components/BlogCard'
+import Form from '../components/Form'
+import css from '../src/css/pages/contact.module.scss'
 
-
-const useStyles = makeStyles((theme) => ({
-    title: {
-        marginTop: theme.spacing(5),
-        marginBottom: theme.spacing(3)
-    },
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(5),
-        color: theme.palette.text.secondary,
-    }
-}))
-
-function Test() {
-    const classes = useStyles()
+function Contact() {
+    const styles = css
     return (
-        <Layout pageTitle="Portfolio" pageSubTitle="Learn more about my work" className={classes.root}>   
-            <Grid xs container justify="space-between" alignItems="center" direction="row">
-                <Grid xs={4} item>
-                    <BlogCard imageUrl="/img/hopihari.jpg" />
-                </Grid>
-                <Grid xs={4} item>
-                    <BlogCard imageUrl="/img/sosbikini.jpg" />
-                </Grid>
-                <Grid xs={4} item>
-                    <BlogCard imageUrl="/img/blend.jpg" />
-                </Grid>
-                <Grid xs={4} item>
-                    <BlogCard imageUrl="/img/quemdisseberenice.jpg" />
-                </Grid>
+        <Layout pageTitle="Contact" pageSubTitle="Learn more about my work">   
+            <Grid item xs={12}>
+                <Paper item xs={12} elevation={2} >
+                    <Box item p={3} xs={12}>
+                        <Form />
+                    </Box>
+                </Paper>
             </Grid>
         </Layout>           
     )
 }
  
-export default Test
+export default Contact

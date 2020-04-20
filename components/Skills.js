@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '10px',
         fontWeight: 'bold',
         fontSize: '15px',
-        background: '#2274A5',
+        background: '#55025a',
         color: '#FFFFFF'
     },
     icon:{
