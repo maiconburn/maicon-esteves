@@ -15,8 +15,8 @@ function Footer() {
         <Box component="footer" className={styles.footerInt} xs={12}>
             <Grid xs={12} container>
                 <Grid item xs={6}>
-                    <Typography component="p" noWrap>
-                        <Button href="index" target="_blank" color="inherit" noWrap>Copyright © {year} <span className={styles.nameAuthor}>- Maicon Esteves</span></Button>
+                    <Typography component="p" className='MuiTypography-noWrap'>
+                        <Button href="index" target="_blank" color="inherit" className='MuiTypography-noWrap'>Copyright © {year} <span className={styles.nameAuthor}>- Maicon Esteves</span></Button>
                     </Typography>
                 </Grid>
                 <Grid item xs={6} justify="flex-end" container>

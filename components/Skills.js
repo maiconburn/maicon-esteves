@@ -107,22 +107,22 @@ function Test() {
             </Grid>
             <Grid item container xs={12}>
                 <Box mt={2}>
-                    <Chip label="Ux Design" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Google Analytcs" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="SEO" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Photoshop" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Cloud Server" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Ubuntu" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="CentOS" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Google Ads" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="AI" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Facebook Ads" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Marketing Automation" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Entrepreneurship" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Statups" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Lean Startup" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Chatbot" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
-                    <Chip label="Design Thinking" className={classes.chip} icon={<FontAwesomeIcon size="md" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Ux Design" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Google Analytcs" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="SEO" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Photoshop" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Cloud Server" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Ubuntu" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="CentOS" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Google Ads" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="AI" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Facebook Ads" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Marketing Automation" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Entrepreneurship" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Statups" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Lean Startup" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Chatbot" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                    <Chip label="Design Thinking" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
                 </Box>
             </Grid>
         </Grid>

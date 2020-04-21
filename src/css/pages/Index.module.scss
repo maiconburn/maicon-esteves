@@ -9,7 +9,7 @@
     .introduction{
         display: block;
         margin: 0px auto;
-        width: 710px;
+        width: 566px;
         height: 200px;
         @media screen and (max-width: 801px) {
             width: $min-screen;
@@ -17,8 +17,8 @@
         }
         .contentIntroduction{
             display:block;
-            margin: (100% / 2.7) auto;
-            width: 710px;
+            margin: (100% / 2) auto;
+            width: 566px;
             height: 200px;
             @media screen and (max-width: 801px) {
                 width: $min-screen;
@@ -62,7 +62,9 @@
                         line-height: 21pt !important;
                     }
                     span{
-                        color: $tertiary-color;
+                        //background-color: rgba(255, 255, 255, 0.5);
+                        color: $text-color-index;
+                        //padding: 0px 3px;
                     }
                 }
             }
@@ -74,6 +76,7 @@
                 }
                 a{
                     margin: 10px 0px 0px 10px;
+                    border: 1px solid #FFF;
                     @media screen and (max-width: 801px) {
                         text-align: center;
                         margin: 10px auto;

@@ -21,21 +21,21 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-function Test() {
+function Portfolio() {
     const classes = useStyles()
     return (
         <Layout pageTitle="Portfolio" pageSubTitle="Learn more about my work" className={classes.root}>   
-            <Grid xs container justify="space-between" alignItems="center" direction="row">
-                <Grid xs={4} item>
+            <Grid container justify="space-between" alignItems="center" direction="row">
+                <Grid xs={12} sm={6} lg={4} item>
                     <BlogCard imageUrl="/img/hopihari.jpg" />
                 </Grid>
-                <Grid xs={4} item>
+                <Grid xs={12} sm={6} lg={4} item>
                     <BlogCard imageUrl="/img/sosbikini.jpg" />
                 </Grid>
-                <Grid xs={4} item>
+                <Grid xs={12} sm={6} lg={4} item>
                     <BlogCard imageUrl="/img/blend.jpg" />
                 </Grid>
-                <Grid xs={4} item>
+                <Grid xs={12} sm={6} lg={4} item>
                     <BlogCard imageUrl="/img/quemdisseberenice.jpg" />
                 </Grid>
             </Grid>
@@ -43,4 +43,4 @@ function Test() {
     )
 }
  
-export default Test
+export default Portfolio

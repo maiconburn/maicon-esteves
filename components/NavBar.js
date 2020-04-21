@@ -5,16 +5,14 @@ import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import Badge from '@material-ui/core/Badge'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
-import AccountCircle from '@material-ui/icons/AccountCircle'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import NotificationsIcon from '@material-ui/icons/Notifications'
 import MoreIcon from '@material-ui/icons/MoreVert'
 import Avatar from '@material-ui/core/Avatar'
 import ButtonActive from '../components/ButtonActive'
+import ButtonMobileActive from '../components/ButtonMobileActive'
 import Link from 'next/link'
 import css from '../src/css/components/NavBar.module.scss'
 
@@ -93,28 +91,24 @@ function Navbar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <Link href="about" color="primary">
-          <a>About Me</a>
-        </Link>
+        <ButtonMobileActive className={styles.buttonMobileActive} color="inherit" href="/about">
+          About Me
+        </ButtonMobileActive>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
+        <ButtonMobileActive className={styles.buttonMobileActive} color="inherit" href="/resume">
+          Curriculum
+        </ButtonMobileActive>
       </MenuItem>
       <MenuItem>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
+        <ButtonMobileActive className={styles.buttonMobileActive} color="inherit" href="/portfolio">
+          Portfolio
+        </ButtonMobileActive>
+      </MenuItem>
+      <MenuItem>
+        <ButtonMobileActive className={styles.buttonMobileActive} color="inherit" href="/contact">
+          Contact
+        </ButtonMobileActive>
       </MenuItem>
     </Menu>
   )

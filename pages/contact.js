@@ -10,7 +10,7 @@ function Contact() {
         <Layout pageTitle="Contact" pageSubTitle="Have a question or want to work together?">   
             <Grid item xs={12}>
                 <Paper item xs={12} elevation={2} >
-                    <Box item p={3} xs={12}>
+                    <Box item p={3} mb={8} xs={12}>
                         <Form />
                     </Box>
                 </Paper>
