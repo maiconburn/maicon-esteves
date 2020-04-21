@@ -17,13 +17,12 @@
         }
         .contentIntroduction{
             display:block;
-            margin: (100% / 2) auto;
+            @include centre(y);
             width: 566px;
             height: 200px;
             @media screen and (max-width: 801px) {
-                margin: (100% / 2.3) auto;
                 width: $min-screen;
-                height: 400px;
+                height: auto;
             }
             .avatar{
                 display: block;

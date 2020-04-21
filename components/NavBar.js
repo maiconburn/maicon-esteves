@@ -106,6 +106,11 @@ function Navbar() {
         </ButtonMobileActive>
       </MenuItem>
       <MenuItem>
+        <ButtonActive className={styles.buttonActive} color="inherit" target="_blank" href="http://maicon-esteves.dev">
+          Blog
+        </ButtonActive>
+      </MenuItem>
+      <MenuItem>
         <ButtonMobileActive className={styles.buttonMobileActive} color="inherit" href="/contact">
           Contact
         </ButtonMobileActive>
@@ -136,10 +141,13 @@ function Navbar() {
               About Me
             </ButtonActive>
             <ButtonActive className={styles.buttonActive} color="inherit" href="/resume">
-              Curriculum
+              Resume
             </ButtonActive>
             <ButtonActive className={styles.buttonActive} color="inherit" href="/portfolio">
               Portfolio
+            </ButtonActive>
+            <ButtonActive className={styles.buttonActive} color="inherit" target="_blank" href="http://maicon-esteves.dev">
+              Blog
             </ButtonActive>
             <ButtonActive className={styles.buttonActive} color="inherit" href="/contact">
               Contact

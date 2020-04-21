@@ -16,11 +16,17 @@ export default function MyApp(props) {
     }
   }, [])
   return (
-    <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Component {...pageProps} />
-    </ThemeProvider>
+    <React.Fragment>
+      <Head>
+          <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" /> 
+      </Head>
+      <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Component {...pageProps} />
+      </ThemeProvider>
+    </React.Fragment>
   )
 }
 
