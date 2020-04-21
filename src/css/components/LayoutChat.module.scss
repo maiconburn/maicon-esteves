@@ -1,6 +1,8 @@
 @import '../Variables.module.scss';
 
 .particleHeader{
+    background: rgb(3,9,45);
+    background: radial-gradient(circle, rgba(3,9,45,1) 0%, rgba(0,4,37,1) 33%, rgba(0,0,0,1) 100%);
     position: absolute;  
 }
 
