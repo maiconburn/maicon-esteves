@@ -8,6 +8,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+            <title>Maicon Esteves - Portfolio</title>
+            <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <meta name="theme-color" content={theme.palette.primary.main} />
             <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" /> 
