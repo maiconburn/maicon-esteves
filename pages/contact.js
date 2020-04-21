@@ -7,7 +7,7 @@ import Form from '../components/Form'
 
 function Contact() {
     return (
-        <Layout pageTitle="Contact" pageSubTitle="Learn more about my work">   
+        <Layout pageTitle="Contact" pageSubTitle="Have a question or want to work together?">   
             <Grid item xs={12}>
                 <Paper item xs={12} elevation={2} >
                     <Box item p={3} xs={12}>

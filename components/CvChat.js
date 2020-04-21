@@ -24,16 +24,14 @@ class Review extends Component {
       name: '',
       gender: '',
       age: '',
-    };
+    }
   }
 
   componentWillMount() {
     const { steps } = this.props;
     const { name, gender, age } = steps
-
     this.setState({ name, gender, age })
   }
-  
 
   render() {
     const { name, gender, age } = this.state
@@ -172,11 +170,22 @@ const steps = [
 ]
 
 class CvChat extends Component {
+
+  componentWillMount() {
+    this.handleEnd = this.handleEnd.bind(this)
+  }
+
+  handleEnd({ steps, values }) {
+    // console.log(steps);
+    // console.log(values);
+    alert(`Chat handleEnd callback! Number: ${values[0]}`);
+  }
+
   render() {
     const styles = css
     return (
         <ThemeProvider theme={theme}>
-            <ChatBot steps={steps} className={styles.chatBot} botAvatar="/img/maicon.png" />
+            <ChatBot steps={steps} handleEnd={this.handleEnd} className={styles.chatBot} botAvatar="/img/maicon.png" />
         </ThemeProvider>
     )
   }
