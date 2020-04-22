@@ -1,13 +1,13 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import LayoutResume from '../components/LayoutResume'
 import VerticalTimeline from '../components/VerticalTimeline'
 
 
 function Resume() {
     return (
-        <Layout pageTitle="Work experience & Education" pageSubTitle="My previous jobs, awards and my qualifications. You can also download my resume at this link"> 
+        <LayoutResume pageTitle="Work experience & Education" pageSubTitle="My previous jobs, awards and my qualifications. You can also download my resume at this" link="https://drive.google.com/file/d/1OEZkOvWoelFDr2QzSR4zx9apGvtYi7c3/view?usp=sharing"> 
             <VerticalTimeline />  
-        </Layout>         
+        </LayoutResume>         
     )
 }
  

@@ -11,12 +11,7 @@ import { motion, useAnimation } from "framer-motion"
 import css from '../src/css/pages/about.module.scss'
 
 function Home() {
-    const spring = {
-      type: "spring",
-      stiffness: 260,
-      damping: 20
-    }
-
+    
     const controls = useAnimation()
 
     React.useEffect(() => {

@@ -4,22 +4,7 @@ import Layout from '../components/LayoutChat'
 import Grid from "@material-ui/core/Grid"
 import CvChat from "../components/CvChat"
 
-
-const useStyles = makeStyles((theme) => ({
-    title: {
-        marginTop: theme.spacing(5),
-        marginBottom: theme.spacing(3)
-    },
-    pdfobject:{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-}))
-
-
 function ChatBot() {
-    const classes = useStyles()
     return (
         <Layout>
             <Grid container lg={12}>
