@@ -4,7 +4,7 @@ import WorkIcon from '@material-ui/icons/Work'
 import SchoolIcon from '@material-ui/icons/School'
 import StarIcon from '@material-ui/icons/Star'
 import EmojiEventsIcon from '@material-ui/icons/EmojiEvents'
-import css from '../src/css/components/VerticalTimeLine.module.scss'
+import css from '../src/css/components/VerticalTimeline.module.scss'
 
 function VerticalTimeLine() {
   const styles = css

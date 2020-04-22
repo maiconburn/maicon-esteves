@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-function Resume() {
+function ChatBot() {
     const classes = useStyles()
     return (
         <Layout>
@@ -29,4 +29,4 @@ function Resume() {
     )
 }
  
-export default Resume
+export default ChatBot
