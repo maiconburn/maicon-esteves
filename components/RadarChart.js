@@ -23,17 +23,17 @@ class RadarChart extends Component {
         },
         fill: {
           opacity: 0.7,
-          colors: ['#03092d']
+          colors: ['#030957']
         },
         stroke: {
           show: true,
           width: 1,
-          colors: ['#03092d'],
+          colors: ['#030957'],
           dashArray: 0
         },
         markers: {
           size: 5,
-          colors: ['#03092d'],
+          colors: ['#030957'],
           hover: {
             size: 10
           }
@@ -41,7 +41,7 @@ class RadarChart extends Component {
         dataLabels: {
           enabled: true,
           style: {
-            colors: ['#03092d']
+            colors: ['#030957']
           }
         },
         plotOptions: {

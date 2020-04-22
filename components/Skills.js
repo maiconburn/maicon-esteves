@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '10px',
         fontWeight: 'bold',
         fontSize: '15px',
-        background: 'radial-gradient(circle, rgba(3,9,45,1) 0%, rgba(0,4,37,1) 33%, rgba(0,0,0,1) 100%)',
+        background: '#030957',
         color: '#FFFFFF'
     },
     icon:{

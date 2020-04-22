@@ -1,16 +1,16 @@
+/* eslint-disable no-undef */
 require('dotenv').config()
-
 module.exports = {
   env: {
     SENDGRID_API_KEY: process.env.SENDGRID_API_KEY
   }
 }
 
-
+/*
 module.exports = {
   webpack: (config, options) => {
     config.module.rules.push({
-      test: /\.pdf$/,
+      test: /\.svg$/,
       use: [
         {
           loader: 'url-loader',
@@ -24,3 +24,4 @@ module.exports = {
     return config
   }
 }
+*/
