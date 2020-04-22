@@ -29,7 +29,7 @@ function Home() {
 
     const styles = css
     return (
-      <Layout pageTitle="About Me" pageSubTitle="Learn more about me">
+      <Layout pageTitle="About me and Skills" pageSubTitle="A small introduction about myself and my skills">
           <Box container lg={12} >
             <Box item mb={5}>
               <Grid item container lg={12} className={styles.personality}>

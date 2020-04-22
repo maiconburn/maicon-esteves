@@ -1,6 +1,13 @@
 @import '../Variables.module.scss';
 .verticalTimelineRoot{
-  .dateFirstItem{
-      color: $tertiary-color;
-  }  
+    width: inherit;
+}
+
+.dateFirstItem{
+    @media screen and (max-width: 1169px) {
+        color: '#FFF' !important,
+    }
+    @media screen and (min-width: 1170px) {
+        color: $tertiary-color !important;
+    }
 }

@@ -3,6 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import WorkIcon from '@material-ui/icons/Work'
 import SchoolIcon from '@material-ui/icons/School'
 import StarIcon from '@material-ui/icons/Star'
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents'
 import css from '../src/css/components/VerticalTimeLine.module.scss'
 
 function VerticalTimeLine() {
@@ -13,54 +14,79 @@ function VerticalTimeLine() {
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           contentArrowStyle={{ borderRight: '7px solid  #55025a' }}
-          date="2011 - present"
+          date="2014 - present"
           dateClassName={ styles.dateFirstItem }
           iconStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+          <h3 className="vertical-timeline-element-title">Full-Stack Growth Developer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Adeus Rotina - (My own company)</h4>
           <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-          </p>
+          Development and management of the digital platform, Marketing, Growth Hacking, Project Management, Speaker, Team Leading, Fundraising           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
-          date="2010 - 2011"
+          date="2011"
           iconStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+          <h3 className="vertical-timeline-element-title">Full-Stack Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Invalley - (My own company)</h4>
           <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+            Projects focused in Design and Technology with HTML, CSS, Javascript, MySql, PHP, Magento, Joomla and Wordpress
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
-          date="2008 - 2010"
+          date="2011"
           iconStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+          <h3 className="vertical-timeline-element-title">Front-End and Back-End Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">RED - Design de Experiência</h4>
           <p>
-            User Experience, Visual Design
+            Projects UX focused with HTML, CSS, Javascript, MySql and PHP 
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
-          date="February 2008 - October 2008"
+          date="2010"
+          iconStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Front-End and Back-End Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Endeavour Group</h4>
+          <p>
+            Projects with HTML, CSS, Javascript, MySql, PHP and Joomla
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          date="2010"
+          iconStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Front-End and Back-End Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Studio Geek - (My own company)</h4>
+          <p>
+            Projects with HTML, CSS, Javascript, MySql, PHP and Joomla
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          date="2008"
           iconStyle={{ background: 'linear-gradient(135deg, #6600aa 0%, #55025a 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">Front-End Software Engineer</h3>
           <h4 className="vertical-timeline-element-subtitle">BriviaDez</h4>
           <p>
-            Code with HTML, CSS, Javascript, MySql and PHP
+            Projects with HTML, CSS, Javascript, MySql and PHP
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -80,6 +106,32 @@ function VerticalTimeLine() {
           className="vertical-timeline-element--education"
           contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           date="2016"
+          iconStyle={{ background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 74%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          icon={<EmojiEventsIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Honors & Awards</h3>
+          <h4 className="vertical-timeline-element-subtitle">IBTeCHDAY</h4>
+          <p>
+            2º place - Hackathon
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          date="2016"
+          iconStyle={{ background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 74%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          icon={<EmojiEventsIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Honors & Awards</h3>
+          <h4 className="vertical-timeline-element-subtitle">Startup RS - Digital</h4>
+          <p>
+            3º place - Startup Tournament
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          date="2016"
           iconStyle={{ background: 'linear-gradient(to top, #30cfd0 0%, #330867 100%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
           icon={<SchoolIcon />}
         >
@@ -87,6 +139,32 @@ function VerticalTimeLine() {
           <h4 className="vertical-timeline-element-subtitle">Acceleration Program - SEBRAE</h4>
           <p>
             Startups acceleration program for digital startups
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          date="2015"
+          iconStyle={{ background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 74%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          icon={<EmojiEventsIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Honors & Awards</h3>
+          <h4 className="vertical-timeline-element-subtitle">Startup Weekend</h4>
+          <p>
+            2º place - Startup Weekend Lajeado
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentStyle={{ boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          date="2016"
+          iconStyle={{ background: 'linear-gradient(147deg, #FFE53B 0%, #FF2525 74%)', color: '#fff', boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12)' }}
+          icon={<EmojiEventsIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Honors & Awards</h3>
+          <h4 className="vertical-timeline-element-subtitle">Acelera Serra</h4>
+          <p>
+            1º place - Startup Tournament
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement

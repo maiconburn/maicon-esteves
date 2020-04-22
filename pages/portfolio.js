@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 function Portfolio() {
     const classes = useStyles()
     return (
-        <Layout pageTitle="Portfolio" pageSubTitle="Learn more about my work" className={classes.root}>   
+        <Layout pageTitle="Projects & developments" pageSubTitle="Showcase of my latest works, projects and developments." className={classes.root}>   
             <Grid container justify="space-between" alignItems="center" direction="row">
                 <Grid xs={12} sm={6} lg={4} item>
                     <BlogCard imageUrl="/img/hopihari.jpg" />
