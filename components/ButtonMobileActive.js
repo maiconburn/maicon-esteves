@@ -16,7 +16,7 @@ function ButtonActive(props) {
   }
 
   return (
-    <Button href={props.href} className={props.className} color={props.color} onClick={handleClick} style={style}>
+    <Button href={props.href} className={props.className} target={props.target} color={props.color} onClick={handleClick} style={style}>
       {props.children}
     </Button>
   )

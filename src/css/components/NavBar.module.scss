@@ -30,3 +30,18 @@ a.buttonMobileActive{
         padding: 0px 5px;
     }
 }
+
+a.buttonIcon{
+    width: 30px;
+    svg{
+        width: 25px;
+    }
+}
+
+a.buttonIconLast{
+    width: 30px;
+    margin-right: 2px !important;
+    svg{
+        width: 21px !important;
+    }
+}

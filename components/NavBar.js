@@ -13,7 +13,6 @@ import MoreIcon from '@material-ui/icons/MoreVert'
 import Avatar from '@material-ui/core/Avatar'
 import ButtonActive from '../components/ButtonActive'
 import ButtonMobileActive from '../components/ButtonMobileActive'
-import Link from 'next/link'
 import css from '../src/css/components/NavBar.module.scss'
 
 const useStyles = makeStyles((theme) => ({
@@ -106,9 +105,9 @@ function Navbar() {
         </ButtonMobileActive>
       </MenuItem>
       <MenuItem>
-        <ButtonActive className={styles.buttonActive} color="inherit" target="_blank" href="http://maicon-esteves.dev">
+        <Button className={styles.buttonActive} color="inherit" target="_blank" href="https://blog.maicon-esteves.tk">
           Blog
-        </ButtonActive>
+        </Button>
       </MenuItem>
       <MenuItem>
         <ButtonMobileActive className={styles.buttonMobileActive} color="inherit" href="/contact">
@@ -146,14 +145,15 @@ function Navbar() {
             <ButtonActive className={styles.buttonActive} color="inherit" href="/portfolio">
               Portfolio
             </ButtonActive>
-            <ButtonActive className={styles.buttonActive} color="inherit" target="_blank" href="http://maicon-esteves.dev">
+            <Button className={styles.buttonActive} color="inherit" target="_blank" href="https://blog.maicon-esteves.tk">
               Blog
-            </ButtonActive>
+            </Button>
             <ButtonActive className={styles.buttonActive} color="inherit" href="/contact">
               Contact
             </ButtonActive>
             <IconButton
               color="inherit"
+              className={styles.buttonIcon}
               target="_blank"
               href="https://www.linkedin.com/in/maiconburn"
             >
@@ -161,6 +161,7 @@ function Navbar() {
             </IconButton>
             <IconButton
               edge="end"
+              className={styles.buttonIconLast}
               target="_blank"
               href="https://github.com/maiconburn"
               color="inherit"

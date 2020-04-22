@@ -21,11 +21,14 @@
         color: $text-color-index;
     }
     .gitBtn{
-        margin-right: 20px;
+        margin-right: 21px;
         color: $text-color-index;
         p{
             margin: 0px 0px 0px 7px;
             color: $text-color-index;
+        }
+        svg{
+            width: 21px !important;
         }
     }
     position: fixed;

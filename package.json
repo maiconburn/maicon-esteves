@@ -30,6 +30,7 @@
     "react-hook-form": "^5.5.0",
     "react-particles-js": "^2.7.1",
     "react-simple-chatbot": "^0.6.1",
+    "react-vertical-timeline-component": "^2.6.0",
     "sass": "^1.26.3",
     "styled-components": "^5.1.0"
   },
