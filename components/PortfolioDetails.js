@@ -10,7 +10,7 @@ import { faHashtag } from '@fortawesome/free-solid-svg-icons'
 import css from '../src/css/components/PortfolioDetails.module.scss'
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   chip:{
       marginTop: '10px',
       marginRight: '10px',
