@@ -27,7 +27,7 @@ class Review extends Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { steps } = this.props;
     const { name, gender, age } = steps
     this.setState({ name, gender, age })
@@ -171,10 +171,11 @@ const steps = [
 
 class CvChat extends Component {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.handleEnd = this.handleEnd.bind(this)
   }
 
+  // eslint-disable-next-line no-unused-vars
   handleEnd({ steps, values }) {
     // console.log(steps);
     // console.log(values);

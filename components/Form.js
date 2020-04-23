@@ -1,14 +1,13 @@
 import React from 'react'
 import { useForm, ErrorMessage } from 'react-hook-form'
 import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Alert from '@material-ui/lab/Alert'
 import css from '../src/css/components/Form.module.scss'
 
 export default function App() {
-  const { register, handleSubmit, errors, setValue } = useForm()
+  const { register, handleSubmit, errors } = useForm()
 
   const [status, setStatus] = React.useState({
     submitted: false,
@@ -42,17 +41,6 @@ export default function App() {
     const text = await res.text()
     handleResponse(res.status, text)
   }
-  
-  const values = React.useState()
-
-  const handleChange = (e) => {
-    setValue("name", e.target.value)
-    setValue("email", e.target.value)
-    setValue("company", e.target.value)
-    setValue("subject", e.target.value)
-    setValue("message", e.target.value)
-    setValue("phone", e.target.value)
-  }
 
   React.useEffect(() => { 
     register(
@@ -84,16 +72,8 @@ export default function App() {
 
   const styles = css
   return (
-      <Grid container xs={12}>
+      <Grid container xs={12} className={styles.formRoot}>
         <form className={styles.formClass} onSubmit={handleSubmit(onSubmit)}>
-            <Grid item xs={12}>
-                {status.info.error && (
-                  <Alert severity="error">Error: {status.info.msg}</Alert>
-                )}
-                {!status.info.error && status.info.msg && (
-                  <Alert severity="success">{status.info.msg}</Alert>
-                )}
-            </Grid>
             <TextField 
             id="outlined-full-width" 
             type="text" 
@@ -190,7 +170,15 @@ export default function App() {
             variant="outlined" 
             inputRef={register} 
             />
-            <Button type="submit" variant="contained" className={styles.inputBtnClass} color="primary">
+            <Grid item xs={12}>
+                {status.info.error && (
+                  <Alert className={styles.alert} severity="error">Error: {status.info.msg}</Alert>
+                )}
+                {!status.info.error && status.info.msg && (
+                  <Alert className={styles.alert} severity="success">{status.info.msg}</Alert>
+                )}
+            </Grid>
+            <Button type="submit" variant="contained" disabled={status.submitting} className={styles.inputBtnClass} color="primary">
               {!status.submitting
                 ? !status.submitted
                   ? 'Submit'

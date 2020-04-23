@@ -29,6 +29,20 @@
     }   
 }
 
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin maintain-ratio($ratio: 1 1) {
+    $width: 100%;
+    $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+
+    width: $width;
+    height: 0;
+    padding-bottom: $height;
+}
+
 $text-color-index: #F5F1ED;
 $text-color:#464646;
 $primary-color: #000000;

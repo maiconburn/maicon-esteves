@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { useRouter } from 'next/router'
 import Button from '@material-ui/core/Button'
 

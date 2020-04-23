@@ -11,6 +11,20 @@
     }
 }
 
-.inputBtnClass{
+button.inputBtnClass{
     background-color: $tertiary-color !important;
+}
+
+.formRoot{
+    button:disabled{
+        background-color: $tertiary-color !important;
+        opacity: 0.7;
+        color: #FFF !important;
+        cursor: wait;
+    }
+}
+
+
+.alert{
+    margin-bottom: 10px;
 }

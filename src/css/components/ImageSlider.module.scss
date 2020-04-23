@@ -1,0 +1,50 @@
+@import '../Variables.module.scss';
+
+.boxImage{
+    position: relative;
+    display: flex;
+    @include box(80vw,63vw);
+    @media screen and (max-width: 801px) {
+        @include box(80vw,73vw);
+    }
+    //padding-top: 45%;
+    //width: 1029px;
+    //height: 900px;
+    //max-width: 1100px;
+    //max-height: 1100px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+        position: absolute;
+        max-width: 100%; 
+        border-radius: 3%;
+        z-index: 0 !important;
+    }
+    .next,
+    .prev {
+    position: absolute;
+    top: calc(50% - 20px);
+    background: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1;
+    }
+
+    .next {
+    right: 4%;
+    }
+
+    .prev {
+    left: 4%;
+    transform: scale(-1);
+    }
+}
