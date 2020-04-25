@@ -49,7 +49,7 @@ function BlogCard(props) {
               <CardMedia
                 className={classes.media}
               >
-                <img src={`http://localhost:1337${props.jobImage.url}`} width="100%" />
+                <img src={`http://localhost${props.jobImage.url}`} width="100%" />
               </CardMedia>
             </CardActionArea>
             <CardActions className={classes.actions}>

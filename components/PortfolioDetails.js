@@ -62,7 +62,7 @@ function PortfolioDetails({jobDetails}) {
           {images.map((image, i) => {
             return(
               <Paper key={i} className={styles.boxImage} elevation={5}>
-                <img width="100%" src={`http://localhost:1337${image.url}`} />
+                <img width="100%" src={`http://localhost${image.url}`} />
               </Paper>
             )
           })}
