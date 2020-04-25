@@ -6,7 +6,7 @@ import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutli
 import { motion, AnimatePresence } from "framer-motion"
 import css from '../src/css/pages/Index.module.scss'
 
-function Index(props) {
+function Index() {
     const spring = {
       type: "spring",
       damping: 20,

@@ -63,20 +63,6 @@ function Navbar() {
   };
 
   const menuId = 'primary-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  )
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
@@ -125,11 +111,11 @@ function Navbar() {
             edge="start"
             className={classes.menuButton}
             color="inherit"
-            href="index"
+            href="/index"
           >
             <Avatar alt="Maicon Esteves" src="/img/maicon.png" />
           </IconButton>
-          <Button edge="start" color="inherit" href="index" >
+          <Button edge="start" color="inherit" href="/index" >
             <Typography variant="h6" className="MuiTypography-noWrap">
                 Portfolio - Maicon Esteves
             </Typography>
@@ -183,7 +169,7 @@ function Navbar() {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
+      
     </div>
   )
 }

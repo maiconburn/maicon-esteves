@@ -1,41 +1,37 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+
 import Layout from '../components/Layout'
 import Grid from "@material-ui/core/Grid"
 import BlogCard from '../components/BlogCard'
+import Query from "../components/api/Query"  
+import JOBS_QUERY from "../apollo/queries/job/jobs"
+import css from '../src/css/pages/portfolio.module.scss'
 
-
-const useStyles = makeStyles((theme) => ({
-    title: {
-        marginTop: theme.spacing(5),
-        marginBottom: theme.spacing(3)
-    },
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(5),
-        color: theme.palette.text.secondary,
-    }
-}))
 
 function Portfolio() {
-    const classes = useStyles()
+    const styles = css
     return (
-        <Layout pageTitle="Projects & developments" pageSubTitle="Showcase of my latest works, projects and developments." className={classes.root}>   
+        <Layout pageTitle="Projects & developments" pageSubTitle="Showcase of my latest works, projects and developments." className={styles.root}>   
             <Grid container justify="space-between" alignItems="center" direction="row">
-                <Grid xs={12} sm={6} lg={4} item>
-                    <BlogCard imageUrl="/img/hopihari.jpg" />
-                </Grid>
-                <Grid xs={12} sm={6} lg={4} item>
-                    <BlogCard imageUrl="/img/sosbikini.jpg" />
-                </Grid>
-                <Grid xs={12} sm={6} lg={4} item>
-                    <BlogCard imageUrl="/img/blend.jpg" />
-                </Grid>
-                <Grid xs={12} sm={6} lg={4} item>
-                    <BlogCard imageUrl="/img/quemdisseberenice.jpg" />
-                </Grid>
+                <Grid xs={12} align="center" container className={styles.masonryWithColumns} rel="mansonry">
+                    <Query query={JOBS_QUERY} id={null}>
+                        {({ data: { jobs } }) => {
+                            return(
+                                <>
+                                    {jobs.map(({id, title, type, company, client, skills, description, images}) => {
+                                        //console.log(images[0])
+                                        return (
+                                            // eslint-disable-next-line react/jsx-key
+                                            <Grid lg={4} md={6} xs={12} item>
+                                                <BlogCard jobTitle={title} jobType={type} jobId={id} jobImage={images[0]} jobImages={images} jobClient={client} jobSkills={skills} jobDescriptiom={description} jobCompany={company} />
+                                            </Grid>
+                                        )
+                                    })} 
+                                </>
+                            ) 
+                        }} 
+                    </Query>
+                </Grid>        
             </Grid>
         </Layout>           
     )

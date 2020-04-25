@@ -1,0 +1,15 @@
+@import '../Variables.module.scss';
+
+.name{
+    padding: 5px 0;
+}
+
+.details{
+    padding: 2px 0;
+    a{
+        text-decoration: none;
+    }
+    :hover{
+        text-decoration: underline;
+    }
+}

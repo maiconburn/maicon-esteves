@@ -57,26 +57,24 @@ function Layout(props) {
           >
             <Box component="header">
               <NavBar/>
-              <Grid className={styles.edgeHeader} container xs={12}>
+              <Grid className={styles.edgeHeader} container>
                 <Particles canvasClassName={styles.particleHeader} params={particleOpt} />
               </Grid>
             </Box>
             <Container maxWidth="lg" className={styles.siteContainer}>
-              <Paper elevation={5} container className={styles.contentPaper}>
+              <Paper elevation={5} className={styles.contentPaper}>
                 <Box p={'4vw'}>
-                  <Grid container item xs={12}>
-                    <Box item container mb={2} mx={2} width="100%" xs={12} className={styles.pageTitle}>
-                      <Typography align="center" variant="h3" component="h1">
-                        {props.pageTitle}
-                      </Typography>
-                      <Typography align="center" variant="subtitle1" component="h2">
-                        {props.pageSubTitle}
-                      </Typography>
-                    </Box>
-                    <Box item xs={12} width="100%">
-                      {props.children}
-                    </Box>
-                  </Grid>
+                  <Box className={styles.pageTitle}>
+                    <Typography align="center" variant="h3" component="h1">
+                      {props.pageTitle}
+                    </Typography>
+                    <Typography align="center" variant="subtitle1" component="h2">
+                      {props.pageSubTitle}
+                    </Typography>
+                  </Box>
+                  <Box width="100%">
+                    {props.children}
+                  </Box> 
                 </Box>
               </Paper>
             </Container>

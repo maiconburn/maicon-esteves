@@ -1,9 +1,10 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
+import Hidden from '@material-ui/core/Hidden'
 import Box from '@material-ui/core/Box'
+import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-import ImageSlider from '../components/ImageSlider'
 import Chip from '@material-ui/core/Chip'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHashtag } from '@fortawesome/free-solid-svg-icons'
@@ -15,7 +16,7 @@ const useStyles = makeStyles(() => ({
       marginTop: '10px',
       marginRight: '10px',
       marginLeft: '0px',
-      marginBottom: '10px',
+      marginBottom: '0px',
       fontWeight: 'bold',
       fontSize: '15px',
       background: '#030957',
@@ -27,29 +28,61 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-function PortfolioDetails() {
+function PortfolioDetails({jobDetails}) {
 
   const classes = useStyles()
 
   const styles = css
 
+  console.log('Details',jobDetails)
+
+  const images = jobDetails.images
+  const skills = jobDetails.skills
+
   return (
-    <Grid xs={12} container spacing={2} className={styles.root}>
-      <Grid xs={12} item display="flex" justifyContent="flex-start" alignItems="center">
-        <Box className={styles.boxImage} pr={3} elevation={3}>
-          <ImageSlider />
-        </Box>
+    <Grid container spacing={2} className={styles.root}>
+      <Hidden mdUp>
+        <Grid xs={12} md={5} item>
+          <Paper elevation={2} className={styles.paperContent}>
+            <Box className={styles.boxContent} p={3}>
+              <Typography variant="subtitle1" className={styles.boxSubTitle} component="h5">{jobDetails.type}</Typography>
+              <Typography variant="h5" component="h4" className={styles.boxTitle}>{jobDetails.title} - {jobDetails.client}</Typography>
+              <Typography variant="body1" component="p">{jobDetails.description}</Typography>
+              {skills.map((skill, i) => {
+                return(
+                  <Chip key={i} label={skill} className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                )
+              })}
+            </Box>
+          </Paper>
+        </Grid>
+      </Hidden>
+      <Grid xs={12} md={7} item display="flex">
+        
+          {images.map((image, i) => {
+            return(
+              <Paper key={i} className={styles.boxImage} elevation={5}>
+                <img width="100%" src={`http://localhost:1337${image.url}`} />
+              </Paper>
+            )
+          })}
       </Grid>
-      <Grid xs={12} item>
-        <Box className={styles.cardContent} elevation={0} px={5}>
-          <Typography variant="subtitle1" className={styles.cardSubTitle} component="h5">WEBSITE</Typography>
-          <Typography variant="h4" component="h4" className={styles.cardTitle}>Hopi Hari - RED Design de Experiencia</Typography>
-          <Typography variant="body1" component="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</Typography>
-          <Chip label="Google Ads" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
-          <Chip label="Google Ads" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
-          <Chip label="Google Ads" className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
-        </Box>
-      </Grid>
+      <Hidden smDown>
+        <Grid xs={12} md={5} item>
+          <Paper elevation={2} className={styles.paperContent}>
+            <Box className={styles.boxContent} p={3}>
+              <Typography variant="subtitle1" className={styles.boxSubTitle} component="h5">{jobDetails.type}</Typography>
+              <Typography variant="h5" component="h4" className={styles.boxTitle}>{jobDetails.title} - {jobDetails.client}</Typography>
+              <Typography variant="body1" component="p">{jobDetails.description}</Typography>
+              {skills.map((skill, i) => {
+                return(
+                  <Chip key={i} label={skill} className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
+                )
+              })}
+            </Box>
+          </Paper>
+        </Grid>
+      </Hidden>
     </Grid>
   )
 }

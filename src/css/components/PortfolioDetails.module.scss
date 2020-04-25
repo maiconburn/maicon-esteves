@@ -2,21 +2,24 @@
 
 .boxImage{
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
-    padding: 0px !important;
+    margin-bottom: 30px;
 }
 
-.cardContent{
+.paperContent{
+    position: inherit;
+}
+
+.boxContent{
     margin-bottom: 15px;
 }
 
-.cardSubTitle{
+.boxSubTitle{
     font-weight: bold;
     color: #030957;
 }
 
-.cardTitle{
+.boxTitle{
     padding: 5px 0px 10px 0px;
 }

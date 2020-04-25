@@ -1,0 +1,11 @@
+@import '../Variables.module.scss';
+
+.containerJobs{
+    display: flex;
+    div{
+        display: flex;
+        div.MuiPaper-root{
+            display: flex
+        }
+    }
+}
