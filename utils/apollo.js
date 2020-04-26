@@ -5,7 +5,8 @@ import { createHttpLink } from "apollo-link-http"
 import fetch from "isomorphic-unfetch"
 
 // Update the GraphQL endpoint to any instance of GraphQL that you like
-const GRAPHQL_URL = process.env.API_URL || "https://api.maicon-esteves.tk";
+// eslint-disable-next-line no-undef
+const GRAPHQL_URL = process.env.API_URL || "https://api-maicon-esteves.herokuapp.com";
 
 const link = createHttpLink({  
   fetch, // Switches between unfetch & node-fetch for client & server.
