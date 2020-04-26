@@ -7,6 +7,7 @@ import theme from '../src/theme'
 import { ApolloProvider } from "@apollo/react-hooks"
 import withData from "../utils/apollo"
 import 'react-vertical-timeline-component/style.min.css'
+import NextNprogress from 'nextjs-progressbar'
 import '../src/styles/styles.css'
 
 const App = ({ Component, pageProps, apollo }) => {
@@ -19,6 +20,12 @@ const App = ({ Component, pageProps, apollo }) => {
 
   return (
     <ApolloProvider client={apollo}>
+      <NextNprogress
+          color="#6600aa"
+          startPosition="0.3"
+          stopDelayMs="700"
+          height="8"
+        />
       <Head>
         <title>Maicon Esteves - Portfolio</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />

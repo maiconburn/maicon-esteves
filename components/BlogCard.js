@@ -24,9 +24,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#FFF',
   },
   title:{
-    a:{
-      textDecoration: 'none'
-    }
+    textDecoration: 'none'
   }
 }))
 
@@ -42,8 +40,8 @@ function BlogCard(props) {
           whileTap={{ scale: [1, 0.5] }}
           transition={{ duration: 0.5 }}
       >
-        <Link href={{ pathname: '/project', query: { id: pid } }} as={`/project/${pid}`}>
-          <a jobTitle={props.jobTitle} jobType={props.jobType} jobId={props.jobId} jobImages={props.jobImages} jobClient={props.jobClient} jobSkills={props.jobSkills} jobDescriptiom={props.jobDescriptiom} jobCompany={props.jobCompany}>
+        <Link href={`/project/${pid}`} as={`/project/${pid}`}>
+          <a className={classes.title}>
           <Card className={classes.root} elevation={5}>
             <CardActionArea>
               <CardMedia
@@ -55,13 +53,13 @@ function BlogCard(props) {
             <CardActions className={classes.actions}>
               <Grid xs={12} widht="100%" container>
                 <Grid xs={6} item>
-                  <Typography variant="h6" align="left" component="h6">
-                    {props.jobTitle}
+                  <Typography variant="Body1" align="left" component="p">
+                    <strong>{props.jobTitle}</strong>
                   </Typography>
                 </Grid>
                 <Grid xs={6} item>
-                  <Typography variant="h6" align="right" component="h6">
-                    {props.jobType}
+                  <Typography variant="Body1" align="right" component="p">
+                    <strong>{props.jobType}</strong>
                   </Typography>
                 </Grid>
               </Grid>

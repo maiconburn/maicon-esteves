@@ -8,7 +8,6 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 import Particles from 'react-particles-js'
 import css from '../src/css/components/Layout.module.scss'
-import NextNprogress from 'nextjs-progressbar'
 
 const particleOpt = {
   particles: {
@@ -35,24 +34,10 @@ const particleOpt = {
 }
 
 function Layout(props) {
-
-    const spring = {
-      type: "spring",
-      damping: 20,
-      stiffness: 100,
-      when: "afterChildren"
-    }
-
     const styles = css
 
     return (
       <React.Fragment>
-        <NextNprogress
-          color="#6600aa"
-          startPosition="0.3"
-          stopDelayMs="700"
-          height="8"
-        />
           <Box component="header">
             <NavBar/>
             <Grid className={styles.edgeHeader} container>

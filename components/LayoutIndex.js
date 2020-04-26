@@ -1,7 +1,6 @@
 import React from 'react'
 import Particles from 'react-particles-js'
 import Footer from './Footer'
-import NextNprogress from 'nextjs-progressbar'
 import css from '../src/css/components/LayoutIndex.module.scss'
 
 class Layout extends React.Component{
@@ -33,12 +32,6 @@ class Layout extends React.Component{
     }
     return(
       <React.Fragment>
-        <NextNprogress
-          color="#6600aa"
-          startPosition="0.3"
-          stopDelayMs="700"
-          height="8"
-        />
         <Particles canvasClassName={styles.particleCanvas} params={particleOpt} />
         {myProp.children}
         <div className={styles.indexFooter}>
