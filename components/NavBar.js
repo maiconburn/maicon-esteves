@@ -40,7 +40,6 @@ function Navbar() {
   const styles = css
   const classes = useStyles()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
-
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
 
   const handleMobileMenuClose = () => {
