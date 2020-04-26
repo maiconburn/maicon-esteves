@@ -14,7 +14,7 @@ function Project() {
 
     console.log('Project',pid)
     return (
-        <Layout pageTitle="About Me & My Skills" pageSubTitle="A small introduction about myself and my skills">
+        <Layout pageTitle="Projects & developments" pageSubTitle="This is one of the projects I developed, I hope you enjoy it :D">
             <Grid container justify="space-between" alignItems="center" direction="row">
                 <Grid item>
                     <Query query={JOB_QUERY} id={pid}>

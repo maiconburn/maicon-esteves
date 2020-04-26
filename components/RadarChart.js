@@ -8,7 +8,7 @@ class RadarChart extends Component {
 
     this.state = {
       series: [{
-        name: 'Teste',
+        name: '0 - 10',
         data: [8, 7, 9, 8, 6, 6],
       }],
       options: {

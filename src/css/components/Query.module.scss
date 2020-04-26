@@ -1,5 +1,6 @@
 @import '../Variables.module.scss';
 
 .progress{
-    @include centre(x)
+    @include centre(x);
+    color:#6600aa !important;
 }
