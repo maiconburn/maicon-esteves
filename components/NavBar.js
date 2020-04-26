@@ -115,7 +115,7 @@ function Navbar() {
           >
             <Avatar alt="Maicon Esteves" src="/img/maicon.png" />
           </IconButton>
-          <Button edge="start" color="inherit" href="/index" >
+          <Button edge="start" color="inherit" href="/" >
             <Typography variant="h6" className="MuiTypography-noWrap">
                 Portfolio - Maicon Esteves
             </Typography>

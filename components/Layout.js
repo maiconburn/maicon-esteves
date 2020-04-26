@@ -7,8 +7,8 @@ import Typography from "@material-ui/core/Typography"
 import NavBar from './NavBar'
 import Footer from './Footer'
 import Particles from 'react-particles-js'
-import { motion, AnimatePresence } from "framer-motion"
 import css from '../src/css/components/Layout.module.scss'
+import NextNprogress from 'nextjs-progressbar'
 
 const particleOpt = {
   particles: {
@@ -46,42 +46,38 @@ function Layout(props) {
     const styles = css
 
     return (
-      <AnimatePresence>
-        <div className="page-transition-wrapper">
-          <motion.div
-            transition={spring}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            id="page-transition-container"
-          >
-            <Box component="header">
-              <NavBar/>
-              <Grid className={styles.edgeHeader} container>
-                <Particles canvasClassName={styles.particleHeader} params={particleOpt} />
-              </Grid>
-            </Box>
-            <Container maxWidth="lg" className={styles.siteContainer}>
-              <Paper elevation={5} className={styles.contentPaper}>
-                <Box p={'4vw'}>
-                  <Box className={styles.pageTitle}>
-                    <Typography align="center" variant="h3" component="h1">
-                      {props.pageTitle}
-                    </Typography>
-                    <Typography align="center" variant="subtitle1" component="h2">
-                      {props.pageSubTitle}
-                    </Typography>
-                  </Box>
-                  <Box width="100%">
-                    {props.children}
-                  </Box> 
+      <React.Fragment>
+        <NextNprogress
+          color="#6600aa"
+          startPosition="0.3"
+          stopDelayMs="700"
+          height="8"
+        />
+          <Box component="header">
+            <NavBar/>
+            <Grid className={styles.edgeHeader} container>
+              <Particles canvasClassName={styles.particleHeader} params={particleOpt} />
+            </Grid>
+          </Box>
+          <Container maxWidth="lg" className={styles.siteContainer}>
+            <Paper elevation={5} className={styles.contentPaper}>
+              <Box p={'4vw'}>
+                <Box className={styles.pageTitle}>
+                  <Typography align="center" variant="h3" component="h1">
+                    {props.pageTitle}
+                  </Typography>
+                  <Typography align="center" variant="subtitle1" component="h2">
+                    {props.pageSubTitle}
+                  </Typography>
                 </Box>
-              </Paper>
-            </Container>
-            <Footer />
-          </motion.div>
-        </div> 
-      </AnimatePresence>
+                <Box width="100%">
+                  {props.children}
+                </Box> 
+              </Box>
+            </Paper>
+          </Container>
+          <Footer />
+      </React.Fragment>
     )
 }
 export default Layout

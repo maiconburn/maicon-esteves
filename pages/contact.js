@@ -45,7 +45,7 @@ function Contact() {
                             <Typography variant="h5" component="h6">Contact Details</Typography>
                             <Typography variant="subtitle1" component="h5">LET`S HAVE A TALK</Typography>
 
-                            <Typography variant="body1" className={styles.name} component="p"><strong>Maicon Esteves</strong></Typography>
+                            <Typography variant="body1" className={styles.name} component="p"><strong>Maicon Ribeiro Esteves</strong></Typography>
                             
                             <Typography variant="body2" className={styles.details} component="p"><a href="https://www.linkedin.com/in/maiconburn/" target="_blank">linkedin.com/in/maiconburn</a></Typography>
                             <Typography variant="body2" className={styles.details} component="p"><a href="https://www.facebook.com/maicon.burn" target="_blank">facebook.com/maicon.burn</a></Typography>

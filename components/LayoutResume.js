@@ -8,7 +8,7 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 import Particles from 'react-particles-js'
 import Link from 'next/link'
-import { motion, AnimatePresence } from "framer-motion"
+import NextNprogress from 'nextjs-progressbar'
 import css from '../src/css/components/Layout.module.scss'
 
 const particleOpt = {
@@ -37,54 +37,43 @@ const particleOpt = {
 
 function LayoutResume(props) {
 
-    const spring = {
-      type: "spring",
-      damping: 20,
-      stiffness: 100,
-      when: "afterChildren"
-    }
-
     const styles = css
 
     return (
-      <AnimatePresence>
-        <div className="page-transition-wrapper">
-          <motion.div
-            transition={spring}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            id="page-transition-container"
-          >
-            <Box component="header">
-              <NavBar/>
-              <Grid className={styles.edgeHeader} container xs={12}>
-                <Particles canvasClassName={styles.particleHeader} params={particleOpt} />
+      <React.Fragment>
+        <NextNprogress
+          color="#6600aa"
+          startPosition="0.3"
+          stopDelayMs="700"
+          height="8"
+        />
+        <Box component="header">
+          <NavBar/>
+          <Grid className={styles.edgeHeader} container xs={12}>
+            <Particles canvasClassName={styles.particleHeader} params={particleOpt} />
+          </Grid>
+        </Box>
+        <Container maxWidth="lg" className={styles.siteContainer}>
+          <Paper elevation={5} container className={styles.contentPaper}>
+            <Box p={'4vw'}>
+              <Grid container item xs={12}>
+                <Box item container mb={2} mx={2} width="100%" xs={12} className={styles.pageTitle}>
+                  <Typography align="center" variant="h3" component="h1">
+                    {props.pageTitle}
+                  </Typography>
+                  <Typography align="center" variant="subtitle1" component="h2">
+                    {props.pageSubTitle} <Link href={props.link} target='_blank'><a>link</a></Link>
+                  </Typography>
+                </Box>
+                <Box item xs={12} width="100%">
+                  {props.children}
+                </Box>
               </Grid>
             </Box>
-            <Container maxWidth="lg" className={styles.siteContainer}>
-              <Paper elevation={5} container className={styles.contentPaper}>
-                <Box p={'4vw'}>
-                  <Grid container item xs={12}>
-                    <Box item container mb={2} mx={2} width="100%" xs={12} className={styles.pageTitle}>
-                      <Typography align="center" variant="h3" component="h1">
-                        {props.pageTitle}
-                      </Typography>
-                      <Typography align="center" variant="subtitle1" component="h2">
-                        {props.pageSubTitle} <Link href={props.link} target='_blank'><a>link</a></Link>
-                      </Typography>
-                    </Box>
-                    <Box item xs={12} width="100%">
-                      {props.children}
-                    </Box>
-                  </Grid>
-                </Box>
-              </Paper>
-            </Container>
-            <Footer />
-          </motion.div>
-        </div> 
-      </AnimatePresence>
+          </Paper>
+        </Container>
+        <Footer />
+      </React.Fragment>
     )
 }
 export default LayoutResume
