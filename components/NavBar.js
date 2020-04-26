@@ -39,18 +39,12 @@ const useStyles = makeStyles((theme) => ({
 function Navbar() {
   const styles = css
   const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState(null)
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
-  }
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
   }
 
   const handleMobileMenuOpen = (event) => {

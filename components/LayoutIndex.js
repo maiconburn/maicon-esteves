@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import Particles from 'react-particles-js'
 import Footer from './Footer'

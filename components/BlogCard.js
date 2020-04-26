@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
@@ -29,11 +30,11 @@ const useStyles = makeStyles(() => ({
 }))
 
 function BlogCard(props) {
-    const classes = useStyles()
+    
+  const classes = useStyles()
     const pid = props.jobId
-    console.log('Card',props)
+    
     return (
-
       <motion.div
           animate={{ scale: [0, 1] }}
           whileHover={{ scale: 0.99 }}
