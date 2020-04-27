@@ -48,7 +48,7 @@ function JobCard(props) {
               <CardMedia
                 className={classes.media}
               >
-                <img src={`https://api-maicon-esteves.herokuapp.com${props.jobImage.url}`} width="100%" />
+                <img src={props.jobImage.url} width="100%" />
               </CardMedia>
             </CardActionArea>
             <CardActions className={classes.actions}>

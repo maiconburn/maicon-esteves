@@ -63,7 +63,7 @@ function PortfolioDetails({jobDetails}) {
           {images.map((image, i) => {
             return(
               <Paper key={i} className={styles.boxImage} elevation={5}>
-                <img width="100%" src={`https://api-maicon-esteves.herokuapp.com${image.url}`} />
+                <img width="100%" src={image.url} />
               </Paper>
             )
           })}
