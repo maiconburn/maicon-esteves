@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-function BlogCard(props) {
+function JobCard(props) {
     
   const classes = useStyles()
     const pid = props.jobId
@@ -71,4 +71,4 @@ function BlogCard(props) {
       </motion.div>
     )
 }
-export default BlogCard
+export default JobCard
