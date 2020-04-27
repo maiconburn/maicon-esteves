@@ -6,7 +6,7 @@ import fetch from "isomorphic-unfetch"
 
 // Update the GraphQL endpoint to any instance of GraphQL that you like
 // eslint-disable-next-line no-undef
-const GRAPHQL_URL = process.env.API_URL || "http://api-maicon-esteves.herokuapp.com";
+const GRAPHQL_URL = process.env.API_URL || "https://api-maicon-esteves.herokuapp.com";
 
 const link = createHttpLink({  
   fetch, // Switches between unfetch & node-fetch for client & server.
