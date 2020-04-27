@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Grid from "@material-ui/core/Grid"
+import Grid from '@material-ui/core/Grid'
 import JobCard from '../components/JobCard'
 import Query from "../components/api/Query"  
-import JOBS_QUERY from "../apollo/queries/job/jobs"
+import JOBS_QUERY from '../apollo/queries/job/jobs'
 import css from '../src/css/pages/portfolio.module.scss'
 
 
