@@ -29,10 +29,10 @@ const App = ({ Component, pageProps, apollo }) => {
       <Head>
         <title>Maicon Esteves - Portfolio</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33170873-6"></script>
         <script
             dangerouslySetInnerHTML={{
               __html: `
-              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33170873-6"></script>
               <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
