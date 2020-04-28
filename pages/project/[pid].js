@@ -11,17 +11,14 @@ function Project() {
 
     const router = useRouter()
     const { pid } = router.query
-
-    console.log('Project',pid)
     return (
         <Layout pageTitle="Projects & developments" pageSubTitle="This is one of the projects I developed, I hope you enjoy it :D">
             <Grid container justify="space-between" alignItems="center" direction="row">
                 <Grid item>
                     <Query query={JOB_QUERY} id={pid}>
                     {({ data: { job } }) => {
-                        console.log('Job',job)
                         return (
-                        <PortfolioDetails jobDetails={job} />
+                        <PortfolioDetails job={job} />
                         )
                     }}
                     </Query>

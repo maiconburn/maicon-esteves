@@ -29,16 +29,14 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-function PortfolioDetails({jobDetails}) {
+function PortfolioDetails({job}) {
 
   const classes = useStyles()
 
   const styles = css
 
-  console.log('Details',jobDetails)
-
-  const images = jobDetails.images
-  const skills = jobDetails.skills
+  const images = job.images
+  const skills = job.skills
 
   return (
     <Grid container spacing={2} className={styles.root}>
@@ -46,9 +44,9 @@ function PortfolioDetails({jobDetails}) {
         <Grid xs={12} md={5} item>
           <Paper elevation={2} className={styles.paperContent}>
             <Box className={styles.boxContent} p={3}>
-              <Typography variant="subtitle1" className={styles.boxSubTitle} component="h5">{jobDetails.type}</Typography>
-              <Typography variant="h5" component="h4" className={styles.boxTitle}>{jobDetails.title} - {jobDetails.client}</Typography>
-              <Typography variant="body1" component="p">{jobDetails.description}</Typography>
+              <Typography variant="subtitle1" className={styles.boxSubTitle} component="h5">{job.type}</Typography>
+              <Typography variant="h5" component="h4" className={styles.boxTitle}>{job.title} - {job.client}</Typography>
+              <Typography variant="body1" component="p">{job.description}</Typography>
               {skills.map((skill, i) => {
                 return(
                   <Chip key={i} label={skill} className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />
@@ -59,7 +57,6 @@ function PortfolioDetails({jobDetails}) {
         </Grid>
       </Hidden>
       <Grid xs={12} md={7} item display="flex">
-        
           {images.map((image, i) => {
             return(
               <Paper key={i} className={styles.boxImage} elevation={5}>
@@ -72,9 +69,9 @@ function PortfolioDetails({jobDetails}) {
         <Grid xs={12} md={5} item>
           <Paper elevation={2} className={styles.paperContent}>
             <Box className={styles.boxContent} p={3}>
-              <Typography variant="subtitle1" className={styles.boxSubTitle} component="h5">{jobDetails.type}</Typography>
-              <Typography variant="h5" component="h4" className={styles.boxTitle}>{jobDetails.title} - {jobDetails.client}</Typography>
-              <Typography variant="body1" component="p">{jobDetails.description}</Typography>
+              <Typography variant="subtitle1" className={styles.boxSubTitle} component="h5">{job.type}</Typography>
+              <Typography variant="h5" component="h4" className={styles.boxTitle}>{job.title} - {job.client}</Typography>
+              <Typography variant="body1" component="p">{job.description}</Typography>
               {skills.map((skill, i) => {
                 return(
                   <Chip key={i} label={skill} className={classes.chip} icon={<FontAwesomeIcon size="1x" className={classes.icon} icon={faHashtag} />} />

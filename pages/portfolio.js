@@ -17,12 +17,12 @@ function Portfolio() {
                         {({ data: { jobs } }) => {
                             return(
                                 <>
-                                    {jobs.map(({id, title, type, company, client, skills, description, images}) => {
-                                        //console.log(images[0])
+                                    {jobs.map((job) => {
+                                        console.log(job.images.slice(0,1))
                                         return (
                                             // eslint-disable-next-line react/jsx-key
                                             <Grid lg={4} md={6} xs={12} item>
-                                                <JobCard jobTitle={title} jobType={type} jobId={id} jobImage={images[0]} jobImages={images} jobClient={client} jobSkills={skills} jobDescriptiom={description} jobCompany={company} />
+                                                <JobCard key={job.id} job={job} />
                                             </Grid>
                                         )
                                     })} 

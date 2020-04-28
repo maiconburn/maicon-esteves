@@ -24,43 +24,40 @@ const useStyles = makeStyles(() => ({
     position: 'relative',
     backgroundColor: '#FFF',
   },
-  title:{
+  link:{
     textDecoration: 'none'
   }
 }))
 
 function JobCard(props) {
     
-  const classes = useStyles()
-    const pid = props.jobId
+    const classes = useStyles()
     
     return (
       <motion.div
           animate={{ scale: [0, 1] }}
           whileHover={{ scale: 0.99 }}
-          whileTap={{ scale: [1, 0.5] }}
-          transition={{ duration: 0.5 }}
+          whileTap={{ scale: [1, 0.8] }}
+          transition={{ duration: 0.3 }}
       >
-        <Link href={`/project/${pid}`} as={`/project/${pid}`}>
-          <a className={classes.title}>
+        <Link href={`/project/${props.job.id}`} as={`/project/${props.job.id}`}>
+          <a className={classes.link}>
           <Card className={classes.root} elevation={5}>
             <CardActionArea>
-              <CardMedia
-                className={classes.media}
-              >
-                <img src={props.jobImage.url} width="100%" />
+              <CardMedia className={classes.media}>
+                <img src={props.job.images.slice(0,1)[0].url} width="100%" />
               </CardMedia>
             </CardActionArea>
             <CardActions className={classes.actions}>
               <Grid xs={12} widht="100%" container>
                 <Grid xs={6} item>
                   <Typography variant="Body1" align="left" component="p">
-                    <strong>{props.jobTitle}</strong>
+                    <strong>{props.job.title}</strong>
                   </Typography>
                 </Grid>
                 <Grid xs={6} item>
                   <Typography variant="Body1" align="right" component="p">
-                    <strong>{props.jobType}</strong>
+                    <strong>{props.job.type}</strong>
                   </Typography>
                 </Grid>
               </Grid>
