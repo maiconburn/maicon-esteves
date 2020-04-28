@@ -8,7 +8,10 @@ import { ApolloProvider } from "@apollo/react-hooks"
 import withData from "../utils/apollo"
 import 'react-vertical-timeline-component/style.min.css'
 import NextNprogress from 'nextjs-progressbar'
+
 import '../src/styles/styles.css'
+import Router from "next/router"
+import withGA from "next-ga"
 
 const App = ({ Component, pageProps, apollo }) => {
 
@@ -29,20 +32,6 @@ const App = ({ Component, pageProps, apollo }) => {
       <Head>
         <title>Maicon Esteves - Portfolio</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33170873-6"></script>
-        <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-              
-                gtag('config', 'UA-33170873-6');
-              </script>
-              `
-            }}
-        />
       </Head>
       <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -58,4 +47,4 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 }
 
-export default withData(App)
+export default withGA("UA-33170873-6", Router)(withData(App))
