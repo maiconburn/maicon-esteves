@@ -7,7 +7,7 @@
     a{
         font-size: ($font-site * 0.8) !important;
         @media screen and (max-width: 801px) {
-            ffont-size: ($font-site * 0.5) !important;
+            font-size: ($font-site * 0.5) !important;
         }
         text-transform: none;
         text-decoration: none;
@@ -32,10 +32,6 @@
         }
     }
     position: fixed;
-    @media screen and (max-width: 801px) {
-        position: relative;
-        bottom: 0px;
-    }
     bottom: 0px;
     z-index: 2;
 }
