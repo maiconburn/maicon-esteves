@@ -77,7 +77,7 @@ function Navbar() {
         </ButtonMobileActive>
       </MenuItem>
       <MenuItem>
-        <Button className={styles.buttonMobileActive} color="inherit" target="_blank" href="https://blog.maicon-esteves.tk">
+        <Button className={styles.buttonMobileActive} color="inherit" target="_blank" href="https://medium.com/@maiconribeiroesteves">
           Blog
         </Button>
       </MenuItem>
@@ -117,7 +117,7 @@ function Navbar() {
             <ButtonActive className={styles.buttonActive} color="inherit" href="/portfolio">
               Portfolio
             </ButtonActive>
-            <Button className={styles.buttonActive} color="inherit" target="_blank" href="https://blog.maicon-esteves.tk">
+            <Button className={styles.buttonActive} color="inherit" target="_blank" href="https://medium.com/@maiconribeiroesteves">
               Blog
             </Button>
             <ButtonActive className={styles.buttonActive} color="inherit" href="/contact">
