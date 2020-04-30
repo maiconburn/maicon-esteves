@@ -8,18 +8,11 @@ import { ApolloProvider } from "@apollo/react-hooks"
 import withData from "../utils/apollo"
 import 'react-vertical-timeline-component/style.min.css'
 import NextNprogress from 'nextjs-progressbar'
-
 import '../src/styles/styles.css'
 import Router from "next/router"
 import withGA from "next-ga"
 
 const App = ({ Component, pageProps, apollo }) => {
-
-  React.useEffect(() => {
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles && jssStyles.parentNode)
-      jssStyles.parentNode.removeChild(jssStyles);
-  }, [])
 
   return (
     <ApolloProvider client={apollo}>

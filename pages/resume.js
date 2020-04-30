@@ -1,6 +1,8 @@
 import React from 'react'
-import LayoutResume from '../components/LayoutResume'
+//import LayoutResume from '../components/LayoutResume'
 import VerticalTimeline from '../components/VerticalTimeline'
+import dynamic from 'next/dynamic'
+const LayoutResume = dynamic(() => import('../components/LayoutResume'), {ssr:false})
 
 
 function Resume() {

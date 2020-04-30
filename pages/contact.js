@@ -4,9 +4,11 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
-import Layout from '../components/Layout'
+//import Layout from '../components/Layout'
 import Form from '../components/Form'
 import css from '../src/css/pages/contact.module.scss'
+import dynamic from 'next/dynamic'
+const Layout = dynamic(() => import('../components/Layout'), {ssr:false})
 
 function Contact() {
     const styles = css

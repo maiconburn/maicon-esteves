@@ -21,7 +21,6 @@ function Index() {
             transition={spring}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             id="page-transition-container"
           >
             <LayoutIndex>
@@ -34,7 +33,7 @@ function Index() {
                       <h2 align="center">I'm a full-stack developer</h2>
                     </hgroup>
                     <p className={styles.btIndex}>
-                      <Button variant="outlined" size="large" color="secondary" href="about" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
+                      <Button variant="outlined" size="large" color="secondary" href="/about" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
                     </p>
                   </div>
                 </div>

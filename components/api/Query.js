@@ -1,6 +1,6 @@
 import React from "react" 
 import { useQuery } from "@apollo/react-hooks"
-import CircularProgress from '@material-ui/core/CircularProgress'
+import Loader from '../Loader'
 import css from '../../src/css/components/Query.module.scss'
 
 const styles = css
@@ -11,7 +11,7 @@ const Query = ({ children, query, id }) => {
     variables: { id: id }
   })
 
-  if (loading) return <CircularProgress className={styles.progress} size={80} />
+  if (loading) return <div className={styles.progress}><Loader /></div>
   if (error) return <p>Error: {JSON.stringify(error)}</p>
 
   return children({ data })

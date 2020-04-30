@@ -47,6 +47,7 @@
     "react-vertical-timeline-component": "^2.6.2",
     "sass": "^1.26.5",
     "styled-components": "^5.1.0",
+    "styled-jsx": "^3.2.5",
     "url-loader": "^4.1.0"
   },
   "devDependencies": {

@@ -1,14 +1,16 @@
 import React from 'react'
 import Hidden from '@material-ui/core/Hidden'
-import Typography from "@material-ui/core/Typography"
-import Link from "@material-ui/core/Link"
-import Grid from "@material-ui/core/Grid"
-import Box from "@material-ui/core/Box"
-import Layout from '../components/Layout'
+import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+//import Layout from '../components/Layout'
 import Skills from '../components/Skills'
 import RadarChart from '../components/RadarChart'
 import { motion, useAnimation } from "framer-motion"
 import css from '../src/css/pages/about.module.scss'
+import dynamic from 'next/dynamic'
+const Layout = dynamic(() => import('../components/Layout'), {ssr:false})
 
 function Home() {
     
