@@ -6,6 +6,7 @@ import Query from "../components/api/Query"
 import JOBS_QUERY from '../apollo/queries/job/jobs'
 import css from '../src/css/pages/portfolio.module.scss'
 import dynamic from 'next/dynamic'
+//eslint-disable-next-line
 const Layout = dynamic(() => import('../components/Layout'), {ssr:false})
 
 

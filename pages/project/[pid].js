@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import JOB_QUERY from "../../apollo/queries/job/job"
 import Query from "../../components/api/Query" 
 import dynamic from 'next/dynamic'
+//eslint-disable-next-line
 const Layout = dynamic(() => import('../../components/Layout'), {ssr:false})
 
 

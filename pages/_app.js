@@ -38,6 +38,7 @@ const App = ({ Component, pageProps, apollo }) => {
 App.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
+  apollo: PropTypes.object.isRequired,
 }
 
 export default withGA("UA-33170873-6", Router)(withData(App))

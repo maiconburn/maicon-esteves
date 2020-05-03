@@ -10,6 +10,7 @@ import RadarChart from '../components/RadarChart'
 import { motion, useAnimation } from "framer-motion"
 import css from '../src/css/pages/about.module.scss'
 import dynamic from 'next/dynamic'
+//eslint-disable-next-line
 const Layout = dynamic(() => import('../components/Layout'), {ssr:false})
 
 function Home() {

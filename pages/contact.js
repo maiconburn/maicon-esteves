@@ -8,6 +8,7 @@ import Hidden from '@material-ui/core/Hidden'
 import Form from '../components/Form'
 import css from '../src/css/pages/contact.module.scss'
 import dynamic from 'next/dynamic'
+//eslint-disable-next-line
 const Layout = dynamic(() => import('../components/Layout'), {ssr:false})
 
 function Contact() {

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import LayoutIndex from '../components/LayoutIndex'

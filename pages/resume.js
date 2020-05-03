@@ -2,6 +2,7 @@ import React from 'react'
 //import LayoutResume from '../components/LayoutResume'
 import VerticalTimeline from '../components/VerticalTimeline'
 import dynamic from 'next/dynamic'
+//eslint-disable-next-line
 const LayoutResume = dynamic(() => import('../components/LayoutResume'), {ssr:false})
 
 
