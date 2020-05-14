@@ -1,3 +1,5 @@
+/* eslint-disable no-irregular-whitespace */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Hidden from '@material-ui/core/Hidden'
 import Typography from '@material-ui/core/Typography'

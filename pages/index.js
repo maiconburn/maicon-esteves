@@ -5,6 +5,7 @@ import LayoutIndex from '../components/LayoutIndex'
 import Avatar from '@material-ui/core/Avatar'
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined'
 import { motion, AnimatePresence } from "framer-motion"
+import Router from 'next/router'
 import css from '../src/css/pages/Index.module.scss'
 
 function Index() {
@@ -34,7 +35,7 @@ function Index() {
                       <h2 align="center">I'm a full-stack developer</h2>
                     </hgroup>
                     <p className={styles.btIndex}>
-                      <Button variant="outlined" size="large" color="secondary" href="/about" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
+                      <Button variant="outlined" onClick={() => Router.push('/about')} href="javascript:" size="large" color="secondary" endIcon={<ArrowForwardIosOutlinedIcon />}>View my work</Button>
                     </p>
                   </div>
                 </div>

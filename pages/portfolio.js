@@ -9,7 +9,6 @@ import dynamic from 'next/dynamic'
 //eslint-disable-next-line
 const Layout = dynamic(() => import('../components/Layout'), {ssr:false})
 
-
 function Portfolio() {
     const styles = css
     return (
@@ -21,7 +20,6 @@ function Portfolio() {
                             return(
                                 <>
                                     {jobs.map((job) => {
-                                        console.log(job.images.slice(0,1))
                                         return (
                                             // eslint-disable-next-line react/jsx-key
                                             <Grid lg={4} md={6} xs={12} item>

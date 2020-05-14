@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Container from '@material-ui/core/Container'
 import Hidden from '@material-ui/core/Hidden'
 import Grid from "@material-ui/core/Grid"
@@ -57,7 +58,7 @@ function LayoutResume(props) {
                       {props.pageTitle}
                     </Typography>
                     <Typography align="center" variant="subtitle1" component="h2">
-                      {props.pageSubTitle} <Link href={props.link} target='_blank'><a>link</a></Link>
+                      {props.pageSubTitle} <Link href={props.link} prefetch={false} target='_blank'><a>link</a></Link>
                     </Typography>
                   </Box>
                 </Hidden>
@@ -82,4 +83,15 @@ function LayoutResume(props) {
       </React.Fragment>
     )
 }
+
+LayoutResume.propTypes = {
+  pageTitle: PropTypes.string.isRequired,
+  pageSubTitle: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+  ]).isRequired 
+}
+
 export default LayoutResume

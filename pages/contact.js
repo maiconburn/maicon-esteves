@@ -25,9 +25,9 @@ function Contact() {
 
                             <Typography variant="body1" className={styles.name} component="p"><strong>Maicon Esteves</strong></Typography>
                             
-                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.linkedin.com/in/maiconburn/" target="_blank">linkedin.com/in/maiconburn</a></Typography>
-                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.facebook.com/maicon.burn" target="_blank">facebook.com/maicon.burn</a></Typography>
-                            <Typography variant="body2" className={styles.details} component="p"><a href="http://github.com/maiconburn" target="_blank">github.com/maiconburn</a></Typography>
+                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.linkedin.com/in/maiconburn/" target="_blank" rel="noopener noreferrer">linkedin.com/in/maiconburn</a></Typography>
+                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.facebook.com/maicon.burn" target="_blank" rel="noopener noreferrer">facebook.com/maicon.burn</a></Typography>
+                            <Typography variant="body2" className={styles.details} component="p"><a href="http://github.com/maiconburn" target="_blank" rel="noopener noreferrer">github.com/maiconburn</a></Typography>
                             <Typography variant="body2" className={styles.details} component="p">+447706512894</Typography> 
                             <Typography variant="body1" className={styles.details} component="p"><strong>London - UK</strong></Typography>        
                         </Box>
@@ -50,10 +50,10 @@ function Contact() {
 
                             <Typography variant="body1" className={styles.name} component="p"><strong>Maicon Ribeiro Esteves</strong></Typography>
                             
-                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.linkedin.com/in/maiconburn/" target="_blank">linkedin.com/in/maiconburn</a></Typography>
-                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.facebook.com/maicon.burn" target="_blank">facebook.com/maicon.burn</a></Typography>
-                            <Typography variant="body2" className={styles.details} component="p"><a href="http://github.com/maiconburn" target="_blank">github.com/maiconburn</a></Typography>
-                            <Typography variant="body2" className={styles.details} component="p"><a href="http://whts.co/maicon-esteves" target="_blanck">+447706512894</a></Typography>  
+                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.linkedin.com/in/maiconburn/" target="_blank" rel="noopener noreferrer">linkedin.com/in/maiconburn</a></Typography>
+                            <Typography variant="body2" className={styles.details} component="p"><a href="https://www.facebook.com/maicon.burn" target="_blank" rel="noopener noreferrer">facebook.com/maicon.burn</a></Typography>
+                            <Typography variant="body2" className={styles.details} component="p"><a href="http://github.com/maiconburn" target="_blank" rel="noopener noreferrer">github.com/maiconburn</a></Typography>
+                            <Typography variant="body2" className={styles.details} component="p"><a href="http://whts.co/maicon-esteves" target="_blanck" rel="noopener noreferrer">+447706512894</a></Typography>  
                             <Typography variant="body1" className={styles.details} component="p"><strong>London - UK</strong></Typography>        
                         </Box>
                         </Paper>
