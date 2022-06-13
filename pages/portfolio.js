@@ -16,14 +16,14 @@ export async function getStaticProps() {
     },
   });
   const jobs = await res.json();
+
+  console.log(jobs);
   return {
     props: {
       jobs,
     },
   };
 }
-
-console.log(jobs);
 
 function Portfolio() {
   const styles = css;
