@@ -10,9 +10,12 @@ import dynamic from "next/dynamic";
 const Layout = dynamic(() => import("../components/Layout"), { ssr: false });
 
 export async function getStaticProps() {
-  const res = await fetch("https://api-portfolio-psi.vercel.app/api/jobs");
-  const posts = await res.json();
-
+  const res = await fetch("https://api-portfolio-psi.vercel.app/api/jobs", {
+    headers: {
+      Accept: "application/json",
+    },
+  });
+  const jobs = await res.json();
   return {
     props: {
       jobs,
