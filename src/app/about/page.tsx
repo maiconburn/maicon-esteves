@@ -10,7 +10,7 @@ export default function About() {
     <section className={styles.about}>
       <PageTitle
         title="About Me & My Skills"
-        subTitle="A small introduction about myself and my skills"
+        subTitle="An in-depth look at my journey in technology, entrepreneurship, and innovation."
       />
       <div className={styles.aboutMeIcons}>
         <div className={styles.aboutMeIcon}>
@@ -53,57 +53,94 @@ export default function About() {
           <p>Entrepreneur</p>
         </div>
       </div>
+
       <div className={styles.aboutMeContent}>
         <div className={styles.aboutMeText}>
           <p>
             I am a <strong>Senior Growth Developer</strong> and{" "}
-            <strong>Frontend Developer</strong> with a strong focus on creating
-            scalable and innovative solutions. My journey in software
-            engineering has been enriched by a unique blend of technical
-            expertise, entrepreneurship, and leadership. I hold a{" "}
+            <strong>Frontend Developer</strong> with over a decade of experience
+            in building innovative, scalable solutions that drive business
+            growth. My career has been characterized by a unique blend of
+            technical expertise, entrepreneurial spirit, and leadership. I have
+            successfully led teams, managed projects, and co-founded companies,
+            all while maintaining a strong focus on leveraging technology to
+            solve real-world problems.
+          </p>
+          <p>
+            My academic foundation includes a{" "}
             <strong>Master&apos;s degree in Entrepreneurship</strong> from
-            Falmouth University and a{" "}
-            <strong>Bachelor&apos;s degree in Marketing</strong> from UNOPAR -
-            University of Northern Paraná.
+            Falmouth University, where I honed my skills in startup development,
+            MVP creation, and business strategy. Additionally, I earned a{" "}
+            <strong>Bachelor&apos;s degree in Marketing</strong> from UNOPAR,
+            which equipped me with a strong understanding of consumer behavior,
+            brand management, and digital marketing strategies.
           </p>
           <p>
-            In my current role as a <strong>Software Developer</strong> at
-            <strong> Remotasks</strong>, I excel in developing high-quality
-            AI-driven solutions with a performance rate of 94.44%. Prior to
-            this, I led significant projects at <strong>MADE BY ON</strong>,
-            working with renowned clients like Ernst & Young and Exclaimer,
-            where I saved two months of development time through innovative
-            integrations.
+            Throughout my career, I have consistently sought opportunities to
+            innovate and improve processes. As a{" "}
+            <strong>Software Developer</strong> at <strong>Remotasks</strong>, I
+            played a key role in developing high-quality AI models with a
+            performance accuracy of 94.44%. My ability to understand complex
+            technical challenges and deliver solutions efficiently earned me a
+            promotion to reviewer within just one month. Prior to this role, I
+            spent time at <strong>MADE BY ON</strong>, where I worked on
+            large-scale projects for prestigious clients like Ernst & Young,
+            Exclaimer, and My Lighthouse. I introduced advanced Content Security
+            Policy (CSP) configurations, optimizing security without disrupting
+            the integration of key tools like Google Tag Manager.
           </p>
           <p>
-            As an entrepreneur, I co-founded two companies:{" "}
-            <strong>Invalley Innovation and Design</strong> and{" "}
-            <strong>Adeus Rotina</strong>. At Invalley, we focus on innovation
-            through the design and development of products, services, and
-            strategies aimed at improving lives. Adeus Rotina offered a unique
-            subscription service delivering romantic experiences for couples. In
-            both ventures, I oversaw marketing and technology, driving growth
-            and operational efficiency.
+            Beyond corporate roles, I am also an entrepreneur at heart. I
+            co-founded <strong>Invalley Innovation and Design</strong>, where we
+            developed cutting-edge design and technology solutions for a wide
+            range of clients. In addition, I co-founded{" "}
+            <strong>Adeus Rotina</strong>, a subscription service offering
+            personalized romantic experiences to couples, which grew to reach
+            over 300,000 monthly visitors. These ventures allowed me to leverage
+            my expertise in growth hacking, SEO, project management, and product
+            development to build and scale successful businesses.
           </p>
           <p>
-            My background is complemented by my technical skills in frontend and
-            backend development, including proficiency in HTML, CSS, JavaScript,
-            React, Next.js, and various other modern technologies. Additionally,
-            I have experience with DevOps tools like Docker, AWS, and Vercel,
-            ensuring robust and scalable deployments.
+            My passion for innovation has also led me to actively participate in
+            several <strong>hackathons</strong> and{" "}
+            <strong>startup acceleration programs</strong>. I have been awarded
+            <strong>1st place at the HackathON</strong> at{" "}
+            <strong>MADE BY ON</strong> (2022, 2023) for developing
+            groundbreaking solutions in internal projects. In 2015, I won{" "}
+            <strong>1st place in the Acelera Serra</strong> startup pitch
+            competition. Additionally, I was recognized with{" "}
+            <strong>2nd place at IBTeCHDAY</strong> for technological
+            innovations in the leather and footwear industry and{" "}
+            <strong>3rd place at Startup RS</strong> for creating a virtual
+            product launch strategy for the footwear market.
           </p>
           <p>
-            Beyond my professional pursuits, I am passionate about contributing
-            to society. I have volunteered with organizations like{" "}
-            <strong>Sonhar Acordado</strong> and{" "}
-            <strong>Junior Achievement</strong>, where I mentored youth and
-            guided startups on business models as part of{" "}
-            <strong>Techstars Startup Weekend</strong>.
+            I am a strong believer in the power of mentorship and giving back to
+            the community. I have volunteered with{" "}
+            <strong>Junior Achievement</strong> and{" "}
+            <strong>Sonhar Acordado</strong>, where I had the privilege of
+            mentoring young entrepreneurs and students on leadership, business
+            models, and personal development. Additionally, I have been actively
+            involved in <strong>Techstars Startup Weekend</strong>, where I
+            guide aspiring entrepreneurs through the process of turning ideas
+            into viable businesses.
           </p>
           <p>
-            I believe that serving humanity is one of the most fulfilling
-            endeavors, and I strive to make a positive impact through my work,
-            both in technology and in my community involvement.
+            In terms of technical skills, I am proficient in a wide range of
+            technologies, including <strong>HTML</strong>, <strong>CSS</strong>,
+            <strong>JavaScript</strong>, <strong>React</strong>,{" "}
+            <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
+            <strong>MySQL</strong>. I also have experience with backend
+            frameworks and DevOps tools like <strong>AWS</strong>,{" "}
+            <strong>Docker</strong>, and <strong>Vercel</strong>. This broad
+            technical skillset allows me to not only develop front-end
+            applications but also architect and deploy scalable back-end
+            systems.
+          </p>
+          <p>
+            I continue to seek opportunities to innovate, collaborate, and make
+            a positive impact through technology, both in my professional
+            endeavors and in my community contributions.
           </p>
         </div>
         <aside className={styles.aboutMeAside}>
