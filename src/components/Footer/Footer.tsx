@@ -25,7 +25,11 @@ export function Footer() {
           </p>
         </div>
         <div className={styles.rightSection}>
-          <Link href="https://github.com/maiconburn" passHref legacyBehavior>
+          <Link
+            href="https://github.com/maiconburn/maicon-esteves"
+            passHref
+            legacyBehavior
+          >
             <a
               className={styles.gitBtn}
               target="_blank"
