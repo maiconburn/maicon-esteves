@@ -20,7 +20,7 @@
   },
   {
     "icon": "faAward",
-    "title": "1st Place - Internal Hackathon",
+    "title": "1st Place - HackathON",
     "subtitle": "MADE BY ON",
     "date": "2022, 2023",
     "description": [
@@ -82,7 +82,7 @@
   {
     "icon": "faBriefcase",
     "title": "Full-Stack Growth Developer",
-    "subtitle": "Adeus Rotina - (My own company)",
+    "subtitle": "Adeus Rotina - (Entrepreneur)",
     "date": "2014 - 2020",
     "description": [
       "Development and management of the digital platform",
@@ -93,7 +93,7 @@
   {
     "icon": "faBriefcase",
     "title": "Full-Stack Software Engineer",
-    "subtitle": "Invalley - (My own company)",
+    "subtitle": "Invalley - (Entrepreneur)",
     "date": "2011",
     "description": [
       "Projects focused on Design and Technology with HTML, CSS, Javascript, MySql, PHP, Magento, Joomla, and Wordpress"
@@ -111,14 +111,14 @@
   {
     "icon": "faGraduationCap",
     "title": "Innovation Management",
-    "subtitle": "Certification - Feevale",
+    "subtitle": "Certification - FEEVALE",
     "date": "2012",
     "description": ["Innovation Management: Practice and Relevance"]
   },
   {
     "icon": "faGraduationCap",
     "title": "Project Manager",
-    "subtitle": "Certification - Feevale",
+    "subtitle": "Certification - FEEVALE",
     "date": "2012",
     "description": ["Project management"]
   },
@@ -134,7 +134,7 @@
   {
     "icon": "faBriefcase",
     "title": "Front-End and Back-End Software Engineer",
-    "subtitle": "Studio Geek - (My own company)",
+    "subtitle": "Studio Geek - (Entrepreneur)",
     "date": "2010",
     "description": [
       "Projects with HTML, CSS, Javascript, MySql, PHP, and Joomla"
