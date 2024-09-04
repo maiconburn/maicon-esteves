@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import styles from "./contact.module.scss";
 
@@ -20,24 +21,19 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus(null);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setStatus("Message sent successfully!");
-      } else {
-        setStatus("Failed to send message.");
-      }
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string, // O ID do serviço
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string, // O ID do template
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string // O user ID
+      );
+      setStatus("Message sent successfully!");
+      console.log(result.text);
     } catch (error) {
-      setStatus("An error occurred.");
+      console.error(error);
+      setStatus("Failed to send message.");
     }
   };
 
