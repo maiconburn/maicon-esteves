@@ -5,7 +5,7 @@ import RadarChart from "../../components/RadarChart/RadarChart";
 import Skills from "../../components/Skills/Skills";
 import styles from "./about.module.scss";
 
-export function About() {
+export default function About() {
   return (
     <section className={styles.about}>
       <PageTitle
@@ -121,5 +121,3 @@ export function About() {
     </section>
   );
 }
-
-export default About;
