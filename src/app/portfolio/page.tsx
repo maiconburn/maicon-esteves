@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
-import projects from "./portfolioData.json"; // Importa o JSON com os projetos
+import Image from "next/image";
+import projects from "./portfolioData.json";
 import styles from "./portfolio.module.scss";
 
-// Define o tipo para os projetos, agora com array de imagens
 interface Project {
   id: number;
   title: string;
-  images: string[]; // Agora é um array de strings
+  images: string[];
   description: string;
   details: string;
 }
@@ -30,13 +30,14 @@ const ProjectModal = ({
         </button>
         <h2>{project.title}</h2>
 
-        {/* Exibe todas as imagens do projeto */}
         <div className={styles.imagesContainer}>
           {project.images.map((image, idx) => (
-            <img
+            <Image
               key={idx}
               src={image}
               alt={`${project.title} image ${idx + 1}`}
+              width={600}
+              height={400}
             />
           ))}
         </div>
@@ -72,8 +73,12 @@ export default function Portfolio() {
             className={styles.projectCard}
             onClick={() => handleProjectClick(project)}
           >
-            {/* Exibe a primeira imagem como capa do projeto */}
-            <img src={project.images[0]} alt={project.title} />
+            <Image
+              src={project.images[0]}
+              alt={project.title}
+              width={600}
+              height={400}
+            />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
           </div>

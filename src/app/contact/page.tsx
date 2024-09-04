@@ -24,10 +24,10 @@ export default function Contact() {
 
     try {
       const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string, // O ID do serviço
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string, // O ID do template
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
         formData,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string // O user ID
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
       );
       setStatus("Message sent successfully!");
       console.log(result.text);
