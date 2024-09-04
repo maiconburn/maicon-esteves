@@ -1,0 +1,178 @@
+[
+  {
+    "icon": "faBriefcase",
+    "title": "Software Developer (AI Trainer)",
+    "subtitle": "Remotasks",
+    "date": "Jan 2024 - Present",
+    "description": [
+      "Specialized in training AI models to understand and generate programming code",
+      "Achieved 94.44% high-quality prompts and promoted to reviewer within one month"
+    ]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Software Developer",
+    "subtitle": "MADE BY ON, LONDON - UK",
+    "date": "June 2022 – January 2024",
+    "description": [
+      "Led and completed projects for Ernst & Young, Exclaimer, and My Lighthouse"
+    ]
+  },
+  {
+    "icon": "faAward",
+    "title": "1st Place - Internal Hackathon",
+    "subtitle": "MADE BY ON",
+    "date": "2022, 2023",
+    "description": [
+      "Awarded for innovative solutions during internal hackathons"
+    ]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "LanguageCert International ESOL Communicator B2",
+    "subtitle": "LanguageCert",
+    "date": "2020",
+    "description": [
+      "Achieved B2 certification in Listening, Reading, Writing, and Speaking"
+    ]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "Master of Science - MSc in Entrepreneurship",
+    "subtitle": "Falmouth University",
+    "date": "2020 - 2021",
+    "description": [
+      "Focus on startups, MVP development, and business strategies"
+    ]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Growth Hacker",
+    "subtitle": "The Fools Imersão em Línguas",
+    "date": "2018",
+    "description": [
+      "Implemented an organized process of growth hacking, seeking exponential results."
+    ]
+  },
+  {
+    "icon": "faAward",
+    "title": "2nd Place - IBTeCHDAY",
+    "subtitle": "Brazilian Institute of Leather, Footwear, and Artifacts Technology",
+    "date": "2016",
+    "description": [
+      "Awarded for technological challenges in improving processes for the leather-footwear sector"
+    ]
+  },
+  {
+    "icon": "faAward",
+    "title": "3rd Place - Startup RS",
+    "subtitle": "SEBRAE",
+    "date": "2016",
+    "description": [
+      "Awarded 3rd place in Startup RS for virtual product launches in the footwear market"
+    ]
+  },
+  {
+    "icon": "faAward",
+    "title": "1st Place - Acelera Serra",
+    "subtitle": "Startup Pitch Competition",
+    "date": "2015",
+    "description": ["Awarded 1st place in a startup pitch competition"]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Full-Stack Growth Developer",
+    "subtitle": "Adeus Rotina - (My own company)",
+    "date": "2014 - 2020",
+    "description": [
+      "Development and management of the digital platform",
+      "Marketing, Growth Hacking, Project Management",
+      "Speaker, Team Leading, Fundraising"
+    ]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Full-Stack Software Engineer",
+    "subtitle": "Invalley - (My own company)",
+    "date": "2011",
+    "description": [
+      "Projects focused on Design and Technology with HTML, CSS, Javascript, MySql, PHP, Magento, Joomla, and Wordpress"
+    ]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Front-End and Back-End Software Engineer",
+    "subtitle": "RED - Design de Experiência",
+    "date": "2011",
+    "description": [
+      "Projects UX focused with HTML, CSS, Javascript, MySql, and PHP"
+    ]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "Innovation Management",
+    "subtitle": "Certification - Feevale",
+    "date": "2012",
+    "description": ["Innovation Management: Practice and Relevance"]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "Project Manager",
+    "subtitle": "Certification - Feevale",
+    "date": "2012",
+    "description": ["Project management"]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Front-End and Back-End Software Engineer",
+    "subtitle": "Endeavour Group",
+    "date": "2010",
+    "description": [
+      "Projects with HTML, CSS, Javascript, MySql, PHP, and Joomla"
+    ]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Front-End and Back-End Software Engineer",
+    "subtitle": "Studio Geek - (My own company)",
+    "date": "2010",
+    "description": [
+      "Projects with HTML, CSS, Javascript, MySql, PHP, and Joomla"
+    ]
+  },
+  {
+    "icon": "faBriefcase",
+    "title": "Front-End Software Engineer",
+    "subtitle": "Brivia",
+    "date": "2008",
+    "description": ["Projects with HTML, CSS, Javascript, MySql, and PHP"]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "Bachelor’s in Marketing",
+    "subtitle": "Universidade do Norte do Paraná (UNOPAR)",
+    "date": "2008 - 2011",
+    "description": ["Marketing, Management, Strategy, Digital Marketing"]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "Tech Qualification Software Developer",
+    "subtitle": "Certification - Brivia",
+    "date": "2007 - 2008",
+    "description": ["HTML, CSS, Javascript, PHP, MySql"]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "Tech Qualification Software Developer",
+    "subtitle": "Certification - Liberato Foundation",
+    "date": "2007 - 2008",
+    "description": ["Software Development in C# and JAVA"]
+  },
+  {
+    "icon": "faGraduationCap",
+    "title": "IT Fundamentals",
+    "subtitle": "Certification",
+    "date": "1997 - 1998",
+    "description": ["IPD-DOS 6.22, Windows 3.11, Word, Excel, PowerPoint"]
+  }
+]

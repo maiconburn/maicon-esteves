@@ -1,0 +1,74 @@
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; /* Ajuste de padding para garantir que o conteúdo não toque nas bordas da tela */
+
+  & > h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%; /* Garantir que o container ocupe toda a largura disponível */
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.1rem;
+  width: 100%; /* Garantir que cada skill ocupe toda a largura disponível */
+}
+
+.skillName {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.progressBar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 6px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #030957;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.tagsContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tag {
+  background-color: #030957;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .skillsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skillItem {
+    align-items: stretch;
+  }
+}
