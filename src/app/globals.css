@@ -10,12 +10,12 @@
   --background-start-color: #d6dbdc; /* Light Gray */
   --background-end-color: #ffffff; /* White */
 
-  --primary-glow: #00f9ff; /* Light Neon Blue */
-  --secondary-glow: #00e0ff; /* Slightly Darker Neon Blue */
+  --primary-glow: #333;
+  --secondary-glow: #aaa;
 
   --tile-start-color: #eff5f9; /* Light Blueish Gray */
   --tile-end-color: #e4e8e9; /* Lighter Gray */
-  --tile-border-color: #00000080; /* Black with transparency effect converted to solid hex approximation */
+  --tile-border-color: #e0e0e0; /* Black with transparency effect converted to solid hex approximation */
 
   --timeline-color: #ccc; /* Light Gray */
 
@@ -23,6 +23,10 @@
   --callout-border-color: #acafb0; /* Medium Gray */
   --card-color: #b4b9bc; /* Light Gray */
   --card-border-color: #838687; /* Medium Gray */
+  --icon-victory: #ffdd00;
+  --icon-education: #007bff;
+  --icon-work: #28a745;
+  --icon-achievement: #dc3545;
 }
 
 @media (prefers-color-scheme: dark) {

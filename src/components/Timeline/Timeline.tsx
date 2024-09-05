@@ -17,6 +17,21 @@ const iconMap: { [key: string]: IconDefinition } = {
   faStar: faStar,
 };
 
+const getIconColor = (icon: string) => {
+  switch (icon) {
+    case "faAward":
+      return "var(--icon-victory)"; // Amarelo para vitórias
+    case "faGraduationCap":
+      return "var(--icon-education)"; // Azul para educação
+    case "faBriefcase":
+      return "var(--icon-work)"; // Verde para trabalho
+    case "faStar":
+      return "var(--icon-achievement)"; // Vermelho para conquistas
+    default:
+      return "var(--foreground-color)";
+  }
+};
+
 interface TimelineProps {
   data: Array<{
     icon: string;
@@ -68,7 +83,10 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
             visibleItems.includes(index) ? styles.visible : ""
           }`}
         >
-          <div className={styles.timelineIcon}>
+          <div
+            className={styles.timelineIcon}
+            style={{ color: getIconColor(item.icon) }}
+          >
             <FontAwesomeIcon icon={iconMap[item.icon]} />
           </div>
           {item.title && (

@@ -1,32 +1,271 @@
-[
-  {
-    "id": 1,
-    "title": "Project One",
-    "description": "This is a brief description of Project One.",
-    "details": "Here are more details about Project One, including the tech stack and challenges.",
-    "images": [
-      "https://via.placeholder.com/600x400?text=Project+One+Image+1",
-      "https://via.placeholder.com/600x400?text=Project+One+Image+2"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Project Two",
-    "description": "This is a brief description of Project Two.",
-    "details": "Here are more details about Project Two, including the tech stack and challenges.",
-    "images": [
-      "https://via.placeholder.com/600x400?text=Project+Two+Image+1",
-      "https://via.placeholder.com/600x400?text=Project+Two+Image+2"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Project Three",
-    "description": "This is a brief description of Project Three.",
-    "details": "Here are more details about Project Three, including the tech stack and challenges.",
-    "images": [
-      "https://via.placeholder.com/600x400?text=Project+Three+Image+1",
-      "https://via.placeholder.com/600x400?text=Project+Three+Image+2"
+{
+  "data": {
+    "projects": [
+      {
+        "id": 1,
+        "name": "OXT Urbanismo",
+        "description": "OXT Urbanismo is a well-established company specializing in the development and sale of land plots for residential construction. Based in Rio Grande do Sul (RS), Brazil, the company is engaged in both the sale of land and the urbanization of areas, providing comprehensive solutions for the development of new residential communities.",
+        "mainImage": "/images/projects/oxt.png",
+        "images": ["/images/projects/oxt.png"],
+        "link": "null"
+      },
+      {
+        "id": 2,
+        "name": "Luel Móveis",
+        "description": "Luel Móveis is a custom furniture company located in Porto Alegre, the capital of Rio Grande do Sul, Brazil. I developed the company's website and also created a Facebook game where children could design their bedroom in a 3D environment. This game helped families visualize and decide on the experience they wanted with their new furniture at home.",
+        "mainImage": "/images/projects/luel.jpg",
+        "images": ["/images/projects/luel.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 3,
+        "name": "Percebe - Business Consultancy",
+        "description": "Percebe is a company that sought to sell consultancy services through an e-commerce platform. We developed the e-commerce site for them with the goal of testing the business model as an MVP (Minimum Viable Product).",
+        "mainImage": "/images/projects/percebe.png",
+        "images": ["/images/projects/percebe.png"],
+        "link": "null"
+      },
+      {
+        "id": 4,
+        "name": "VibMaster",
+        "description": "VibMaster is a company with over two decades of expertise in condition monitoring, aiming to increase machine availability and, consequently, boost production for its clients. They conduct measurements, diagnostics, and offer solutions using advanced predictive techniques, delivering a unique condition maintenance experience to their customers.",
+        "mainImage": "/images/projects/vibmaster.png",
+        "images": [
+          "/images/projects/vibmaster.png",
+          "/images/projects/vibmaster-1.png"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 5,
+        "name": "JCI (Junior Chamber International)",
+        "description": "JCI (Junior Chamber International) is a global non-profit organization focused on developing leadership skills, social responsibility, entrepreneurship, and fellowship among young active citizens. The JCI chapter in Novo Hamburgo, RS, provides opportunities for personal and professional growth, empowering young people to create positive change in their communities through impactful projects and initiatives.",
+        "mainImage": "/images/projects/jci.jpeg",
+        "images": ["/images/projects/jci.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 6,
+        "name": "World Cup  - Urban Scenarios",
+        "description": "This project was a collaboration with architect Benamy Turkienicz, where we developed a tool that integrated with Google Maps to overlay 3D architectural projects onto the maps. This allowed users to visualise how various areas of the city would look with the proposed developments, offering an immersive way to explore urban transformations.",
+        "mainImage": "/images/projects/world-cup.jpeg",
+        "images": ["/images/projects/world-cup.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 7,
+        "name": "Blend Coworking",
+        "description": "This project involved the development of an entry control turnstile system, integrated with a networking platform to enhance member interaction. The system randomly displayed member profiles on TVs throughout the coworking space and also featured an internal social network for members to share experiences and engage in networking activities.",
+        "mainImage": "/images/projects/blend.png",
+        "images": [
+          "/images/projects/blend.png",
+          "/images/projects/blend-1.png",
+          "/images/projects/blend-2.png",
+          "/images/projects/blend-3.png",
+          "/images/projects/blend-4.png"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 8,
+        "name": "Phosphoros",
+        "description": "Phosphoros is a press advisory consultancy based in Porto Alegre, specialising in providing tailored communication strategies for businesses and individuals. With a strong focus on media relations, Phosphoros helps its clients gain visibility and build their reputation in the marketplace. Their team of experienced professionals works closely with each client to understand their unique needs, delivering comprehensive solutions that include press releases, media outreach, and public relations campaigns. Through their expertise in the local and national media landscape, Phosphoros ensures that their clients' messages reach the right audience, creating impactful and lasting impressions.",
+        "mainImage": "/images/projects/phosphoros.png",
+        "images": [
+          "/images/projects/phosphoros.png",
+          "/images/projects/phosphoros-1.png",
+          "/images/projects/phosphoros-2.png",
+          "/images/projects/phosphoros-3.png"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 9,
+        "name": "City Hall of Dois Irmãos - RS",
+        "description": "I developed the official website for the city of Dois Irmãos, RS, along with a fully optimized infrastructure to support their servers. The site was designed not only to provide easy access to essential public services for the citizens but also to address the recurring issues with the city's previous infrastructure, which frequently caused service outages. By implementing a robust and stable system, the new infrastructure was tailored to prevent these disruptions, ensuring that citizens could consistently access municipal services without interruptions. This project aimed to enhance the overall user experience while supporting the city's growing digital demands with a resilient and scalable solution.",
+        "mainImage": "/images/projects/dois-irmaos.jpg",
+        "images": ["/images/projects/dois-irmaos.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 10,
+        "name": "Atacado do Calçado",
+        "description": "Atacado do Calçado is an e-commerce platform specialising in the wholesale of footwear, primarily aimed at serving retailers. The platform was designed to offer a wide variety of shoes, ranging from casual to formal wear, ensuring that businesses have access to high-quality products at competitive prices. In addition to providing an extensive catalogue, Atacado do Calçado simplifies the buying process for retailers by offering user-friendly navigation, secure payment gateways, and a seamless shopping experience. The platform also includes features tailored to the needs of wholesalers, such as bulk order management and tailored promotions, making it a valuable tool for businesses looking to stock their shelves efficiently. With a focus on quality, convenience, and reliability, Atacado do Calçado has become a trusted partner for retailers seeking to expand their product offerings in the footwear market.",
+        "mainImage": "/images/projects/atacado.jpeg",
+        "images": ["/images/projects/atacado.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 11,
+        "name": "Pão com Chia by Vital - Promotional Website",
+        "description": "The Pão com Chia promotional website was developed for Vital, a company known for producing and supplying high-quality food products. This website was designed to showcase one of Vital’s signature products, the Pão com Chia, a nutritious bread made with chia seeds, targeting health-conscious consumers. The site not only highlights the product's health benefits, such as its rich fiber content and essential fatty acids but also provides detailed nutritional information and creative recipe ideas for incorporating the bread into everyday meals. The platform was designed with user experience in mind, featuring an engaging and visually appealing layout that reflects the brand's commitment to healthy living. Additionally, the site offers easy navigation, allowing visitors to explore the product’s origins, its role in a balanced diet, and where it can be purchased. Vital’s dedication to quality is mirrored in the website, which serves as both a promotional tool and an informative resource for customers interested in enhancing their diet with nutritious, wholesome foods.",
+        "mainImage": "/images/projects/vital.jpg",
+        "images": ["/images/projects/vital.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 12,
+        "name": "Invalley Innovation and Design",
+        "description": "Invalley Innovation and Design was my company, where we aimed to apply design thinking through a multidisciplinary team to explore new business opportunities for large enterprises in our region of Brazil.",
+        "mainImage": "/images/projects/invalley.jpeg",
+        "images": ["/images/projects/invalley.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 13,
+        "name": "Gustavo Viegas Tatoo",
+        "description": "Gustavo Viegas is a highly skilled tattoo artist known for his artistic precision and creative flair. Specializing in custom designs that blend personal expression with visual artistry, Gustavo has earned a reputation for transforming his clients' ideas into unique, timeless tattoos. The website I developed for him showcases his extensive portfolio, offering potential clients an easy way to explore his work, book appointments, and connect with his creative process. Whether it's delicate line work or intricate, large-scale pieces, Gustavo’s talent is evident in every design, making his studio a go-to destination for tattoo enthusiasts.",
+        "mainImage": "/images/projects/gustavo.jpg",
+        "images": ["/images/projects/gustavo.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 14,
+        "name": "SOS Bikini",
+        "description": "SOS Bikini is a swimwear store that approached us seeking a solution to create a virtual fitting room. The store operated a small kiosk in one of Brazil’s largest shopping centres and wanted to avoid long queues for the fitting rooms. With the virtual fitting room, customers could try different outfit combinations without physically trying on the pieces. Additionally, we developed an e-commerce platform for them, enabling nationwide sales across Brazil.",
+        "mainImage": "/images/projects/sos.jpeg",
+        "images": [
+          "/images/projects/sos.jpeg",
+          "/images/projects/sos-1.jpeg",
+          "/images/projects/sos-2.jpeg",
+          "/images/projects/sos-3.jpeg",
+          "/images/projects/sos-4.jpeg"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 15,
+        "name": "Mail2Easy",
+        "description": "Mail2Easy is a market leader in newsletter distribution in Brazil. I was responsible for developing the entire front-end code for their email delivery system, effectively building the user interface for a complete SaaS platform.",
+        "mainImage": "/images/projects/mail2easy.jpg",
+        "images": ["/images/projects/mail2easy.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 16,
+        "name": "Mapfre",
+        "description": "Mapfre was a project I worked on as a third-party contractor. I was responsible for developing the front-end of an innovative insurance sales system, designed to operate through vending machines located in airports. This system allowed travellers to quickly and conveniently purchase insurance on the go, streamlining the process in high-traffic environments. The project was a unique challenge that required a seamless user interface, ensuring a smooth and efficient experience for customers in time-sensitive situations. My role involved close collaboration with the back-end team to integrate complex features, ultimately delivering a cutting-edge solution tailored to the travel insurance market.",
+        "mainImage": "/images/projects/mapfre.jpg",
+        "images": ["/images/projects/mapfre.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 17,
+        "name": "Credeal",
+        "description": "Credeal was an exciting project where I developed the e-commerce platform for one of Brazil’s leading manufacturers of notebooks and school supplies. As a market leader in the stationery industry, Credeal needed a robust, user-friendly online store to cater to its large customer base across the country. I was responsible for the front-end development, ensuring a seamless shopping experience for users, from browsing through the vast product range to the final purchase process. The project required a deep understanding of e-commerce best practices, UX/UI design, and integration with backend systems for inventory management and order processing. My work helped streamline their online sales process, providing an efficient and visually appealing platform to support their expanding digital presence.",
+        "mainImage": "/images/projects/credeal.jpeg",
+        "images": ["/images/projects/credeal.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 18,
+        "name": "EQUEL",
+        "description": "Equel was an innovative MVP project I developed from the ground up for a promising startup. I handled both the front-end and back-end development, creating a fully functional platform designed to bring together fashion designers and consumers in a unique way. The core idea was to create a space where designers could upload their creations, while consumers could share trends and inspirations that designers could then use as a creative springboard. This collaborative approach aimed to bridge the gap between designers and end consumers, fostering a community-driven design process. The platform was not only a hub for creativity but also integrated with an e-commerce system, allowing the company to manufacture the designs and sell them directly to consumers. This seamless integration of design, inspiration, and commerce brought an entirely new approach to the fashion industry, offering both designers and customers a way to interact and influence fashion trends. My work on this MVP involved everything from database management and API development to ensuring a smooth, intuitive user experience, making Equel a truly cutting-edge project.",
+        "mainImage": "/images/projects/equel.jpg",
+        "images": [
+          "/images/projects/equel.jpg",
+          "/images/projects/equel-1.jpg",
+          "/images/projects/equel-2.jpg",
+          "/images/projects/equel-3.jpg",
+          "/images/projects/equel-4.jpg"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 19,
+        "name": "BECEL",
+        "description": "This project was a promotional website developed for Becel, a leading margarine brand, with a focus on promoting heart health. The site aimed to offer health tips, advice, and information related to maintaining a healthy lifestyle. It served as an engaging platform where customers could find valuable content on cardiovascular wellness, share personal stories, and ask questions directly to health experts. The colourful and interactive design helped create an inviting space for users to learn more about heart-friendly habits while connecting with the Becel brand's mission to promote well-being.",
+        "mainImage": "/images/projects/becel.jpeg",
+        "images": ["/images/projects/becel.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 20,
+        "name": "Genius of the Ball",
+        "description": "Genius of the Ball was a promotional website and Facebook-based game developed during the 2014 FIFA World Cup in Brazil. Built using Node.js and Facebook's API, the game allowed users to challenge their friends to a quiz about the history of the World Cup. Participants would earn points based on the speed and accuracy of their responses, with top scorers winning prizes such as World Cup tickets, merchandise, and other exciting rewards. This interactive platform was designed to engage users in a fun and competitive way while promoting Liberty Seguros.",
+        "mainImage": "/images/projects/genio.jpg",
+        "images": ["/images/projects/genio.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 21,
+        "name": "Brazilian Dream",
+        "description": "Brazilian Dream was a research project conducted by Box1824, focused on young, active Brazilian citizens aged 18 to 24, with the aim of identifying the dreams and aspirations of the Brazilian population. The project received significant attention, including a feature on Brazils highly popular TV programme, Fantástico, which airs during prime time on Sunday evenings, comparable to the UKs BBC Panorama or ITVs Exposure. Our task was to create a website that would successfully present and communicate the results of this extensive research, which consisted of over 1,500 slides. The goal was to transform the vast amount of data into an engaging and accessible digital experience that conveyed the essence of the research while making it easy to understand for a wider audience.",
+        "mainImage": "/images/projects/sonho.jpg",
+        "images": [
+          "/images/projects/sonho.jpg",
+          "/images/projects/sonho-1.jpg"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 22,
+        "name": "Hora do Horror",
+        "description": "Hora do Horror at the Hopi Hari theme park was an ARG (Alternate Reality Game) that took place in São Paulo, designed to engage the park's most dedicated visitors. My role was to develop the platform where participants could solve clues, with each correct answer revealing the next hint in the game. This interactive experience was aimed at deepening the connection between the park and its fans by immersing them in a thrilling, puzzle-based adventure.",
+        "mainImage": "/images/projects/hopi.jpg",
+        "images": [
+          "/images/projects/hopi.jpg",
+          "/images/projects/hopi-1.jpg",
+          "/images/projects/hopi-2.jpg"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 23,
+        "name": "Quem disse, Berenice?",
+        "description": "Quem disse, Berenice? is a leading e-commerce platform from the renowned Grupo Boticário in Brazil, catering to a diverse range of beauty products. My role was to develop the frontend of this extensive online store, ensuring a smooth and visually engaging shopping experience for users. The design was focused on reflecting the brand’s vibrant and youthful essence, with intuitive navigation and seamless product categorisation. The platform supported various promotional campaigns, including discounts and offers, and was optimised for high traffic, enhancing customer engagement and satisfaction with a dynamic user interface.",
+        "mainImage": "/images/projects/quem.jpeg",
+        "images": ["/images/projects/quem.jpeg"],
+        "link": "null"
+      },
+      {
+        "id": 24,
+        "name": "Vanish",
+        "description": "This promotional website for Vanish, a leading fabric cleaning product, was designed to engage customers with interactive content and tips for removing stains. The site features a vibrant and dynamic layout, where users can learn about Vanish products, explore various stain removal solutions, and access helpful cleaning tips. My role focused on creating a user-friendly frontend that enhances the browsing experience, with intuitive navigation and visually appealing design elements. The platform also integrates video tutorials, social media interactions, and fun, informative content, making it both an educational and engaging resource for customers.",
+        "mainImage": "/images/projects/vanish.jpg",
+        "images": ["/images/projects/vanish.jpg"],
+        "link": "null"
+      },
+      {
+        "id": 25,
+        "name": "Adeus Rotina",
+        "description": "Adeus Rotina was an innovative subscription-based service designed to bring excitement and spontaneity to couples’ lives by delivering curated romantic experiences. The website was the heart of our platform, providing users with a seamless experience to explore and subscribe to these tailored moments. As the co-founder and developer, I was responsible for creating an intuitive and visually appealing frontend and backend. The site offered an easy-to-navigate interface where users could personalize their preferences, explore upcoming experiences, and manage their subscriptions. Adeus Rotina aimed to reignite romance through carefully curated adventures, helping couples break free from their routines.",
+        "mainImage": "/images/projects/adeusrotina.png",
+        "images": [
+          "/images/projects/adeusrotina.png",
+          "/images/projects/adeusrotina-1.png"
+        ],
+        "link": "null"
+      },
+      {
+        "id": 26,
+        "name": "Exclaimer",
+        "description": "Exclaimer is a powerful tool designed to help businesses create professional and consistent email signatures across their entire organization. With its intuitive signature editor, users can easily design email signatures that include banners, company logos, social media links, and legal disclaimer text. The platform ensures seamless integration by automatically pulling employee contact details from Azure Active Directory, making the process both efficient and error-free. Additionally, Exclaimer allows businesses to assign custom signature templates to different departments or teams, ensuring that every communication aligns with the company’s brand identity while maintaining compliance with legal requirements. This all-in-one solution simplifies the management of email signatures at scale, ensuring a professional and unified look for all outgoing communications.",
+        "mainImage": "/images/projects/exclaimer.png",
+        "images": ["/images/projects/exclaimer.png"],
+        "link": "null"
+      },
+      {
+        "id": 27,
+        "name": "MyLighthouse",
+        "description": "MyLighthouse is a cutting-edge platform designed to provide comprehensive and reliable insights within the travel and hospitality industry, enabling businesses to make informed, data-driven decisions. As the lead developer on this project, I oversaw the development of the platform's core functionalities, ensuring seamless integration of vast datasets and user-friendly tools. MyLighthouse offers the most complete data on travel trends, consumer behavior, and market dynamics, empowering leaders in the industry to navigate the complexities of the market with confidence. With real-time analytics, intuitive dashboards, and actionable insights, the platform shines a light on key travel and hospitality metrics, helping businesses enhance their strategies and stay ahead of the competition. My role involved managing the full development cycle, from backend infrastructure to front-end design, ensuring that MyLighthouse delivers high-quality, actionable insights that businesses can rely on.",
+        "mainImage": "/images/projects/my.png",
+        "images": ["/images/projects/my.png"],
+        "link": "https://www.mylighthouse.com/"
+      },
+      {
+        "id": 28,
+        "name": "EY Adventure Awaits",
+        "description": "EY Adventure Awaits was an immersive digital experience designed to engage and connect EY with a younger audience through interactive 3D environments and games. Using cutting-edge technologies like Three.js, Next.js, SCSS, React, and Canvas for the game mechanics, and powered by Storyblok on the backend, we crafted a vibrant virtual world where users could explore, play, and interact in real-time. This project not only aimed to strengthen the brand’s relationship with younger generations but also created a fun and engaging platform that allowed users to learn about EY’s values and services in a dynamic, gamified way. As part of the development team, I helped bring this digital universe to life, ensuring seamless performance across devices and delivering a high-quality experience that combined stunning visuals with innovative user engagement strategies. The project successfully merged creativity with technology, offering EY a unique approach to build meaningful connections with the next generation of talent and consumers.",
+        "mainImage": "/images/projects/ey.png",
+        "images": [
+          "/images/projects/ey.png",
+          "/images/projects/ey-1.png",
+          "/images/projects/ey-2.png",
+          "/images/projects/ey-3.png"
+        ],
+        "link": "https://eyadventureawaits.co.uk/"
+      }
     ]
   }
-]
+}

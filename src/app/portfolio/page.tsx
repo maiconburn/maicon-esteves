@@ -22,8 +22,14 @@ const ProjectModal = ({
 }) => {
   if (!project) return null;
 
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).classList.contains(styles.modalOverlay)) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={styles.modalOverlay}>
+    <div className={styles.modalOverlay} onClick={handleOverlayClick}>
       <div className={styles.modalContent}>
         <button className={styles.closeButton} onClick={onClose}>
           &times;
@@ -51,6 +57,7 @@ const ProjectModal = ({
 export default function Portfolio() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [expandedProjectIds, setExpandedProjectIds] = useState<number[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -77,15 +84,15 @@ export default function Portfolio() {
           }
         );
 
-        const fetchedProjects = response.data.data.projects.map(
-          (project: any) => ({
+        const fetchedProjects = response.data.data.projects
+          .map((project: any) => ({
             id: project.id,
             name: project.name,
             description: project.description,
             details: project.description,
-            images: [project.mainImage, ...project.images],
-          })
-        );
+            images: project.images,
+          }))
+          .sort((a: Project, b: Project) => b.id - a.id);
 
         setProjects(fetchedProjects);
       } catch (error) {
@@ -118,14 +125,19 @@ export default function Portfolio() {
             className={styles.projectCard}
             onClick={() => handleProjectClick(project)}
           >
-            <Image
-              src={project.images[0]}
-              alt={project.name}
-              width={600}
-              height={400}
-            />
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
+            <a>
+              <Image
+                src={project.images[0]}
+                alt={project.name}
+                width={600}
+                height={400}
+              />
+              <h3>{project.name}</h3>
+
+              <p className={styles.projectDescription}>{project.description}</p>
+
+              <button className={styles.seeMoreButton}>View Project</button>
+            </a>
           </div>
         ))}
       </div>
