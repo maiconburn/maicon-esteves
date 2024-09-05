@@ -12,7 +12,7 @@
     margin-left: -1px;
     width: 2px;
     height: 100%;
-    background-color: rgba(var(--tile-border));
+    background-color: var(--timeline-color);
   }
 
   .timelineItem {
@@ -20,10 +20,10 @@
     margin: 2rem 0;
     width: 40%;
     padding: 1rem;
-    background-color: rgba(var(--tile-start-rgb));
-    border: 1px solid rgba(var(--tile-border));
+    background-color: var(--tile-start-color);
+    border: 1px solid var(--tile-border-color);
     border-radius: var(--border-radius);
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px #0000001a;
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
     transform: translateY(20px);
@@ -48,15 +48,15 @@
         transform: translate(-50%, -50%);
         width: 40px;
         height: 40px;
-        background-color: rgb(var(--background-start-rgb));
+        background-color: var(--background-start-color);
         border-radius: 50%;
         z-index: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgb(var(--foreground-rgb));
+        color: var(--foreground-color);
         font-size: 1.2rem;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 6px #00000033;
       }
     }
 
@@ -76,15 +76,15 @@
         transform: translate(-50%, -50%);
         width: 40px;
         height: 40px;
-        background-color: rgb(var(--background-start-rgb));
+        background-color: var(--background-start-color);
         border-radius: 50%;
         z-index: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgb(var(--foreground-rgb));
+        color: var(--foreground-color);
         font-size: 1.2rem;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 6px #00000033;
       }
     }
 
@@ -95,18 +95,18 @@
       h3 {
         margin-top: 0;
         font-size: 1.2rem;
-        color: rgb(var(--foreground-rgb));
+        color: var(--foreground-color);
       }
 
       h4 {
         margin-bottom: 0.5rem;
         font-size: 1rem;
-        color: rgba(var(--foreground-rgb), 0.7);
+        color: #666666;
       }
 
       p {
         margin: 0.5rem 0;
-        color: rgba(var(--foreground-rgb), 0.7);
+        color: #666666;
       }
     }
   }
