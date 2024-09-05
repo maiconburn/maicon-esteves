@@ -63,10 +63,9 @@ export function RadarChart({ chartTitle, chartSize, chartHeight }) {
         .attr("y2", radialScale(10) * Math.sin(angle))
         .attr("stroke", "#e9e9e9");
 
-      // Adicionar os labels dos eixos
       svg
         .append("text")
-        .attr("x", radialScale(11) * Math.cos(angle)) // Altere 10.5 para 11 para aumentar a distância do label
+        .attr("x", radialScale(11) * Math.cos(angle))
         .attr("y", radialScale(11) * Math.sin(angle))
         .attr("dy", "0.35em")
         .attr("text-anchor", "middle")

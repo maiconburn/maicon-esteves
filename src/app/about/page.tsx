@@ -147,7 +147,7 @@ export default function About() {
           <div className={styles.aboutMeChart}>
             <RadarChart
               chartTitle={"Multi-Disciplinary Strengths"}
-              chartSize={400}
+              chartSize={360}
               chartHeight={360}
             />
           </div>
