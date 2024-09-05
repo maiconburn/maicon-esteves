@@ -76,14 +76,14 @@ export function Header() {
               >
                 Portfolio
               </Link>
-              <Link
+              {/* <Link
                 href="https://medium.com/@maiconribeiroesteves"
                 className={styles.link}
                 target="_blank"
                 onClick={closeMenu}
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className={`${styles.link} ${
