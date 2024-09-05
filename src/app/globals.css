@@ -6,7 +6,7 @@
 
   --font-mono: "Roboto Mono", Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
-    "Droid Sans Mono", "Courier New", monospace;
+    "Droid Sans Mono", "Courier New", monospace, sans-serif;
 
   --foreground-color: #000000; /* Black */
   --background-start-color: #d6dbdc; /* Light Gray */
