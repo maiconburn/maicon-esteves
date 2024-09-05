@@ -16,6 +16,10 @@ export function Header() {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
@@ -50,6 +54,7 @@ export function Header() {
                 className={`${styles.link} ${
                   isActive("/about") ? styles.active : ""
                 }`}
+                onClick={closeMenu}
               >
                 About
               </Link>
@@ -58,6 +63,7 @@ export function Header() {
                 className={`${styles.link} ${
                   isActive("/resume") ? styles.active : ""
                 }`}
+                onClick={closeMenu}
               >
                 Resume
               </Link>
@@ -66,6 +72,7 @@ export function Header() {
                 className={`${styles.link} ${
                   isActive("/portfolio") ? styles.active : ""
                 }`}
+                onClick={closeMenu}
               >
                 Portfolio
               </Link>
@@ -73,6 +80,7 @@ export function Header() {
                 href="https://medium.com/@maiconribeiroesteves"
                 className={styles.link}
                 target="_blank"
+                onClick={closeMenu}
               >
                 Blog
               </Link>
@@ -81,6 +89,7 @@ export function Header() {
                 className={`${styles.link} ${
                   isActive("/contact") ? styles.active : ""
                 }`}
+                onClick={closeMenu}
               >
                 Contact
               </Link>
@@ -90,6 +99,7 @@ export function Header() {
                   className={styles.socialLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={closeMenu}
                 >
                   <FontAwesomeIcon
                     icon={faGithub}
@@ -101,6 +111,7 @@ export function Header() {
                   className={styles.socialLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={closeMenu}
                 >
                   <FontAwesomeIcon
                     icon={faLinkedin}
