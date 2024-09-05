@@ -17,7 +17,7 @@ export function RadarChart({ chartTitle, chartSize, chartHeight }) {
       { axis: "DevOps", value: 6 },
     ];
 
-    const margin = { top: 50, right: 50, bottom: 50, left: 50 };
+    const margin = { top: 50, right: 0, bottom: 50, left: 0 };
     const width = chartSize || 500;
     const height = chartHeight || 500;
     const radius =
