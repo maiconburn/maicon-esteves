@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 import "./globals.css";
 import Script from "next/script"; // Import Next.js Script component
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Maicon Ribeiro Esteves - Portfolio",
@@ -60,7 +57,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body>
         <Header />
         <Main>{children}</Main>
         <Footer />

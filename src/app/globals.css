@@ -1,12 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
 
+  /* Atualizamos para uma combinação de fontes elegantes e comuns em MacOS */
+  --font-sans: "SF Pro Display", "Inter", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   --font-mono: "Roboto Mono", Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
-    "Droid Sans Mono", "Courier New", monospace, sans-serif;
+    "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-color: #000000; /* Black */
   --background-start-color: #d6dbdc; /* Light Gray */
@@ -17,7 +20,7 @@
 
   --tile-start-color: #eff5f9; /* Light Blueish Gray */
   --tile-end-color: #e4e8e9; /* Lighter Gray */
-  --tile-border-color: #e0e0e0; /* Black with transparency effect converted to solid hex approximation */
+  --tile-border-color: #e0e0e0; /* Gray */
 
   --timeline-color: #ccc; /* Light Gray */
 
@@ -42,7 +45,7 @@
 
     --tile-start-color: #020d2e; /* Dark Navy */
     --tile-end-color: #020513; /* Darker Navy */
-    --tile-border: #ffffff80; /* White with transparency effect converted to solid hex approximation */
+    --tile-border: #ffffff80; /* White with transparency */
 
     --callout-color: #141414; /* Very Dark Gray */
     --callout-border-color: #6c6c6c; /* Dark Gray */
@@ -71,7 +74,9 @@ body {
       var(--background-end-color)
     )
     var(--background-start-color);
-  font-family: var(--font-mono);
+  font-family: var(
+    --font-sans
+  ); /* Atualizado para usar fontes sans-serif principais */
   font-size: 1rem;
   -webkit-font-smoothing: antialiased; /* Smooth fonts on iOS */
   -moz-osx-font-smoothing: grayscale;
@@ -84,7 +89,7 @@ a {
 
 @media (max-width: 480px) {
   body {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    font-size: 0.9rem; /* Ajuste de tamanho de fonte para telas menores */
   }
 }
 
