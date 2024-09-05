@@ -1,11 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import axios from "axios";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
+import Image from "next/image";
 import styles from "./portfolio.module.scss";
-
-// Import the JSON file directly
-import portfolioData from "./portfolioData.json";
 
 interface Project {
   id: number;
@@ -59,20 +57,50 @@ const ProjectModal = ({
 export default function Portfolio() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [expandedProjectIds, setExpandedProjectIds] = useState<number[]>([]);
 
   useEffect(() => {
-    // Load the JSON data
-    const fetchedProjects = portfolioData.data.projects
-      .map((project: any) => ({
-        id: project.id,
-        name: project.name,
-        description: project.description,
-        details: project.description,
-        images: project.images,
-      }))
-      .sort((a: Project, b: Project) => b.id - a.id);
+    const fetchProjects = async () => {
+      try {
+        const response = await axios.post(
+          "https://portfolio-api-production-93c5.up.railway.app/graphql",
+          {
+            query: `
+              query {
+                projects {
+                  id
+                  name
+                  description
+                  mainImage
+                  images
+                }
+              }
+            `,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
-    setProjects(fetchedProjects);
+        const fetchedProjects = response.data.data.projects
+          .map((project: any) => ({
+            id: project.id,
+            name: project.name,
+            description: project.description,
+            details: project.description,
+            images: project.images,
+          }))
+          .sort((a: Project, b: Project) => b.id - a.id);
+
+        setProjects(fetchedProjects);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+
+    fetchProjects();
   }, []);
 
   const handleProjectClick = (project: Project) => {
@@ -105,7 +133,9 @@ export default function Portfolio() {
                 height={400}
               />
               <h3>{project.name}</h3>
+
               <p className={styles.projectDescription}>{project.description}</p>
+
               <button className={styles.seeMoreButton}>View Project</button>
             </a>
           </div>
