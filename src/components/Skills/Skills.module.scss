@@ -1,7 +1,7 @@
 .skillsSection {
   display: flex;
   flex-direction: column;
-  padding: 1rem; /* Ajuste de padding para garantir que o conteúdo não toque nas bordas da tela */
+  padding: 1rem;
 
   & > h4 {
     font-size: 1rem;
@@ -15,7 +15,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%; /* Garantir que o container ocupe toda a largura disponível */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .skillItem {
@@ -23,7 +24,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 0.1rem;
-  width: 100%; /* Garantir que cada skill ocupe toda a largura disponível */
+  width: 100%;
 }
 
 .skillName {
