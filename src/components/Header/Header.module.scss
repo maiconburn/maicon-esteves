@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-dark); /* Usando variável global */
-  color: var(--color-light); /* Usando variável global */
+  background-color: var(--color-dark);
+  color: var(--color-light);
   z-index: 999;
 
   &.home {
@@ -36,7 +36,7 @@
 
       .titleLink {
         &:hover {
-          color: var(--color-muted); /* Usando variável global */
+          color: var(--color-muted);
         }
 
         .title {
@@ -58,7 +58,7 @@
         display: none;
         background: none;
         border: none;
-        color: var(--color-light); /* Usando variável global */
+        color: var(--color-light);
         font-size: 1.5rem;
         cursor: pointer;
       }
@@ -77,12 +77,12 @@
           font-weight: 300;
           text-transform: uppercase;
           text-decoration: none;
-          color: var(--color-light); /* Usando variável global */
+          color: var(--color-light);
           border-radius: 5px;
           transition: all 0.3s ease;
 
           &:hover {
-            color: var(--color-muted); /* Usando variável global */
+            color: var(--color-muted);
           }
         }
 
@@ -92,7 +92,7 @@
             var(--color-primary-glow) 0%,
             var(--color-secondary-glow) 100%
           );
-          color: var(--color-light); /* Usando variável global */
+          color: var(--color-light);
 
           &:hover {
             background: linear-gradient(
@@ -100,7 +100,7 @@
               var(--color-secondary-glow) 0%,
               var(--color-primary-glow) 100%
             );
-            color: var(--color-light); /* Usando variável global */
+            color: var(--color-light);
           }
         }
       }
@@ -111,10 +111,9 @@
 
         .socialLink {
           margin-left: 15px;
-          color: var(--color-light); /* Usando variável global */
-
+          color: var(--color-light);
           &:hover {
-            color: var(--color-muted); /* Usando variável global */
+            color: var(--color-muted);
           }
 
           .socialIcon {
@@ -184,7 +183,7 @@
           flex-direction: column;
           align-items: flex-end;
           width: 100%;
-          background-color: var(--color-dark); /* Usando variável global */
+          background-color: var(--color-dark);
           padding: 20px;
           position: absolute;
           top: 60px;
@@ -198,7 +197,6 @@
             width: 100%;
             text-align: center;
             padding: 10px 0;
-            border-bottom: 1px solid var(--color-border); /* Usando variável global */
           }
         }
 

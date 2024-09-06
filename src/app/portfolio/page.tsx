@@ -4,7 +4,6 @@ import Image from "next/image";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import styles from "./portfolio.module.scss";
 
-// Import the JSON file directly
 import portfolioData from "./portfolioData.json";
 
 interface Project {

@@ -54,21 +54,32 @@
     }
 
     .seeMoreButton {
-      background-color: transparent;
-      color: var(--color-primary-glow);
+      background: linear-gradient(
+        135deg,
+        var(--color-primary-glow) 0%,
+        var(--color-secondary-glow) 100%
+      );
+      color: var(--color-light);
       border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 0.9rem;
-      text-transform: uppercase;
+      font-size: 1rem;
       font-weight: 600;
-      margin-top: 0.5rem;
-      transition: color 0.3s ease;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, color 0.3s ease;
 
       &:hover {
-        color: var(--color-secondary-glow);
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary-glow) 0%,
+          var(--color-primary-glow) 100%
+        );
+        color: var(--color-light);
       }
+
       &:visited {
-        color: var(--color-primary-glow);
+        color: var(--color-light);
       }
     }
   }
@@ -102,14 +113,29 @@
   }
 
   .closeButton {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--color-primary-glow);
     border: none;
-    font-size: 1.5rem;
+    color: var(--color-light);
+    font-size: 3rem;
     cursor: pointer;
-    color: var(--color-text);
+    z-index: 1100;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 50%;
+    padding: 10px 25px;
+
+    &:hover {
+      background-color: var(--color-secondary-glow);
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 10px;
+      right: 10px;
+      font-size: 2rem;
+      padding: 5px 15px;
+    }
   }
 
   h2 {
