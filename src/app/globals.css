@@ -10,47 +10,25 @@
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
     "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-color: #000000; /* Black */
-  --background-start-color: #d6dbdc; /* Light Gray */
-  --background-end-color: #ffffff; /* White */
+  --color-text: #000000;
+  --color-background: #f5f5f5;
 
-  --primary-glow: #333;
-  --secondary-glow: #aaa;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
 
-  --tile-start-color: #eff5f9; /* Light Blueish Gray */
-  --tile-end-color: #e4e8e9; /* Lighter Gray */
-  --tile-border-color: #e0e0e0; /* Gray */
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-muted: #6c757d;
 
-  --timeline-color: #ccc; /* Light Gray */
+  --color-border: #e0e0e0;
+  --color-tile-start: #eff5f9;
+  --color-tile-end: #e4e8e9;
 
-  --callout-color: #eef0f1; /* Light Gray */
-  --callout-border-color: #acafb0; /* Medium Gray */
-  --card-color: #b4b9bc; /* Light Gray */
-  --card-border-color: #838687; /* Medium Gray */
-  --icon-victory: #ffdd00;
-  --icon-education: #007bff;
-  --icon-work: #28a745;
-  --icon-achievement: #dc3545;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-color: #ffffff; /* White */
-    --background-start-color: #000000; /* Black */
-    --background-end-color: #000000; /* Black */
-
-    --primary-glow: #00f9ff; /* Light Neon Blue */
-    --secondary-glow: #00e0ff; /* Slightly Darker Neon Blue */
-
-    --tile-start-color: #020d2e; /* Dark Navy */
-    --tile-end-color: #020513; /* Darker Navy */
-    --tile-border: #ffffff80; /* White with transparency */
-
-    --callout-color: #141414; /* Very Dark Gray */
-    --callout-border-color: #6c6c6c; /* Dark Gray */
-    --card-color: #646464; /* Dark Gray */
-    --card-border-color: #c8c8c8; /* Light Gray */
-  }
+  --color-primary-glow: #8833cc;
+  --color-secondary-glow: #773080;
 }
 
 * {
@@ -66,13 +44,9 @@ body {
 }
 
 body {
-  color: var(--foreground-color);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--background-end-color)
-    )
-    var(--background-start-color);
+  color: var(--color-text);
+  background: linear-gradient(to bottom, transparent, var(--color-background))
+    var(--color-background);
   font-family: var(--font-sans);
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;

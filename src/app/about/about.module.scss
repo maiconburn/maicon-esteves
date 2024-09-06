@@ -26,7 +26,7 @@
         text-transform: uppercase;
         font-size: 1rem;
         font-weight: 500;
-        color: var(--foreground-rgb);
+        color: var(--color-text);
       }
 
       & > img {
@@ -43,7 +43,7 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
-    width: 100%; /* Garante que o conteúdo respeite a largura total da tela */
+    width: 100%;
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
@@ -54,7 +54,7 @@
     .aboutMeText {
       font-size: 1rem;
       font-weight: 400;
-      color: rgba(var(--foreground-rgb), 0.7);
+      color: rgba(var(--color-text), 0.7);
       text-align: left;
       flex-basis: 100%;
       line-height: 1.6;
@@ -73,13 +73,13 @@
       }
 
       strong {
-        color: rgb(var(--foreground-rgb));
+        color: var(--color-text);
       }
 
       h4 {
         margin-top: 1.5rem;
         font-size: 1.2rem;
-        color: rgb(var(--foreground-rgb));
+        color: var(--color-text);
       }
 
       p {

@@ -20,13 +20,13 @@ const iconMap: { [key: string]: IconDefinition } = {
 const getIconColor = (icon: string) => {
   switch (icon) {
     case "faAward":
-      return "var(--icon-victory)"; // Amarelo para vitórias
+      return "var(--color-warning)";
     case "faGraduationCap":
-      return "var(--icon-education)"; // Azul para educação
+      return "var(--color-primary)";
     case "faBriefcase":
-      return "var(--icon-work)"; // Verde para trabalho
+      return "var(--color-success)";
     case "faStar":
-      return "var(--icon-achievement)"; // Vermelho para conquistas
+      return "var(--color-danger)";
     default:
       return "var(--foreground-color)";
   }

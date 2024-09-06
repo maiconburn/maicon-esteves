@@ -8,8 +8,8 @@
   }
 
   .projectCard {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-border);
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -31,12 +31,12 @@
 
     h3 {
       margin: 1rem 0 0.5rem;
-      color: var(--foreground-color);
+      color: var(--color-text);
       font-weight: 500;
     }
 
     .projectDescription {
-      color: #666666;
+      color: var(--color-muted);
       font-size: 0.95rem;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -55,7 +55,7 @@
 
     .seeMoreButton {
       background-color: transparent;
-      color: var(--primary-glow);
+      color: var(--color-primary-glow);
       border: none;
       cursor: pointer;
       font-size: 0.9rem;
@@ -65,10 +65,10 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: var(--secondary-glow);
+        color: var(--color-secondary-glow);
       }
       &:visited {
-        color: var(--primary-glow);
+        color: var(--color-primary-glow);
       }
     }
   }
@@ -87,9 +87,9 @@
   }
 
   .modalContent {
-    background-color: #ffffff;
+    background-color: var(--color-light);
     padding: 3rem 2rem;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     max-width: 600px;
     width: 100%;
@@ -109,13 +109,13 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--foreground-color);
+    color: var(--color-text);
   }
 
   h2 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
-    color: var(--foreground-color);
+    color: var(--color-text);
     font-weight: 600;
   }
 
@@ -135,7 +135,7 @@
   }
 
   p {
-    color: #333;
+    color: var(--color-dark);
     font-size: 1rem;
     margin-bottom: 1rem;
   }
