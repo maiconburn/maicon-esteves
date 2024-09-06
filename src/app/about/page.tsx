@@ -85,9 +85,9 @@ export default function About() {
             promotion to reviewer within just one month. Prior to this role, I
             spent time at <strong>MADE BY ON</strong>, where I worked on
             large-scale projects for prestigious clients like Ernst & Young,
-            Exclaimer, and My Lighthouse. I introduced advanced Content Security
-            Policy (CSP) configurations, optimizing security without disrupting
-            the integration of key tools like Google Tag Manager.
+            Exclaimer, and My Lighthouse. I led the Exclaimer and My Lighthouse
+            projects, delegating tasks and maintaining communication with the
+            Delivery Manager.
           </p>
           <p>
             Beyond corporate roles, I am also an entrepreneur at heart. I
@@ -104,15 +104,16 @@ export default function About() {
             My passion for innovation has also led me to actively participate in
             several <strong>hackathons</strong> and{" "}
             <strong>startup acceleration programs</strong>. I have been awarded
-            <strong>1st place at the HackathON</strong> at{" "}
+            <strong> 1st place at the HackathON</strong> at{" "}
             <strong>MADE BY ON</strong> (2022, 2023) for developing
             groundbreaking solutions in internal projects. In 2015, I won{" "}
             <strong>1st place in the Acelera Serra</strong> startup pitch
             competition. Additionally, I was recognized with{" "}
             <strong>2nd place at IBTeCHDAY</strong> for technological
             innovations in the leather and footwear industry and{" "}
-            <strong>3rd place at Startup RS</strong> for creating a virtual
-            product launch strategy for the footwear market.
+            <strong>3rd place at Startup RS</strong> for my work on the Adeus
+            Rotina project, which was selected for the continuation phase in the
+            ScaleUP RS program.
           </p>
           <p>
             I am a strong believer in the power of mentorship and giving back to
