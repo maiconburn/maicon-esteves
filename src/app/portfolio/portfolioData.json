@@ -7,7 +7,8 @@
         "description": "OXT Urbanismo is a well-established company specializing in the development and sale of land plots for residential construction. Based in Rio Grande do Sul (RS), Brazil, the company is engaged in both the sale of land and the urbanization of areas, providing comprehensive solutions for the development of new residential communities.",
         "mainImage": "/images/projects/oxt.png",
         "images": ["/images/projects/oxt.png"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 2,
@@ -15,7 +16,8 @@
         "description": "Luel Móveis is a custom furniture company located in Porto Alegre, the capital of Rio Grande do Sul, Brazil. I developed the company's website and also created a Facebook game where children could design their bedroom in a 3D environment. This game helped families visualize and decide on the experience they wanted with their new furniture at home.",
         "mainImage": "/images/projects/luel.jpg",
         "images": ["/images/projects/luel.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 3,
@@ -23,7 +25,8 @@
         "description": "Percebe is a company that sought to sell consultancy services through an e-commerce platform. We developed the e-commerce site for them with the goal of testing the business model as an MVP (Minimum Viable Product).",
         "mainImage": "/images/projects/percebe.png",
         "images": ["/images/projects/percebe.png"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 4,
@@ -34,7 +37,8 @@
           "/images/projects/vibmaster.png",
           "/images/projects/vibmaster-1.png"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 5,
@@ -42,7 +46,8 @@
         "description": "JCI (Junior Chamber International) is a global non-profit organization focused on developing leadership skills, social responsibility, entrepreneurship, and fellowship among young active citizens. The JCI chapter in Novo Hamburgo, RS, provides opportunities for personal and professional growth, empowering young people to create positive change in their communities through impactful projects and initiatives.",
         "mainImage": "/images/projects/jci.jpeg",
         "images": ["/images/projects/jci.jpeg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 6,
@@ -50,7 +55,8 @@
         "description": "This project was a collaboration with architect Benamy Turkienicz, where we developed a tool that integrated with Google Maps to overlay 3D architectural projects onto the maps. This allowed users to visualise how various areas of the city would look with the proposed developments, offering an immersive way to explore urban transformations.",
         "mainImage": "/images/projects/world-cup.jpeg",
         "images": ["/images/projects/world-cup.jpeg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 7,
@@ -64,7 +70,8 @@
           "/images/projects/blend-3.png",
           "/images/projects/blend-4.png"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 8,
@@ -77,7 +84,8 @@
           "/images/projects/phosphoros-2.png",
           "/images/projects/phosphoros-3.png"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 9,
@@ -85,7 +93,8 @@
         "description": "I developed the official website for the city of Dois Irmãos, RS, along with a fully optimized infrastructure to support their servers. The site was designed not only to provide easy access to essential public services for the citizens but also to address the recurring issues with the city's previous infrastructure, which frequently caused service outages. By implementing a robust and stable system, the new infrastructure was tailored to prevent these disruptions, ensuring that citizens could consistently access municipal services without interruptions. This project aimed to enhance the overall user experience while supporting the city's growing digital demands with a resilient and scalable solution.",
         "mainImage": "/images/projects/dois-irmaos.jpg",
         "images": ["/images/projects/dois-irmaos.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 10,
@@ -101,7 +110,8 @@
         "description": "The Pão com Chia promotional website was developed for Vital, a company known for producing and supplying high-quality food products. This website was designed to showcase one of Vital’s signature products, the Pão com Chia, a nutritious bread made with chia seeds, targeting health-conscious consumers. The site not only highlights the product's health benefits, such as its rich fiber content and essential fatty acids but also provides detailed nutritional information and creative recipe ideas for incorporating the bread into everyday meals. The platform was designed with user experience in mind, featuring an engaging and visually appealing layout that reflects the brand's commitment to healthy living. Additionally, the site offers easy navigation, allowing visitors to explore the product’s origins, its role in a balanced diet, and where it can be purchased. Vital’s dedication to quality is mirrored in the website, which serves as both a promotional tool and an informative resource for customers interested in enhancing their diet with nutritious, wholesome foods.",
         "mainImage": "/images/projects/vital.jpg",
         "images": ["/images/projects/vital.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 12,
@@ -117,7 +127,8 @@
         "description": "Gustavo Viegas is a highly skilled tattoo artist known for his artistic precision and creative flair. Specializing in custom designs that blend personal expression with visual artistry, Gustavo has earned a reputation for transforming his clients' ideas into unique, timeless tattoos. The website I developed for him showcases his extensive portfolio, offering potential clients an easy way to explore his work, book appointments, and connect with his creative process. Whether it's delicate line work or intricate, large-scale pieces, Gustavo’s talent is evident in every design, making his studio a go-to destination for tattoo enthusiasts.",
         "mainImage": "/images/projects/gustavo.jpg",
         "images": ["/images/projects/gustavo.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 14,
@@ -131,7 +142,8 @@
           "/images/projects/sos-3.jpeg",
           "/images/projects/sos-4.jpeg"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 15,
@@ -147,7 +159,8 @@
         "description": "Mapfre was a project I worked on as a third-party contractor. I was responsible for developing the front-end of an innovative insurance sales system, designed to operate through vending machines located in airports. This system allowed travellers to quickly and conveniently purchase insurance on the go, streamlining the process in high-traffic environments. The project was a unique challenge that required a seamless user interface, ensuring a smooth and efficient experience for customers in time-sensitive situations. My role involved close collaboration with the back-end team to integrate complex features, ultimately delivering a cutting-edge solution tailored to the travel insurance market.",
         "mainImage": "/images/projects/mapfre.jpg",
         "images": ["/images/projects/mapfre.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 17,
@@ -155,7 +168,8 @@
         "description": "Credeal was an exciting project where I developed the e-commerce platform for one of Brazil’s leading manufacturers of notebooks and school supplies. As a market leader in the stationery industry, Credeal needed a robust, user-friendly online store to cater to its large customer base across the country. I was responsible for the front-end development, ensuring a seamless shopping experience for users, from browsing through the vast product range to the final purchase process. The project required a deep understanding of e-commerce best practices, UX/UI design, and integration with backend systems for inventory management and order processing. My work helped streamline their online sales process, providing an efficient and visually appealing platform to support their expanding digital presence.",
         "mainImage": "/images/projects/credeal.jpeg",
         "images": ["/images/projects/credeal.jpeg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 18,
@@ -169,7 +183,8 @@
           "/images/projects/equel-3.jpg",
           "/images/projects/equel-4.jpg"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 19,
@@ -177,7 +192,8 @@
         "description": "This project was a promotional website developed for Becel, a leading margarine brand, with a focus on promoting heart health. The site aimed to offer health tips, advice, and information related to maintaining a healthy lifestyle. It served as an engaging platform where customers could find valuable content on cardiovascular wellness, share personal stories, and ask questions directly to health experts. The colourful and interactive design helped create an inviting space for users to learn more about heart-friendly habits while connecting with the Becel brand's mission to promote well-being.",
         "mainImage": "/images/projects/becel.jpeg",
         "images": ["/images/projects/becel.jpeg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 20,
@@ -185,7 +201,8 @@
         "description": "Genius of the Ball was a promotional website and Facebook-based game developed during the 2014 FIFA World Cup in Brazil. Built using Node.js and Facebook's API, the game allowed users to challenge their friends to a quiz about the history of the World Cup. Participants would earn points based on the speed and accuracy of their responses, with top scorers winning prizes such as World Cup tickets, merchandise, and other exciting rewards. This interactive platform was designed to engage users in a fun and competitive way while promoting Liberty Seguros.",
         "mainImage": "/images/projects/genio.jpg",
         "images": ["/images/projects/genio.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 21,
@@ -196,7 +213,8 @@
           "/images/projects/sonho.jpg",
           "/images/projects/sonho-1.jpg"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 22,
@@ -208,7 +226,8 @@
           "/images/projects/hopi-1.jpg",
           "/images/projects/hopi-2.jpg"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 23,
@@ -216,7 +235,8 @@
         "description": "Quem disse, Berenice? is a leading e-commerce platform from the renowned Grupo Boticário in Brazil, catering to a diverse range of beauty products. My role was to develop the frontend of this extensive online store, ensuring a smooth and visually engaging shopping experience for users. The design was focused on reflecting the brand’s vibrant and youthful essence, with intuitive navigation and seamless product categorisation. The platform supported various promotional campaigns, including discounts and offers, and was optimised for high traffic, enhancing customer engagement and satisfaction with a dynamic user interface.",
         "mainImage": "/images/projects/quem.jpeg",
         "images": ["/images/projects/quem.jpeg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 24,
@@ -224,7 +244,8 @@
         "description": "This promotional website for Vanish, a leading fabric cleaning product, was designed to engage customers with interactive content and tips for removing stains. The site features a vibrant and dynamic layout, where users can learn about Vanish products, explore various stain removal solutions, and access helpful cleaning tips. My role focused on creating a user-friendly frontend that enhances the browsing experience, with intuitive navigation and visually appealing design elements. The platform also integrates video tutorials, social media interactions, and fun, informative content, making it both an educational and engaging resource for customers.",
         "mainImage": "/images/projects/vanish.jpg",
         "images": ["/images/projects/vanish.jpg"],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 25,
@@ -235,7 +256,8 @@
           "/images/projects/adeusrotina.png",
           "/images/projects/adeusrotina-1.png"
         ],
-        "link": "null"
+        "link": "null",
+        "protected": false
       },
       {
         "id": 26,
@@ -243,7 +265,8 @@
         "description": "Exclaimer is a powerful tool designed to help businesses create professional and consistent email signatures across their entire organization. With its intuitive signature editor, users can easily design email signatures that include banners, company logos, social media links, and legal disclaimer text. The platform ensures seamless integration by automatically pulling employee contact details from Azure Active Directory, making the process both efficient and error-free. Additionally, Exclaimer allows businesses to assign custom signature templates to different departments or teams, ensuring that every communication aligns with the company’s brand identity while maintaining compliance with legal requirements. This all-in-one solution simplifies the management of email signatures at scale, ensuring a professional and unified look for all outgoing communications.",
         "mainImage": "/images/projects/exclaimer.png",
         "images": ["/images/projects/exclaimer.png"],
-        "link": "null"
+        "link": "https://exclaimer.com/",
+        "protected": true
       },
       {
         "id": 27,
@@ -251,7 +274,8 @@
         "description": "MyLighthouse is a cutting-edge platform designed to provide comprehensive and reliable insights within the travel and hospitality industry, enabling businesses to make informed, data-driven decisions. As the lead developer on this project, I oversaw the development of the platform's core functionalities, ensuring seamless integration of vast datasets and user-friendly tools. MyLighthouse offers the most complete data on travel trends, consumer behavior, and market dynamics, empowering leaders in the industry to navigate the complexities of the market with confidence. With real-time analytics, intuitive dashboards, and actionable insights, the platform shines a light on key travel and hospitality metrics, helping businesses enhance their strategies and stay ahead of the competition. My role involved managing the full development cycle, from backend infrastructure to front-end design, ensuring that MyLighthouse delivers high-quality, actionable insights that businesses can rely on.",
         "mainImage": "/images/projects/my.png",
         "images": ["/images/projects/my.png"],
-        "link": "https://www.mylighthouse.com/"
+        "link": "https://www.mylighthouse.com/",
+        "protected": true
       },
       {
         "id": 28,
@@ -264,7 +288,8 @@
           "/images/projects/ey-2.png",
           "/images/projects/ey-3.png"
         ],
-        "link": "https://eyadventureawaits.co.uk/"
+        "link": "https://eyadventureawaits.co.uk/",
+        "protected": true
       }
     ]
   }

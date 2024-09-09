@@ -166,3 +166,58 @@
     margin-bottom: 1rem;
   }
 }
+
+.passwordSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 5rem 0;
+  flex-wrap: wrap;
+}
+
+.passwordInput {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.passwordButton {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-glow) 0%,
+    var(--color-secondary-glow) 100%
+  );
+  color: var(--color-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.passwordButton:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary-glow) 0%,
+    var(--color-primary-glow) 100%
+  );
+  color: var(--color-light);
+}
+
+.requestLink {
+  color: var(--color-primary-glow);
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.requestLink:hover {
+  color: var(--color-secondary-glow);
+  text-decoration: none;
+}
