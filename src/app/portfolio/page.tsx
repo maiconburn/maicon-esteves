@@ -127,17 +127,18 @@ export default function Portfolio() {
               ))}
             </div>
             <p>{selectedProject.details}</p>
-
-            {selectedProject.link !== "null" && (
-              <a
-                href={selectedProject.link ?? undefined}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.projectLink}
-              >
-                Visit Project
-              </a>
-            )}
+            <p>
+              {selectedProject.link !== "null" && (
+                <a
+                  href={selectedProject.link ?? undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.projectLink}
+                >
+                  Visit Project
+                </a>
+              )}
+            </p>
           </div>
         </div>
       )}
