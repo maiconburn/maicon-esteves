@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -94,12 +95,7 @@ export default function Portfolio() {
             onClick={() => handleProjectClick(project)}
           >
             <a>
-              <Image
-                src={project.images[0]}
-                alt={project.name}
-                width={600}
-                height={400}
-              />
+              <img src={project.images[0]} alt={project.name} />
               <h3>{project.name}</h3>
               <p className={styles.projectDescription}>{project.description}</p>
               <button className={styles.seeMoreButton}>View Project</button>
@@ -117,12 +113,10 @@ export default function Portfolio() {
             <h2>{selectedProject.name}</h2>
             <div className={styles.imagesContainer}>
               {selectedProject.images.map((image, idx) => (
-                <Image
+                <img
                   key={idx}
                   src={image}
                   alt={`${selectedProject.name} image ${idx + 1}`}
-                  width={600}
-                  height={400}
                 />
               ))}
             </div>
