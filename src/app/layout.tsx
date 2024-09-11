@@ -57,7 +57,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Header />
         <Main>{children}</Main>
         <Footer />

@@ -55,7 +55,9 @@ export default function Portfolio() {
       setPasswordCorrect(true);
       localStorage.setItem("portfolioPasswordCorrect", "true");
     } else {
-      alert("Incorrect password");
+      alert("Incorrect password. Please try again.");
+      setPassword("");
+      setPasswordCorrect(false);
     }
   };
 
