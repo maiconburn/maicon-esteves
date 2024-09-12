@@ -266,7 +266,7 @@
         "mainImage": "/images/projects/exclaimer.png",
         "images": ["/images/projects/exclaimer.png"],
         "link": "https://exclaimer.com/",
-        "protected": true
+        "protected": false
       },
       {
         "id": 27,
@@ -275,7 +275,7 @@
         "mainImage": "/images/projects/my.png",
         "images": ["/images/projects/my.png"],
         "link": "https://www.mylighthouse.com/",
-        "protected": true
+        "protected": false
       },
       {
         "id": 28,
@@ -289,7 +289,7 @@
           "/images/projects/ey-3.png"
         ],
         "link": "https://eyadventureawaits.co.uk/",
-        "protected": true
+        "protected": false
       }
     ]
   }
