@@ -6,7 +6,13 @@ const IntroCard = () => {
   return (
     <div className={styles.introCard}>
       <div className={styles.avatar}>
-        <Image src="/images/avatar.jpg" alt="avatar" width={140} height={140} />
+        <Image
+          src="/images/avatar.jpg"
+          alt="avatar"
+          width={140}
+          height={140}
+          priority={true}
+        />
       </div>
       <div className={styles.introCardBox}>
         <hgroup className={styles.introText}>
