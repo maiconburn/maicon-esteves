@@ -3,7 +3,13 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 import "./globals.css";
-import Script from "next/script"; // Import Next.js Script component
+import Script from "next/script";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Maicon Ribeiro Esteves - Portfolio",
@@ -57,7 +63,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header />
         <Main>{children}</Main>
         <Footer />
