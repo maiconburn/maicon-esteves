@@ -1,7 +1,14 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "description": "Portfolio of Maicon Ribeiro Esteves",
+  "private": false,
+  "author": {
+    "name": "Maicon Ribeiro Esteves",
+    "email": "maicon.burn@gmail.com",
+    "url": "https://maicon-esteves.vercel.app"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
